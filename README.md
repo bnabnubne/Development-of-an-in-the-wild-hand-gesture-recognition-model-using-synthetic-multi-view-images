@@ -1,0 +1,1 @@
+# Development-of-an-in-the-wild-hand-gesture-recognition-model-using-synthetic-multi-view-images
