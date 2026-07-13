@@ -102,4 +102,3 @@ python aggregate_camera_ready.py
 
 - `docs/thesis_report_final.pdf`
 - `docs/thesis_slides.pdf`
-
