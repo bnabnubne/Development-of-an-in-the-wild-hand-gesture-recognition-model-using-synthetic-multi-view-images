@@ -1,8 +1,10 @@
 numpy
 pandas
 torch
+torchvision
 scikit-learn
 matplotlib
 opencv-python
 mediapipe
-
+pillow
+tqdm

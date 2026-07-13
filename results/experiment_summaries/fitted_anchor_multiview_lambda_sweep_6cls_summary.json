@@ -1,0 +1,96 @@
+{
+  "protocol": "fitted anchor + Blender8 MV lambda sweep, 6-class",
+  "rows": [
+    {
+      "lambda": 0.05,
+      "best_epoch": 56,
+      "best_val_acc": 1.0,
+      "salux_fitted": 0.9989827060020345,
+      "salux_fitted_bal": 0.9965986394557823,
+      "salux_raw": 0.21871820956256358,
+      "salux_raw_bal": 0.2268523407473639,
+      "droh_raw": 0.3214814814814815,
+      "droh_raw_bal": 0.3091227617535644,
+      "droh_fitted_oracle": 0.9214814814814815,
+      "droh_fitted_oracle_bal": 0.9276067350837444
+    },
+    {
+      "lambda": 0.1,
+      "best_epoch": 34,
+      "best_val_acc": 0.9989816700610998,
+      "salux_fitted": 0.9989827060020345,
+      "salux_fitted_bal": 0.9992138364779874,
+      "salux_raw": 0.22075279755849442,
+      "salux_raw_bal": 0.2206204480866313,
+      "droh_raw": 0.2903703703703704,
+      "droh_raw_bal": 0.27721777952788607,
+      "droh_fitted_oracle": 0.8918518518518519,
+      "droh_fitted_oracle_bal": 0.8998582895157606
+    },
+    {
+      "lambda": 0.3,
+      "best_epoch": 27,
+      "best_val_acc": 0.9989816700610998,
+      "salux_fitted": 0.9989827060020345,
+      "salux_fitted_bal": 0.9992138364779874,
+      "salux_raw": 0.474059003051882,
+      "salux_raw_bal": 0.4675811145154902,
+      "droh_raw": 0.36148148148148146,
+      "droh_raw_bal": 0.35282031657521057,
+      "droh_fitted_oracle": 0.8933333333333333,
+      "droh_fitted_oracle_bal": 0.9010639988422149
+    },
+    {
+      "lambda": 0.5,
+      "best_epoch": 26,
+      "best_val_acc": 1.0,
+      "salux_fitted": 0.9989827060020345,
+      "salux_fitted_bal": 0.9992138364779874,
+      "salux_raw": 0.45676500508647,
+      "salux_raw_bal": 0.4318881195279627,
+      "droh_raw": 0.35555555555555557,
+      "droh_raw_bal": 0.34869541867583936,
+      "droh_fitted_oracle": 0.8918518518518519,
+      "droh_fitted_oracle_bal": 0.8994000799315475
+    },
+    {
+      "lambda": 0.7,
+      "best_epoch": 26,
+      "best_val_acc": 1.0,
+      "salux_fitted": 0.9989827060020345,
+      "salux_fitted_bal": 0.9992138364779874,
+      "salux_raw": 0.392675483214649,
+      "salux_raw_bal": 0.37521993072441157,
+      "droh_raw": 0.4,
+      "droh_raw_bal": 0.38978778303757894,
+      "droh_fitted_oracle": 0.9081481481481481,
+      "droh_fitted_oracle_bal": 0.914771689620351
+    },
+    {
+      "lambda": 0.9,
+      "best_epoch": 28,
+      "best_val_acc": 1.0,
+      "salux_fitted": 0.9979654120040692,
+      "salux_fitted_bal": 0.9958124759337698,
+      "salux_raw": 0.4008138351983723,
+      "salux_raw_bal": 0.38935907869462016,
+      "droh_raw": 0.397037037037037,
+      "droh_raw_bal": 0.38825564805094487,
+      "droh_fitted_oracle": 0.9259259259259259,
+      "droh_fitted_oracle_bal": 0.931165132243302
+    },
+    {
+      "lambda": 1.0,
+      "best_epoch": 29,
+      "best_val_acc": 1.0,
+      "salux_fitted": 0.9989827060020345,
+      "salux_fitted_bal": 0.9992138364779874,
+      "salux_raw": 0.41912512716174977,
+      "salux_raw_bal": 0.3986832779748534,
+      "droh_raw": 0.39555555555555555,
+      "droh_raw_bal": 0.3881474745892311,
+      "droh_fitted_oracle": 0.9896296296296296,
+      "droh_fitted_oracle_bal": 0.9897702211832229
+    }
+  ]
+}

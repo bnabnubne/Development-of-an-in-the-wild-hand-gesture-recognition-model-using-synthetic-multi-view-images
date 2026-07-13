@@ -1,0 +1,32 @@
+{
+  "comparison_type": "combined system-level comparison, not a multiview-only ablation",
+  "seeds": [
+    0,
+    1,
+    7,
+    21,
+    42
+  ],
+  "naive_baseline": {
+    "pipeline": "RGB -> MediaPipe -> handedness + wrist center + scale -> camera-single GRU",
+    "rows": 605,
+    "correct": 213,
+    "accuracy": 0.35206611570247937,
+    "macro_f1": 0.28985310317908536
+  },
+  "full_proposed": {
+    "pipeline": "RGB -> MediaPipe -> canonicalization -> Blender8 + lambda=0.3 consistency ensemble",
+    "rows": 605,
+    "correct": 531,
+    "accuracy": 0.8776859504132232,
+    "macro_f1": 0.8774033600227265
+  },
+  "difference_pp": 52.56198347107438,
+  "baseline_only_correct": 16,
+  "proposed_only_correct": 334,
+  "mcnemar_p": 1.5668771720085733e-78,
+  "bootstrap_95ci_pp": [
+    48.264462809917354,
+    56.8595041322314
+  ]
+}

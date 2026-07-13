@@ -1,0 +1,24 @@
+{
+  "min_detection_confidence": 0.25,
+  "outputs": {
+    "render": {
+      "rows": 1000,
+      "images": 8000,
+      "detected": 7138,
+      "detection_rate": 0.89225,
+      "path": "./metadata/rgb_skeleton_multiview_mphand_bbox.csv"
+    },
+    "salux": {
+      "rows": 716,
+      "detected": 715,
+      "detection_rate": 0.9986033519553073,
+      "path": "./metadata/salux_original_rgb_5cls_mphand_bbox.csv"
+    },
+    "droh": {
+      "rows": 483,
+      "detected": 483,
+      "detection_rate": 1.0,
+      "path": "./metadata/droh_rgb_skeleton_5cls_mphand_bbox.csv"
+    }
+  }
+}

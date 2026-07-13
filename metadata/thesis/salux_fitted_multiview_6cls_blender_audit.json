@@ -1,0 +1,24 @@
+{
+  "generator": "Blender bpy camera.matrix_world.inverted()",
+  "source_script_protocol": "MAPR old salux_multiview3d_8cam_front",
+  "camera_angles_deg": [
+    -45,
+    0,
+    30,
+    45,
+    60,
+    90,
+    120,
+    135
+  ],
+  "camera_radius": 3.0,
+  "camera_height": 0.8,
+  "camera_lens": 30,
+  "center_by_mean_before_camera": true,
+  "center_on_wrist_after_camera": true,
+  "input_rows": 6547,
+  "output_rows": 6547,
+  "output_views": 52376,
+  "front_warnings": 0,
+  "failures": []
+}

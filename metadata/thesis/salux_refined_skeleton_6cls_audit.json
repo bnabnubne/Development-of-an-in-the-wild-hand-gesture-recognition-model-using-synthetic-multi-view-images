@@ -1,0 +1,39 @@
+{
+  "source_rows": 6547,
+  "output_rows": 6547,
+  "missing": [],
+  "bad_arrays": [],
+  "duplicate_sample_ids": 0,
+  "split_overlap": {
+    "train_val": 0,
+    "train_test": 0,
+    "val_test": 0
+  },
+  "class_split_counts": {
+    "test": {
+      "ok": 163,
+      "paper": 180,
+      "rock": 49,
+      "scissors": 212,
+      "the-finger": 112,
+      "thumb": 267
+    },
+    "train": {
+      "ok": 758,
+      "paper": 840,
+      "rock": 227,
+      "scissors": 989,
+      "the-finger": 526,
+      "thumb": 1242
+    },
+    "val": {
+      "ok": 162,
+      "paper": 180,
+      "rock": 49,
+      "scissors": 212,
+      "the-finger": 113,
+      "thumb": 266
+    }
+  },
+  "warning": "refined_path was produced with a ground-truth pose-specific template"
+}

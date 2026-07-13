@@ -1,0 +1,21 @@
+{
+  "source_rows_5cls": 4772,
+  "matched_rows": 4772,
+  "missing_count": 0,
+  "invalid_count": 0,
+  "missing": [],
+  "invalid": [],
+  "class_counts": {
+    "ok": 1083,
+    "paper": 1200,
+    "rock": 325,
+    "scissors": 1413,
+    "the-finger": 751
+  },
+  "split_counts": {
+    "test": 716,
+    "train": 3340,
+    "val": 716
+  },
+  "refined_artifact": "class template fitted to 2D, followed by refinement"
+}

@@ -1,0 +1,160 @@
+{
+  "protocol": "fitted Salux anchor + 8 Blender camera views generated from fitted anchor",
+  "lambda_weight": 0.3,
+  "seeds": [
+    0,
+    1,
+    7,
+    21,
+    42
+  ],
+  "aggregate": [
+    {
+      "eval": "droh_fitted_oracle_605",
+      "num_seeds": 5,
+      "seeds": "0,1,7,21,42",
+      "accuracy_mean": 0.899504132231405,
+      "accuracy_std": 0.03786170413650463,
+      "balanced_accuracy_mean": 0.9161648905650683,
+      "balanced_accuracy_std": 0.03150047144088572,
+      "macro_f1_mean": 0.9060831526232868,
+      "macro_f1_std": 0.03568852897864567,
+      "weighted_f1_mean": 0.8934530156015066,
+      "weighted_f1_std": 0.04172504611410597,
+      "rows": 605
+    },
+    {
+      "eval": "droh_fitted_oracle_675",
+      "num_seeds": 5,
+      "seeds": "0,1,7,21,42",
+      "accuracy_mean": 0.9093333333333333,
+      "accuracy_std": 0.03438505433456839,
+      "balanced_accuracy_mean": 0.9155696524698301,
+      "balanced_accuracy_std": 0.03195296925515082,
+      "macro_f1_mean": 0.9071276378133597,
+      "macro_f1_std": 0.03629258532885394,
+      "weighted_f1_mean": 0.9038929044025454,
+      "weighted_f1_std": 0.03785750764502337,
+      "rows": 675
+    },
+    {
+      "eval": "droh_raw_605",
+      "num_seeds": 5,
+      "seeds": "0,1,7,21,42",
+      "accuracy_mean": 0.41487603305785126,
+      "accuracy_std": 0.06602266180744217,
+      "balanced_accuracy_mean": 0.43239519005754223,
+      "balanced_accuracy_std": 0.07985456830429134,
+      "macro_f1_mean": 0.36399270103538195,
+      "macro_f1_std": 0.0767171572876332,
+      "weighted_f1_mean": 0.3597020947700586,
+      "weighted_f1_std": 0.07522095133068492,
+      "rows": 605
+    },
+    {
+      "eval": "droh_raw_675",
+      "num_seeds": 5,
+      "seeds": "0,1,7,21,42",
+      "accuracy_mean": 0.4062222222222222,
+      "accuracy_std": 0.06405930037344074,
+      "balanced_accuracy_mean": 0.3989626503750026,
+      "balanced_accuracy_std": 0.06785020065373505,
+      "macro_f1_mean": 0.3593520066277877,
+      "macro_f1_std": 0.0730643007862518,
+      "weighted_f1_mean": 0.3633087089507834,
+      "weighted_f1_std": 0.0707047250526385,
+      "rows": 675
+    },
+    {
+      "eval": "salux_fitted",
+      "num_seeds": 5,
+      "seeds": "0,1,7,21,42",
+      "accuracy_mean": 0.9991861648016277,
+      "accuracy_std": 0.0004549477065106615,
+      "balanced_accuracy_mean": 0.998848029777949,
+      "balanced_accuracy_std": 0.001302712155401996,
+      "macro_f1_mean": 0.9988273581763382,
+      "macro_f1_std": 0.0008709182385156751,
+      "weighted_f1_mean": 0.999186203082487,
+      "weighted_f1_std": 0.0004549296725379776,
+      "rows": 983
+    },
+    {
+      "eval": "salux_raw",
+      "num_seeds": 5,
+      "seeds": "0,1,7,21,42",
+      "accuracy_mean": 0.43214649033570696,
+      "accuracy_std": 0.09807895987509847,
+      "balanced_accuracy_mean": 0.42669518715592625,
+      "balanced_accuracy_std": 0.10339487131375576,
+      "macro_f1_mean": 0.3628555105389021,
+      "macro_f1_std": 0.09922517371955471,
+      "weighted_f1_mean": 0.36948547770830065,
+      "weighted_f1_std": 0.09782634966730097,
+      "rows": 983
+    }
+  ],
+  "ensembles": [
+    {
+      "eval": "droh_fitted_oracle_605",
+      "members": 5,
+      "seeds": "0,1,7,21,42",
+      "accuracy": 0.8826446280991735,
+      "balanced_accuracy": 0.90263632588624,
+      "macro_f1": 0.8912233672659671,
+      "weighted_f1": 0.8739188285305949,
+      "rows": 605
+    },
+    {
+      "eval": "droh_fitted_oracle_675",
+      "members": 5,
+      "seeds": "0,1,7,21,42",
+      "accuracy": 0.8948148148148148,
+      "balanced_accuracy": 0.90263632588624,
+      "macro_f1": 0.8912233672659671,
+      "weighted_f1": 0.886993912979274,
+      "rows": 675
+    },
+    {
+      "eval": "droh_raw_605",
+      "members": 5,
+      "seeds": "0,1,7,21,42",
+      "accuracy": 0.38016528925619836,
+      "balanced_accuracy": 0.4073786084961357,
+      "macro_f1": 0.3288693184560922,
+      "weighted_f1": 0.3210149735724068,
+      "rows": 605
+    },
+    {
+      "eval": "droh_raw_675",
+      "members": 5,
+      "seeds": "0,1,7,21,42",
+      "accuracy": 0.37333333333333335,
+      "balanced_accuracy": 0.36571194182946903,
+      "macro_f1": 0.3253429689243987,
+      "weighted_f1": 0.3298092147412072,
+      "rows": 675
+    },
+    {
+      "eval": "salux_fitted",
+      "members": 5,
+      "seeds": "0,1,7,21,42",
+      "accuracy": 0.9989827060020345,
+      "balanced_accuracy": 0.9992138364779874,
+      "macro_f1": 0.9988652482269503,
+      "weighted_f1": 0.9989837641801885,
+      "rows": 983
+    },
+    {
+      "eval": "salux_raw",
+      "members": 5,
+      "seeds": "0,1,7,21,42",
+      "accuracy": 0.44150559511698884,
+      "balanced_accuracy": 0.4293417436025872,
+      "macro_f1": 0.37469785320725596,
+      "weighted_f1": 0.38100821977630006,
+      "rows": 983
+    }
+  ],
+  "warning": "DrOh fitted/oracle uses ground-truth class-template selection and should be reported as an upper-bound diagnostic."
+}

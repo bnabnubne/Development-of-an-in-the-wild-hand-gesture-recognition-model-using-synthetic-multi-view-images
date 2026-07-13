@@ -3,11 +3,18 @@ __pycache__/
 *.py[cod]
 *.log
 
-# Large/raw datasets and generated arrays
+# Raw/generated datasets
 dataset/
+datasets/
+data/
 test/
 render_context/
-debug_raw_skeleton_*/
+render_output/
+renders_*/
+batch_*/
+debug*/
+outputs/
+skeleton/
 *.npy
 *.npz
 *.zip
@@ -18,10 +25,13 @@ debug_raw_skeleton_*/
 *.ckpt
 *.onnx
 
+# Large prediction dumps / local experiment by-products
+predictions_*.csv
+all_predictions*.csv
+all_errors.csv
+all_template_fits*.csv
+
 # Blender backup/cache files
 *.blend1
 *.blend2
-
-# Local PDF inspection exports
-pdf_check_*/
 

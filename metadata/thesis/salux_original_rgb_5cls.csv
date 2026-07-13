@@ -1,0 +1,717 @@
+action,sample_id,split,image_path,skeleton_path
+ok,ok_1532,test,./data/raw/FullLabelled/ok/ok_1532.jpg,./dataset/skeleton_final_v2/ok/ok_1532.npy
+paper,paper-set2 (35),test,./data/raw/FullLabelled/paper/paper-set2 (35).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (35).npy
+scissors,scissors (272),test,./data/raw/FullLabelled/scissors/scissors (272).jpg,./dataset/skeleton_final_v2/scissors/scissors (272).npy
+paper,paper (151),test,./data/raw/FullLabelled/paper/paper (151).jpg,./dataset/skeleton_final_v2/paper/paper (151).npy
+scissors,scissors (435),test,./data/raw/FullLabelled/scissors/scissors (435).jpg,./dataset/skeleton_final_v2/scissors/scissors (435).npy
+paper,paper-set2 (212),test,./data/raw/FullLabelled/paper/paper-set2 (212).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (212).npy
+ok,ok_Set2_ (542),test,./data/raw/FullLabelled/ok/ok_Set2_ (542).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (542).npy
+ok,ok_Set2_ (456),test,./data/raw/FullLabelled/ok/ok_Set2_ (456).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (456).npy
+scissors,scissors_3838,test,./data/raw/FullLabelled/scissors/scissors_3838.jpg,./dataset/skeleton_final_v2/scissors/scissors_3838.npy
+scissors,scissors-set2 (735),test,./data/raw/FullLabelled/scissors/scissors-set2 (735).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (735).npy
+rock,rock-set2 (179),test,./data/raw/FullLabelled/rock/rock-set2 (179).jpg,./dataset/skeleton_final_v2/rock/rock-set2 (179).npy
+paper,paper-set2 (43),test,./data/raw/FullLabelled/paper/paper-set2 (43).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (43).npy
+rock,rock_6325,test,./data/raw/FullLabelled/rock/rock_6325.jpg,./dataset/skeleton_final_v2/rock/rock_6325.npy
+scissors,scissors-set2 (38),test,./data/raw/FullLabelled/scissors/scissors-set2 (38).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (38).npy
+the-finger,the-finger-set2 (309),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (309).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (309).npy
+paper,paper (123),test,./data/raw/FullLabelled/paper/paper (123).jpg,./dataset/skeleton_final_v2/paper/paper (123).npy
+ok,ok (263),test,./data/raw/FullLabelled/ok/ok (263).jpg,./dataset/skeleton_final_v2/ok/ok (263).npy
+paper,paper-set2 (341),test,./data/raw/FullLabelled/paper/paper-set2 (341).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (341).npy
+scissors,scissors_6168,test,./data/raw/FullLabelled/scissors/scissors_6168.jpg,./dataset/skeleton_final_v2/scissors/scissors_6168.npy
+scissors,scissors_5744,test,./data/raw/FullLabelled/scissors/scissors_5744.jpg,./dataset/skeleton_final_v2/scissors/scissors_5744.npy
+scissors,scissors (473),test,./data/raw/FullLabelled/scissors/scissors (473).jpg,./dataset/skeleton_final_v2/scissors/scissors (473).npy
+the-finger,the-finger (135),test,./data/raw/FullLabelled/the-finger/the-finger (135).jpg,./dataset/skeleton_final_v2/the-finger/the-finger (135).npy
+paper,paper (124),test,./data/raw/FullLabelled/paper/paper (124).jpg,./dataset/skeleton_final_v2/paper/paper (124).npy
+paper,paper-set2 (280),test,./data/raw/FullLabelled/paper/paper-set2 (280).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (280).npy
+the-finger,the-finger_2250,test,./data/raw/FullLabelled/the-finger/the-finger_2250.jpg,./dataset/skeleton_final_v2/the-finger/the-finger_2250.npy
+ok,ok_Set2_ (38),test,./data/raw/FullLabelled/ok/ok_Set2_ (38).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (38).npy
+ok,ok_2009,test,./data/raw/FullLabelled/ok/ok_2009.jpg,./dataset/skeleton_final_v2/ok/ok_2009.npy
+paper,paper-set2 (23),test,./data/raw/FullLabelled/paper/paper-set2 (23).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (23).npy
+ok,ok_Set2_ (264),test,./data/raw/FullLabelled/ok/ok_Set2_ (264).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (264).npy
+scissors,scissors_6553,test,./data/raw/FullLabelled/scissors/scissors_6553.jpg,./dataset/skeleton_final_v2/scissors/scissors_6553.npy
+ok,ok (267),test,./data/raw/FullLabelled/ok/ok (267).jpg,./dataset/skeleton_final_v2/ok/ok (267).npy
+scissors,scissors_422,test,./data/raw/FullLabelled/scissors/scissors_422.jpg,./dataset/skeleton_final_v2/scissors/scissors_422.npy
+paper,paper_5712,test,./data/raw/FullLabelled/paper/paper_5712.jpg,./dataset/skeleton_final_v2/paper/paper_5712.npy
+paper,paper-set2 (318),test,./data/raw/FullLabelled/paper/paper-set2 (318).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (318).npy
+scissors,scissors-set2 (149),test,./data/raw/FullLabelled/scissors/scissors-set2 (149).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (149).npy
+the-finger,the-finger-set2 (92),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (92).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (92).npy
+ok,ok_Set2_ (158),test,./data/raw/FullLabelled/ok/ok_Set2_ (158).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (158).npy
+ok,ok_81,test,./data/raw/FullLabelled/ok/ok_81.jpg,./dataset/skeleton_final_v2/ok/ok_81.npy
+paper,paper-set2 (389),test,./data/raw/FullLabelled/paper/paper-set2 (389).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (389).npy
+scissors,scissors (392),test,./data/raw/FullLabelled/scissors/scissors (392).jpg,./dataset/skeleton_final_v2/scissors/scissors (392).npy
+ok,ok_1145,test,./data/raw/FullLabelled/ok/ok_1145.jpg,./dataset/skeleton_final_v2/ok/ok_1145.npy
+ok,ok_Set2_ (261),test,./data/raw/FullLabelled/ok/ok_Set2_ (261).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (261).npy
+paper,paper-set2 (253),test,./data/raw/FullLabelled/paper/paper-set2 (253).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (253).npy
+ok,ok_Set2_ (281),test,./data/raw/FullLabelled/ok/ok_Set2_ (281).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (281).npy
+scissors,scissors-set2 (602),test,./data/raw/FullLabelled/scissors/scissors-set2 (602).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (602).npy
+the-finger,the-finger_6299,test,./data/raw/FullLabelled/the-finger/the-finger_6299.jpg,./dataset/skeleton_final_v2/the-finger/the-finger_6299.npy
+scissors,scissors-set2 (334),test,./data/raw/FullLabelled/scissors/scissors-set2 (334).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (334).npy
+paper,paper-set2 (463),test,./data/raw/FullLabelled/paper/paper-set2 (463).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (463).npy
+scissors,scissors_2678,test,./data/raw/FullLabelled/scissors/scissors_2678.jpg,./dataset/skeleton_final_v2/scissors/scissors_2678.npy
+scissors,scissors_7970,test,./data/raw/FullLabelled/scissors/scissors_7970.jpg,./dataset/skeleton_final_v2/scissors/scissors_7970.npy
+scissors,scissors-set2 (660),test,./data/raw/FullLabelled/scissors/scissors-set2 (660).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (660).npy
+the-finger,the-finger-set2 (2),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (2).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (2).npy
+paper,paper_368,test,./data/raw/FullLabelled/paper/paper_368.jpg,./dataset/skeleton_final_v2/paper/paper_368.npy
+ok,ok_1974,test,./data/raw/FullLabelled/ok/ok_1974.jpg,./dataset/skeleton_final_v2/ok/ok_1974.npy
+ok,ok_Set2_ (380),test,./data/raw/FullLabelled/ok/ok_Set2_ (380).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (380).npy
+ok,ok (253),test,./data/raw/FullLabelled/ok/ok (253).jpg,./dataset/skeleton_final_v2/ok/ok (253).npy
+scissors,scissors (106),test,./data/raw/FullLabelled/scissors/scissors (106).jpg,./dataset/skeleton_final_v2/scissors/scissors (106).npy
+scissors,scissors (70),test,./data/raw/FullLabelled/scissors/scissors (70).jpg,./dataset/skeleton_final_v2/scissors/scissors (70).npy
+paper,paper_5460,test,./data/raw/FullLabelled/paper/paper_5460.jpg,./dataset/skeleton_final_v2/paper/paper_5460.npy
+the-finger,the-finger_6068,test,./data/raw/FullLabelled/the-finger/the-finger_6068.jpg,./dataset/skeleton_final_v2/the-finger/the-finger_6068.npy
+paper,paper_6128,test,./data/raw/FullLabelled/paper/paper_6128.jpg,./dataset/skeleton_final_v2/paper/paper_6128.npy
+rock,rock_6310,test,./data/raw/FullLabelled/rock/rock_6310.jpg,./dataset/skeleton_final_v2/rock/rock_6310.npy
+the-finger,the-finger_878,test,./data/raw/FullLabelled/the-finger/the-finger_878.jpg,./dataset/skeleton_final_v2/the-finger/the-finger_878.npy
+scissors,scissors (432),test,./data/raw/FullLabelled/scissors/scissors (432).jpg,./dataset/skeleton_final_v2/scissors/scissors (432).npy
+ok,ok_7018,test,./data/raw/FullLabelled/ok/ok_7018.jpg,./dataset/skeleton_final_v2/ok/ok_7018.npy
+ok,ok_5292,test,./data/raw/FullLabelled/ok/ok_5292.jpg,./dataset/skeleton_final_v2/ok/ok_5292.npy
+scissors,scissors (282),test,./data/raw/FullLabelled/scissors/scissors (282).jpg,./dataset/skeleton_final_v2/scissors/scissors (282).npy
+scissors,scissors (427),test,./data/raw/FullLabelled/scissors/scissors (427).jpg,./dataset/skeleton_final_v2/scissors/scissors (427).npy
+scissors,scissors-set2 (364),test,./data/raw/FullLabelled/scissors/scissors-set2 (364).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (364).npy
+scissors,scissors-set2 (30),test,./data/raw/FullLabelled/scissors/scissors-set2 (30).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (30).npy
+scissors,scissors-set2 (638),test,./data/raw/FullLabelled/scissors/scissors-set2 (638).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (638).npy
+paper,paper (107),test,./data/raw/FullLabelled/paper/paper (107).jpg,./dataset/skeleton_final_v2/paper/paper (107).npy
+scissors,scissors (211),test,./data/raw/FullLabelled/scissors/scissors (211).jpg,./dataset/skeleton_final_v2/scissors/scissors (211).npy
+paper,paper-set2 (103),test,./data/raw/FullLabelled/paper/paper-set2 (103).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (103).npy
+paper,paper_24,test,./data/raw/FullLabelled/paper/paper_24.jpg,./dataset/skeleton_final_v2/paper/paper_24.npy
+scissors,scissors-set2 (729),test,./data/raw/FullLabelled/scissors/scissors-set2 (729).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (729).npy
+paper,paper-set2 (424),test,./data/raw/FullLabelled/paper/paper-set2 (424).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (424).npy
+scissors,scissors (267),test,./data/raw/FullLabelled/scissors/scissors (267).jpg,./dataset/skeleton_final_v2/scissors/scissors (267).npy
+the-finger,the-finger-set2 (234),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (234).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (234).npy
+scissors,scissors (324),test,./data/raw/FullLabelled/scissors/scissors (324).jpg,./dataset/skeleton_final_v2/scissors/scissors (324).npy
+ok,ok_1556,test,./data/raw/FullLabelled/ok/ok_1556.jpg,./dataset/skeleton_final_v2/ok/ok_1556.npy
+rock,rock_3152,test,./data/raw/FullLabelled/rock/rock_3152.jpg,./dataset/skeleton_final_v2/rock/rock_3152.npy
+ok,ok_Set2_ (474),test,./data/raw/FullLabelled/ok/ok_Set2_ (474).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (474).npy
+scissors,scissors-set2 (477),test,./data/raw/FullLabelled/scissors/scissors-set2 (477).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (477).npy
+paper,paper-set2 (402),test,./data/raw/FullLabelled/paper/paper-set2 (402).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (402).npy
+scissors,scissors-set2 (576),test,./data/raw/FullLabelled/scissors/scissors-set2 (576).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (576).npy
+ok,ok (115),test,./data/raw/FullLabelled/ok/ok (115).jpg,./dataset/skeleton_final_v2/ok/ok (115).npy
+scissors,scissors_7170,test,./data/raw/FullLabelled/scissors/scissors_7170.jpg,./dataset/skeleton_final_v2/scissors/scissors_7170.npy
+paper,paper_3814,test,./data/raw/FullLabelled/paper/paper_3814.jpg,./dataset/skeleton_final_v2/paper/paper_3814.npy
+paper,paper-set2 (454),test,./data/raw/FullLabelled/paper/paper-set2 (454).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (454).npy
+ok,ok_5777,test,./data/raw/FullLabelled/ok/ok_5777.jpg,./dataset/skeleton_final_v2/ok/ok_5777.npy
+paper,paper-set2 (403),test,./data/raw/FullLabelled/paper/paper-set2 (403).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (403).npy
+the-finger,the-finger-set2 (371),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (371).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (371).npy
+the-finger,the-finger_7093,test,./data/raw/FullLabelled/the-finger/the-finger_7093.jpg,./dataset/skeleton_final_v2/the-finger/the-finger_7093.npy
+the-finger,the-finger_6062,test,./data/raw/FullLabelled/the-finger/the-finger_6062.jpg,./dataset/skeleton_final_v2/the-finger/the-finger_6062.npy
+scissors,scissors_6375,test,./data/raw/FullLabelled/scissors/scissors_6375.jpg,./dataset/skeleton_final_v2/scissors/scissors_6375.npy
+ok,ok (108),test,./data/raw/FullLabelled/ok/ok (108).jpg,./dataset/skeleton_final_v2/ok/ok (108).npy
+the-finger,the-finger (61),test,./data/raw/FullLabelled/the-finger/the-finger (61).jpg,./dataset/skeleton_final_v2/the-finger/the-finger (61).npy
+scissors,scissors-set2 (74),test,./data/raw/FullLabelled/scissors/scissors-set2 (74).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (74).npy
+ok,ok_Set2_ (123),test,./data/raw/FullLabelled/ok/ok_Set2_ (123).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (123).npy
+the-finger,the-finger_6871,test,./data/raw/FullLabelled/the-finger/the-finger_6871.jpg,./dataset/skeleton_final_v2/the-finger/the-finger_6871.npy
+rock,rock-set2 (426),test,./data/raw/FullLabelled/rock/rock-set2 (426).jpg,./dataset/skeleton_final_v2/rock/rock-set2 (426).npy
+scissors,scissors_1083,test,./data/raw/FullLabelled/scissors/scissors_1083.jpg,./dataset/skeleton_final_v2/scissors/scissors_1083.npy
+paper,paper_2440,test,./data/raw/FullLabelled/paper/paper_2440.jpg,./dataset/skeleton_final_v2/paper/paper_2440.npy
+the-finger,the-finger_5363,test,./data/raw/FullLabelled/the-finger/the-finger_5363.jpg,./dataset/skeleton_final_v2/the-finger/the-finger_5363.npy
+scissors,scissors_6368,test,./data/raw/FullLabelled/scissors/scissors_6368.jpg,./dataset/skeleton_final_v2/scissors/scissors_6368.npy
+scissors,scissors_766,test,./data/raw/FullLabelled/scissors/scissors_766.jpg,./dataset/skeleton_final_v2/scissors/scissors_766.npy
+scissors,scissors (259),test,./data/raw/FullLabelled/scissors/scissors (259).jpg,./dataset/skeleton_final_v2/scissors/scissors (259).npy
+ok,ok_Set2_ (137),test,./data/raw/FullLabelled/ok/ok_Set2_ (137).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (137).npy
+paper,paper_5720,test,./data/raw/FullLabelled/paper/paper_5720.jpg,./dataset/skeleton_final_v2/paper/paper_5720.npy
+scissors,scissors-set2 (634),test,./data/raw/FullLabelled/scissors/scissors-set2 (634).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (634).npy
+ok,ok (223),test,./data/raw/FullLabelled/ok/ok (223).jpg,./dataset/skeleton_final_v2/ok/ok (223).npy
+rock,rock_5409,test,./data/raw/FullLabelled/rock/rock_5409.jpg,./dataset/skeleton_final_v2/rock/rock_5409.npy
+ok,ok_8036,test,./data/raw/FullLabelled/ok/ok_8036.jpg,./dataset/skeleton_final_v2/ok/ok_8036.npy
+paper,paper-set2 (364),test,./data/raw/FullLabelled/paper/paper-set2 (364).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (364).npy
+scissors,scissors_6145,test,./data/raw/FullLabelled/scissors/scissors_6145.jpg,./dataset/skeleton_final_v2/scissors/scissors_6145.npy
+scissors,scissors-set2 (373),test,./data/raw/FullLabelled/scissors/scissors-set2 (373).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (373).npy
+paper,paper_5908,test,./data/raw/FullLabelled/paper/paper_5908.jpg,./dataset/skeleton_final_v2/paper/paper_5908.npy
+rock,rock-set2 (24),test,./data/raw/FullLabelled/rock/rock-set2 (24).jpg,./dataset/skeleton_final_v2/rock/rock-set2 (24).npy
+ok,ok_6388,test,./data/raw/FullLabelled/ok/ok_6388.jpg,./dataset/skeleton_final_v2/ok/ok_6388.npy
+ok,ok_6993,test,./data/raw/FullLabelled/ok/ok_6993.jpg,./dataset/skeleton_final_v2/ok/ok_6993.npy
+ok,ok_Set2_ (497),test,./data/raw/FullLabelled/ok/ok_Set2_ (497).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (497).npy
+scissors,scissors-set2 (255),test,./data/raw/FullLabelled/scissors/scissors-set2 (255).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (255).npy
+scissors,scissors-set2 (493),test,./data/raw/FullLabelled/scissors/scissors-set2 (493).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (493).npy
+scissors,scissors-set2 (66),test,./data/raw/FullLabelled/scissors/scissors-set2 (66).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (66).npy
+scissors,scissors-set2 (693),test,./data/raw/FullLabelled/scissors/scissors-set2 (693).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (693).npy
+ok,ok_1945,test,./data/raw/FullLabelled/ok/ok_1945.jpg,./dataset/skeleton_final_v2/ok/ok_1945.npy
+ok,ok (74),test,./data/raw/FullLabelled/ok/ok (74).jpg,./dataset/skeleton_final_v2/ok/ok (74).npy
+paper,paper_9158,test,./data/raw/FullLabelled/paper/paper_9158.jpg,./dataset/skeleton_final_v2/paper/paper_9158.npy
+paper,paper-set2 (85),test,./data/raw/FullLabelled/paper/paper-set2 (85).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (85).npy
+paper,paper (59),test,./data/raw/FullLabelled/paper/paper (59).jpg,./dataset/skeleton_final_v2/paper/paper (59).npy
+ok,ok (146),test,./data/raw/FullLabelled/ok/ok (146).jpg,./dataset/skeleton_final_v2/ok/ok (146).npy
+ok,ok_8538,test,./data/raw/FullLabelled/ok/ok_8538.jpg,./dataset/skeleton_final_v2/ok/ok_8538.npy
+rock,rock-set2 (166),test,./data/raw/FullLabelled/rock/rock-set2 (166).jpg,./dataset/skeleton_final_v2/rock/rock-set2 (166).npy
+the-finger,the-finger-set2 (239),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (239).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (239).npy
+paper,paper-set2 (94),test,./data/raw/FullLabelled/paper/paper-set2 (94).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (94).npy
+paper,paper-set2 (367),test,./data/raw/FullLabelled/paper/paper-set2 (367).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (367).npy
+ok,ok_2917,test,./data/raw/FullLabelled/ok/ok_2917.jpg,./dataset/skeleton_final_v2/ok/ok_2917.npy
+scissors,scissors-set2 (361),test,./data/raw/FullLabelled/scissors/scissors-set2 (361).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (361).npy
+ok,ok_Set2_ (71),test,./data/raw/FullLabelled/ok/ok_Set2_ (71).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (71).npy
+the-finger,the-finger-set2 (79),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (79).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (79).npy
+paper,paper_6531,test,./data/raw/FullLabelled/paper/paper_6531.jpg,./dataset/skeleton_final_v2/paper/paper_6531.npy
+paper,paper-set2 (17),test,./data/raw/FullLabelled/paper/paper-set2 (17).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (17).npy
+ok,ok_Set2_ (246),test,./data/raw/FullLabelled/ok/ok_Set2_ (246).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (246).npy
+ok,ok_Set2_ (373),test,./data/raw/FullLabelled/ok/ok_Set2_ (373).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (373).npy
+paper,paper_7960,test,./data/raw/FullLabelled/paper/paper_7960.jpg,./dataset/skeleton_final_v2/paper/paper_7960.npy
+ok,ok_Set2_ (239),test,./data/raw/FullLabelled/ok/ok_Set2_ (239).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (239).npy
+rock,rock-set2 (603),test,./data/raw/FullLabelled/rock/rock-set2 (603).jpg,./dataset/skeleton_final_v2/rock/rock-set2 (603).npy
+ok,ok_Set2_ (487),test,./data/raw/FullLabelled/ok/ok_Set2_ (487).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (487).npy
+ok,ok_Set2_ (395),test,./data/raw/FullLabelled/ok/ok_Set2_ (395).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (395).npy
+rock,rock-set2 (54),test,./data/raw/FullLabelled/rock/rock-set2 (54).jpg,./dataset/skeleton_final_v2/rock/rock-set2 (54).npy
+the-finger,the-finger_6059,test,./data/raw/FullLabelled/the-finger/the-finger_6059.jpg,./dataset/skeleton_final_v2/the-finger/the-finger_6059.npy
+paper,paper_6342,test,./data/raw/FullLabelled/paper/paper_6342.jpg,./dataset/skeleton_final_v2/paper/paper_6342.npy
+the-finger,the-finger-set2 (102),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (102).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (102).npy
+scissors,scissors_5749,test,./data/raw/FullLabelled/scissors/scissors_5749.jpg,./dataset/skeleton_final_v2/scissors/scissors_5749.npy
+scissors,scissors_6958,test,./data/raw/FullLabelled/scissors/scissors_6958.jpg,./dataset/skeleton_final_v2/scissors/scissors_6958.npy
+ok,ok (228),test,./data/raw/FullLabelled/ok/ok (228).jpg,./dataset/skeleton_final_v2/ok/ok (228).npy
+ok,ok (66),test,./data/raw/FullLabelled/ok/ok (66).jpg,./dataset/skeleton_final_v2/ok/ok (66).npy
+paper,paper_1832,test,./data/raw/FullLabelled/paper/paper_1832.jpg,./dataset/skeleton_final_v2/paper/paper_1832.npy
+ok,ok_Set2_ (65),test,./data/raw/FullLabelled/ok/ok_Set2_ (65).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (65).npy
+ok,ok_1540,test,./data/raw/FullLabelled/ok/ok_1540.jpg,./dataset/skeleton_final_v2/ok/ok_1540.npy
+scissors,scissors_6161,test,./data/raw/FullLabelled/scissors/scissors_6161.jpg,./dataset/skeleton_final_v2/scissors/scissors_6161.npy
+scissors,scissors_1115,test,./data/raw/FullLabelled/scissors/scissors_1115.jpg,./dataset/skeleton_final_v2/scissors/scissors_1115.npy
+scissors,scissors-set2 (399),test,./data/raw/FullLabelled/scissors/scissors-set2 (399).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (399).npy
+paper,paper_2471,test,./data/raw/FullLabelled/paper/paper_2471.jpg,./dataset/skeleton_final_v2/paper/paper_2471.npy
+ok,ok (241),test,./data/raw/FullLabelled/ok/ok (241).jpg,./dataset/skeleton_final_v2/ok/ok (241).npy
+paper,paper (122),test,./data/raw/FullLabelled/paper/paper (122).jpg,./dataset/skeleton_final_v2/paper/paper (122).npy
+rock,rock-set2 (363),test,./data/raw/FullLabelled/rock/rock-set2 (363).jpg,./dataset/skeleton_final_v2/rock/rock-set2 (363).npy
+paper,paper-set2 (382),test,./data/raw/FullLabelled/paper/paper-set2 (382).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (382).npy
+paper,paper-set2 (259),test,./data/raw/FullLabelled/paper/paper-set2 (259).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (259).npy
+ok,ok_Set2_ (247),test,./data/raw/FullLabelled/ok/ok_Set2_ (247).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (247).npy
+ok,ok_5958,test,./data/raw/FullLabelled/ok/ok_5958.jpg,./dataset/skeleton_final_v2/ok/ok_5958.npy
+the-finger,the-finger-set2 (352),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (352).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (352).npy
+ok,ok_5530,test,./data/raw/FullLabelled/ok/ok_5530.jpg,./dataset/skeleton_final_v2/ok/ok_5530.npy
+scissors,scissors-set2 (189),test,./data/raw/FullLabelled/scissors/scissors-set2 (189).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (189).npy
+ok,ok_6402,test,./data/raw/FullLabelled/ok/ok_6402.jpg,./dataset/skeleton_final_v2/ok/ok_6402.npy
+scissors,scissors-set2 (270),test,./data/raw/FullLabelled/scissors/scissors-set2 (270).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (270).npy
+ok,ok_Set2_ (63),test,./data/raw/FullLabelled/ok/ok_Set2_ (63).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (63).npy
+ok,ok_6191,test,./data/raw/FullLabelled/ok/ok_6191.jpg,./dataset/skeleton_final_v2/ok/ok_6191.npy
+ok,ok (32),test,./data/raw/FullLabelled/ok/ok (32).jpg,./dataset/skeleton_final_v2/ok/ok (32).npy
+rock,rock_2,test,./data/raw/FullLabelled/rock/rock_2.jpg,./dataset/skeleton_final_v2/rock/rock_2.npy
+scissors,scissors_3847,test,./data/raw/FullLabelled/scissors/scissors_3847.jpg,./dataset/skeleton_final_v2/scissors/scissors_3847.npy
+rock,rock-set2 (43),test,./data/raw/FullLabelled/rock/rock-set2 (43).jpg,./dataset/skeleton_final_v2/rock/rock-set2 (43).npy
+scissors,scissors-set2 (325),test,./data/raw/FullLabelled/scissors/scissors-set2 (325).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (325).npy
+ok,ok_Set2_ (454),test,./data/raw/FullLabelled/ok/ok_Set2_ (454).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (454).npy
+the-finger,the-finger-set2 (133),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (133).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (133).npy
+ok,ok_5542,test,./data/raw/FullLabelled/ok/ok_5542.jpg,./dataset/skeleton_final_v2/ok/ok_5542.npy
+paper,paper_1051,test,./data/raw/FullLabelled/paper/paper_1051.jpg,./dataset/skeleton_final_v2/paper/paper_1051.npy
+paper,paper (117),test,./data/raw/FullLabelled/paper/paper (117).jpg,./dataset/skeleton_final_v2/paper/paper (117).npy
+scissors,scissors-set2 (512),test,./data/raw/FullLabelled/scissors/scissors-set2 (512).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (512).npy
+ok,ok_Set2_ (532),test,./data/raw/FullLabelled/ok/ok_Set2_ (532).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (532).npy
+ok,ok_Set2_ (81),test,./data/raw/FullLabelled/ok/ok_Set2_ (81).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (81).npy
+paper,paper_5160,test,./data/raw/FullLabelled/paper/paper_5160.jpg,./dataset/skeleton_final_v2/paper/paper_5160.npy
+scissors,scissors-set2 (702),test,./data/raw/FullLabelled/scissors/scissors-set2 (702).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (702).npy
+rock,rock-set2 (216),test,./data/raw/FullLabelled/rock/rock-set2 (216).jpg,./dataset/skeleton_final_v2/rock/rock-set2 (216).npy
+paper,paper_4600,test,./data/raw/FullLabelled/paper/paper_4600.jpg,./dataset/skeleton_final_v2/paper/paper_4600.npy
+ok,ok (2),test,./data/raw/FullLabelled/ok/ok (2).jpg,./dataset/skeleton_final_v2/ok/ok (2).npy
+scissors,scissors (358),test,./data/raw/FullLabelled/scissors/scissors (358).jpg,./dataset/skeleton_final_v2/scissors/scissors (358).npy
+scissors,scissors (374),test,./data/raw/FullLabelled/scissors/scissors (374).jpg,./dataset/skeleton_final_v2/scissors/scissors (374).npy
+ok,ok_Set2_ (122),test,./data/raw/FullLabelled/ok/ok_Set2_ (122).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (122).npy
+ok,ok_Set2_ (14),test,./data/raw/FullLabelled/ok/ok_Set2_ (14).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (14).npy
+scissors,scissors (480),test,./data/raw/FullLabelled/scissors/scissors (480).jpg,./dataset/skeleton_final_v2/scissors/scissors (480).npy
+scissors,scissors-set2 (294),test,./data/raw/FullLabelled/scissors/scissors-set2 (294).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (294).npy
+scissors,scissors_6725,test,./data/raw/FullLabelled/scissors/scissors_6725.jpg,./dataset/skeleton_final_v2/scissors/scissors_6725.npy
+rock,rock_3583,test,./data/raw/FullLabelled/rock/rock_3583.jpg,./dataset/skeleton_final_v2/rock/rock_3583.npy
+scissors,scissors-set2 (681),test,./data/raw/FullLabelled/scissors/scissors-set2 (681).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (681).npy
+scissors,scissors-set2 (7),test,./data/raw/FullLabelled/scissors/scissors-set2 (7).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (7).npy
+the-finger,the-finger-set2 (342),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (342).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (342).npy
+paper,paper_6533,test,./data/raw/FullLabelled/paper/paper_6533.jpg,./dataset/skeleton_final_v2/paper/paper_6533.npy
+the-finger,the-finger-set2 (201),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (201).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (201).npy
+the-finger,the-finger-set2 (354),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (354).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (354).npy
+paper,paper_1462,test,./data/raw/FullLabelled/paper/paper_1462.jpg,./dataset/skeleton_final_v2/paper/paper_1462.npy
+scissors,scissors_5190,test,./data/raw/FullLabelled/scissors/scissors_5190.jpg,./dataset/skeleton_final_v2/scissors/scissors_5190.npy
+the-finger,the-finger-set2 (108),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (108).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (108).npy
+ok,ok_3981,test,./data/raw/FullLabelled/ok/ok_3981.jpg,./dataset/skeleton_final_v2/ok/ok_3981.npy
+scissors,scissors (61),test,./data/raw/FullLabelled/scissors/scissors (61).jpg,./dataset/skeleton_final_v2/scissors/scissors (61).npy
+the-finger,the-finger-set2 (246),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (246).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (246).npy
+the-finger,the-finger-set2 (155),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (155).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (155).npy
+ok,ok_7000,test,./data/raw/FullLabelled/ok/ok_7000.jpg,./dataset/skeleton_final_v2/ok/ok_7000.npy
+paper,paper-set2 (158),test,./data/raw/FullLabelled/paper/paper-set2 (158).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (158).npy
+scissors,scissors-set2 (249),test,./data/raw/FullLabelled/scissors/scissors-set2 (249).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (249).npy
+ok,ok (160),test,./data/raw/FullLabelled/ok/ok (160).jpg,./dataset/skeleton_final_v2/ok/ok (160).npy
+paper,paper-set2 (437),test,./data/raw/FullLabelled/paper/paper-set2 (437).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (437).npy
+the-finger,the-finger (1),test,./data/raw/FullLabelled/the-finger/the-finger (1).jpg,./dataset/skeleton_final_v2/the-finger/the-finger (1).npy
+scissors,scissors-set2 (596),test,./data/raw/FullLabelled/scissors/scissors-set2 (596).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (596).npy
+ok,ok (104),test,./data/raw/FullLabelled/ok/ok (104).jpg,./dataset/skeleton_final_v2/ok/ok (104).npy
+scissors,scissors-set2 (392),test,./data/raw/FullLabelled/scissors/scissors-set2 (392).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (392).npy
+paper,paper_3695,test,./data/raw/FullLabelled/paper/paper_3695.jpg,./dataset/skeleton_final_v2/paper/paper_3695.npy
+paper,paper-set2 (440),test,./data/raw/FullLabelled/paper/paper-set2 (440).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (440).npy
+the-finger,the-finger_3507,test,./data/raw/FullLabelled/the-finger/the-finger_3507.jpg,./dataset/skeleton_final_v2/the-finger/the-finger_3507.npy
+paper,paper_9150,test,./data/raw/FullLabelled/paper/paper_9150.jpg,./dataset/skeleton_final_v2/paper/paper_9150.npy
+ok,ok_Set2_ (347),test,./data/raw/FullLabelled/ok/ok_Set2_ (347).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (347).npy
+scissors,scissors-set2 (209),test,./data/raw/FullLabelled/scissors/scissors-set2 (209).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (209).npy
+scissors,scissors_434,test,./data/raw/FullLabelled/scissors/scissors_434.jpg,./dataset/skeleton_final_v2/scissors/scissors_434.npy
+the-finger,the-finger-set2 (364),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (364).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (364).npy
+paper,paper-set2 (20),test,./data/raw/FullLabelled/paper/paper-set2 (20).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (20).npy
+the-finger,the-finger-set2 (229),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (229).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (229).npy
+the-finger,the-finger_3466,test,./data/raw/FullLabelled/the-finger/the-finger_3466.jpg,./dataset/skeleton_final_v2/the-finger/the-finger_3466.npy
+scissors,scissors-set2 (311),test,./data/raw/FullLabelled/scissors/scissors-set2 (311).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (311).npy
+paper,paper (29),test,./data/raw/FullLabelled/paper/paper (29).jpg,./dataset/skeleton_final_v2/paper/paper (29).npy
+ok,ok_Set2_ (397),test,./data/raw/FullLabelled/ok/ok_Set2_ (397).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (397).npy
+paper,paper-set2 (394),test,./data/raw/FullLabelled/paper/paper-set2 (394).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (394).npy
+scissors,scissors_4615,test,./data/raw/FullLabelled/scissors/scissors_4615.jpg,./dataset/skeleton_final_v2/scissors/scissors_4615.npy
+ok,ok_Set2_ (241),test,./data/raw/FullLabelled/ok/ok_Set2_ (241).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (241).npy
+ok,ok_Set2_ (413),test,./data/raw/FullLabelled/ok/ok_Set2_ (413).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (413).npy
+paper,paper_382,test,./data/raw/FullLabelled/paper/paper_382.jpg,./dataset/skeleton_final_v2/paper/paper_382.npy
+paper,paper_7577,test,./data/raw/FullLabelled/paper/paper_7577.jpg,./dataset/skeleton_final_v2/paper/paper_7577.npy
+paper,paper-set2 (169),test,./data/raw/FullLabelled/paper/paper-set2 (169).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (169).npy
+ok,ok_Set2_ (167),test,./data/raw/FullLabelled/ok/ok_Set2_ (167).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (167).npy
+scissors,scissors-set2 (739),test,./data/raw/FullLabelled/scissors/scissors-set2 (739).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (739).npy
+paper,paper (210),test,./data/raw/FullLabelled/paper/paper (210).jpg,./dataset/skeleton_final_v2/paper/paper (210).npy
+scissors,scissors_1885,test,./data/raw/FullLabelled/scissors/scissors_1885.jpg,./dataset/skeleton_final_v2/scissors/scissors_1885.npy
+scissors,scissors (8),test,./data/raw/FullLabelled/scissors/scissors (8).jpg,./dataset/skeleton_final_v2/scissors/scissors (8).npy
+paper,paper-set2 (469),test,./data/raw/FullLabelled/paper/paper-set2 (469).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (469).npy
+the-finger,the-finger_7264,test,./data/raw/FullLabelled/the-finger/the-finger_7264.jpg,./dataset/skeleton_final_v2/the-finger/the-finger_7264.npy
+paper,paper-set2 (450),test,./data/raw/FullLabelled/paper/paper-set2 (450).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (450).npy
+ok,ok (123),test,./data/raw/FullLabelled/ok/ok (123).jpg,./dataset/skeleton_final_v2/ok/ok (123).npy
+paper,paper_3771,test,./data/raw/FullLabelled/paper/paper_3771.jpg,./dataset/skeleton_final_v2/paper/paper_3771.npy
+paper,paper-set2 (304),test,./data/raw/FullLabelled/paper/paper-set2 (304).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (304).npy
+ok,ok (219),test,./data/raw/FullLabelled/ok/ok (219).jpg,./dataset/skeleton_final_v2/ok/ok (219).npy
+ok,ok_Set2_ (31),test,./data/raw/FullLabelled/ok/ok_Set2_ (31).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (31).npy
+scissors,scissors-set2 (33),test,./data/raw/FullLabelled/scissors/scissors-set2 (33).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (33).npy
+scissors,scissors (405),test,./data/raw/FullLabelled/scissors/scissors (405).jpg,./dataset/skeleton_final_v2/scissors/scissors (405).npy
+paper,paper (15),test,./data/raw/FullLabelled/paper/paper (15).jpg,./dataset/skeleton_final_v2/paper/paper (15).npy
+paper,paper (152),test,./data/raw/FullLabelled/paper/paper (152).jpg,./dataset/skeleton_final_v2/paper/paper (152).npy
+scissors,scissors-set2 (396),test,./data/raw/FullLabelled/scissors/scissors-set2 (396).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (396).npy
+ok,ok_3971,test,./data/raw/FullLabelled/ok/ok_3971.jpg,./dataset/skeleton_final_v2/ok/ok_3971.npy
+paper,paper_6123,test,./data/raw/FullLabelled/paper/paper_6123.jpg,./dataset/skeleton_final_v2/paper/paper_6123.npy
+scissors,scissors_7166,test,./data/raw/FullLabelled/scissors/scissors_7166.jpg,./dataset/skeleton_final_v2/scissors/scissors_7166.npy
+paper,paper (9),test,./data/raw/FullLabelled/paper/paper (9).jpg,./dataset/skeleton_final_v2/paper/paper (9).npy
+paper,paper-set2 (421),test,./data/raw/FullLabelled/paper/paper-set2 (421).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (421).npy
+scissors,scissors-set2 (541),test,./data/raw/FullLabelled/scissors/scissors-set2 (541).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (541).npy
+paper,paper-set2 (255),test,./data/raw/FullLabelled/paper/paper-set2 (255).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (255).npy
+scissors,scissors-set2 (152),test,./data/raw/FullLabelled/scissors/scissors-set2 (152).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (152).npy
+scissors,scissors-set2 (711),test,./data/raw/FullLabelled/scissors/scissors-set2 (711).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (711).npy
+rock,rock_6499,test,./data/raw/FullLabelled/rock/rock_6499.jpg,./dataset/skeleton_final_v2/rock/rock_6499.npy
+paper,paper_9164,test,./data/raw/FullLabelled/paper/paper_9164.jpg,./dataset/skeleton_final_v2/paper/paper_9164.npy
+paper,paper (88),test,./data/raw/FullLabelled/paper/paper (88).jpg,./dataset/skeleton_final_v2/paper/paper (88).npy
+ok,ok_7001,test,./data/raw/FullLabelled/ok/ok_7001.jpg,./dataset/skeleton_final_v2/ok/ok_7001.npy
+scissors,scissors (370),test,./data/raw/FullLabelled/scissors/scissors (370).jpg,./dataset/skeleton_final_v2/scissors/scissors (370).npy
+rock,rock_704,test,./data/raw/FullLabelled/rock/rock_704.jpg,./dataset/skeleton_final_v2/rock/rock_704.npy
+ok,ok (70),test,./data/raw/FullLabelled/ok/ok (70).jpg,./dataset/skeleton_final_v2/ok/ok (70).npy
+ok,ok_Set2_ (500),test,./data/raw/FullLabelled/ok/ok_Set2_ (500).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (500).npy
+ok,ok_Set2_ (367),test,./data/raw/FullLabelled/ok/ok_Set2_ (367).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (367).npy
+ok,ok_2862,test,./data/raw/FullLabelled/ok/ok_2862.jpg,./dataset/skeleton_final_v2/ok/ok_2862.npy
+ok,ok_Set2_ (262),test,./data/raw/FullLabelled/ok/ok_Set2_ (262).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (262).npy
+paper,paper_7585,test,./data/raw/FullLabelled/paper/paper_7585.jpg,./dataset/skeleton_final_v2/paper/paper_7585.npy
+the-finger,the-finger_233,test,./data/raw/FullLabelled/the-finger/the-finger_233.jpg,./dataset/skeleton_final_v2/the-finger/the-finger_233.npy
+the-finger,the-finger-set2 (208),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (208).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (208).npy
+ok,ok_Set2_ (270),test,./data/raw/FullLabelled/ok/ok_Set2_ (270).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (270).npy
+paper,paper-set2 (329),test,./data/raw/FullLabelled/paper/paper-set2 (329).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (329).npy
+ok,ok_Set2_ (321),test,./data/raw/FullLabelled/ok/ok_Set2_ (321).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (321).npy
+paper,paper_4586,test,./data/raw/FullLabelled/paper/paper_4586.jpg,./dataset/skeleton_final_v2/paper/paper_4586.npy
+paper,paper (228),test,./data/raw/FullLabelled/paper/paper (228).jpg,./dataset/skeleton_final_v2/paper/paper (228).npy
+ok,ok_Set2_ (164),test,./data/raw/FullLabelled/ok/ok_Set2_ (164).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (164).npy
+ok,ok (254),test,./data/raw/FullLabelled/ok/ok (254).jpg,./dataset/skeleton_final_v2/ok/ok (254).npy
+ok,ok_Set2_ (324),test,./data/raw/FullLabelled/ok/ok_Set2_ (324).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (324).npy
+ok,ok (138),test,./data/raw/FullLabelled/ok/ok (138).jpg,./dataset/skeleton_final_v2/ok/ok (138).npy
+rock,rock-set2 (52),test,./data/raw/FullLabelled/rock/rock-set2 (52).jpg,./dataset/skeleton_final_v2/rock/rock-set2 (52).npy
+ok,ok_2524,test,./data/raw/FullLabelled/ok/ok_2524.jpg,./dataset/skeleton_final_v2/ok/ok_2524.npy
+ok,ok_Set2_ (401),test,./data/raw/FullLabelled/ok/ok_Set2_ (401).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (401).npy
+ok,ok_Set2_ (37),test,./data/raw/FullLabelled/ok/ok_Set2_ (37).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (37).npy
+the-finger,the-finger (145),test,./data/raw/FullLabelled/the-finger/the-finger (145).jpg,./dataset/skeleton_final_v2/the-finger/the-finger (145).npy
+the-finger,the-finger-set2 (95),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (95).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (95).npy
+scissors,scissors (393),test,./data/raw/FullLabelled/scissors/scissors (393).jpg,./dataset/skeleton_final_v2/scissors/scissors (393).npy
+ok,ok_5778,test,./data/raw/FullLabelled/ok/ok_5778.jpg,./dataset/skeleton_final_v2/ok/ok_5778.npy
+paper,paper_6518,test,./data/raw/FullLabelled/paper/paper_6518.jpg,./dataset/skeleton_final_v2/paper/paper_6518.npy
+the-finger,the-finger_7267,test,./data/raw/FullLabelled/the-finger/the-finger_7267.jpg,./dataset/skeleton_final_v2/the-finger/the-finger_7267.npy
+paper,paper (249),test,./data/raw/FullLabelled/paper/paper (249).jpg,./dataset/skeleton_final_v2/paper/paper (249).npy
+ok,ok_6194,test,./data/raw/FullLabelled/ok/ok_6194.jpg,./dataset/skeleton_final_v2/ok/ok_6194.npy
+scissors,scissors-set2 (598),test,./data/raw/FullLabelled/scissors/scissors-set2 (598).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (598).npy
+the-finger,the-finger-set2 (1),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (1).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (1).npy
+ok,ok_Set2_ (415),test,./data/raw/FullLabelled/ok/ok_Set2_ (415).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (415).npy
+scissors,scissors-set2 (113),test,./data/raw/FullLabelled/scissors/scissors-set2 (113).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (113).npy
+scissors,scissors-set2 (722),test,./data/raw/FullLabelled/scissors/scissors-set2 (722).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (722).npy
+paper,paper_5154,test,./data/raw/FullLabelled/paper/paper_5154.jpg,./dataset/skeleton_final_v2/paper/paper_5154.npy
+ok,ok_Set2_ (6),test,./data/raw/FullLabelled/ok/ok_Set2_ (6).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (6).npy
+rock,rock-set2 (563),test,./data/raw/FullLabelled/rock/rock-set2 (563).jpg,./dataset/skeleton_final_v2/rock/rock-set2 (563).npy
+scissors,scissors-set2 (116),test,./data/raw/FullLabelled/scissors/scissors-set2 (116).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (116).npy
+rock,rock_678,test,./data/raw/FullLabelled/rock/rock_678.jpg,./dataset/skeleton_final_v2/rock/rock_678.npy
+ok,ok_6585,test,./data/raw/FullLabelled/ok/ok_6585.jpg,./dataset/skeleton_final_v2/ok/ok_6585.npy
+paper,paper (195),test,./data/raw/FullLabelled/paper/paper (195).jpg,./dataset/skeleton_final_v2/paper/paper (195).npy
+ok,ok_Set2_ (335),test,./data/raw/FullLabelled/ok/ok_Set2_ (335).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (335).npy
+rock,rock-set2 (307),test,./data/raw/FullLabelled/rock/rock-set2 (307).jpg,./dataset/skeleton_final_v2/rock/rock-set2 (307).npy
+the-finger,the-finger_6297,test,./data/raw/FullLabelled/the-finger/the-finger_6297.jpg,./dataset/skeleton_final_v2/the-finger/the-finger_6297.npy
+scissors,scissors-set2 (554),test,./data/raw/FullLabelled/scissors/scissors-set2 (554).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (554).npy
+scissors,scissors (186),test,./data/raw/FullLabelled/scissors/scissors (186).jpg,./dataset/skeleton_final_v2/scissors/scissors (186).npy
+scissors,scissors-set2 (691),test,./data/raw/FullLabelled/scissors/scissors-set2 (691).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (691).npy
+ok,ok_Set2_ (434),test,./data/raw/FullLabelled/ok/ok_Set2_ (434).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (434).npy
+scissors,scissors_3905,test,./data/raw/FullLabelled/scissors/scissors_3905.jpg,./dataset/skeleton_final_v2/scissors/scissors_3905.npy
+scissors,scissors (433),test,./data/raw/FullLabelled/scissors/scissors (433).jpg,./dataset/skeleton_final_v2/scissors/scissors (433).npy
+the-finger,the-finger (54),test,./data/raw/FullLabelled/the-finger/the-finger (54).jpg,./dataset/skeleton_final_v2/the-finger/the-finger (54).npy
+paper,paper_5450,test,./data/raw/FullLabelled/paper/paper_5450.jpg,./dataset/skeleton_final_v2/paper/paper_5450.npy
+paper,paper-set2 (316),test,./data/raw/FullLabelled/paper/paper-set2 (316).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (316).npy
+rock,rock-set2 (564),test,./data/raw/FullLabelled/rock/rock-set2 (564).jpg,./dataset/skeleton_final_v2/rock/rock-set2 (564).npy
+paper,paper-set2 (414),test,./data/raw/FullLabelled/paper/paper-set2 (414).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (414).npy
+paper,paper-set2 (356),test,./data/raw/FullLabelled/paper/paper-set2 (356).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (356).npy
+ok,ok_Set2_ (573),test,./data/raw/FullLabelled/ok/ok_Set2_ (573).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (573).npy
+paper,paper_4602,test,./data/raw/FullLabelled/paper/paper_4602.jpg,./dataset/skeleton_final_v2/paper/paper_4602.npy
+paper,paper-set2 (416),test,./data/raw/FullLabelled/paper/paper-set2 (416).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (416).npy
+scissors,scissors-set2 (508),test,./data/raw/FullLabelled/scissors/scissors-set2 (508).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (508).npy
+ok,ok_Set2_ (526),test,./data/raw/FullLabelled/ok/ok_Set2_ (526).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (526).npy
+ok,ok_Set2_ (175),test,./data/raw/FullLabelled/ok/ok_Set2_ (175).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (175).npy
+paper,paper-set2 (52),test,./data/raw/FullLabelled/paper/paper-set2 (52).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (52).npy
+rock,rock (240),test,./data/raw/FullLabelled/rock/rock (240).jpg,./dataset/skeleton_final_v2/rock/rock (240).npy
+the-finger,the-finger_2254,test,./data/raw/FullLabelled/the-finger/the-finger_2254.jpg,./dataset/skeleton_final_v2/the-finger/the-finger_2254.npy
+paper,paper_7153,test,./data/raw/FullLabelled/paper/paper_7153.jpg,./dataset/skeleton_final_v2/paper/paper_7153.npy
+scissors,scissors-set2 (92),test,./data/raw/FullLabelled/scissors/scissors-set2 (92).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (92).npy
+ok,ok_1173,test,./data/raw/FullLabelled/ok/ok_1173.jpg,./dataset/skeleton_final_v2/ok/ok_1173.npy
+the-finger,the-finger-set2 (135),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (135).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (135).npy
+the-finger,the-finger-set2 (316),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (316).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (316).npy
+scissors,scissors-set2 (441),test,./data/raw/FullLabelled/scissors/scissors-set2 (441).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (441).npy
+paper,paper_5458,test,./data/raw/FullLabelled/paper/paper_5458.jpg,./dataset/skeleton_final_v2/paper/paper_5458.npy
+ok,ok_6980,test,./data/raw/FullLabelled/ok/ok_6980.jpg,./dataset/skeleton_final_v2/ok/ok_6980.npy
+scissors,scissors-set2 (171),test,./data/raw/FullLabelled/scissors/scissors-set2 (171).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (171).npy
+ok,ok_8034,test,./data/raw/FullLabelled/ok/ok_8034.jpg,./dataset/skeleton_final_v2/ok/ok_8034.npy
+scissors,scissors-set2 (494),test,./data/raw/FullLabelled/scissors/scissors-set2 (494).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (494).npy
+paper,paper-set2 (348),test,./data/raw/FullLabelled/paper/paper-set2 (348).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (348).npy
+scissors,scissors_8010,test,./data/raw/FullLabelled/scissors/scissors_8010.jpg,./dataset/skeleton_final_v2/scissors/scissors_8010.npy
+ok,ok_Set2_ (468),test,./data/raw/FullLabelled/ok/ok_Set2_ (468).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (468).npy
+paper,paper_5156,test,./data/raw/FullLabelled/paper/paper_5156.jpg,./dataset/skeleton_final_v2/paper/paper_5156.npy
+the-finger,the-finger (13),test,./data/raw/FullLabelled/the-finger/the-finger (13).jpg,./dataset/skeleton_final_v2/the-finger/the-finger (13).npy
+paper,paper_3647,test,./data/raw/FullLabelled/paper/paper_3647.jpg,./dataset/skeleton_final_v2/paper/paper_3647.npy
+ok,ok (162),test,./data/raw/FullLabelled/ok/ok (162).jpg,./dataset/skeleton_final_v2/ok/ok (162).npy
+paper,paper-set2 (275),test,./data/raw/FullLabelled/paper/paper-set2 (275).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (275).npy
+scissors,scissors-set2 (665),test,./data/raw/FullLabelled/scissors/scissors-set2 (665).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (665).npy
+scissors,scissors-set2 (4),test,./data/raw/FullLabelled/scissors/scissors-set2 (4).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (4).npy
+scissors,scissors-set2 (657),test,./data/raw/FullLabelled/scissors/scissors-set2 (657).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (657).npy
+scissors,scissors_6718,test,./data/raw/FullLabelled/scissors/scissors_6718.jpg,./dataset/skeleton_final_v2/scissors/scissors_6718.npy
+ok,ok_2526,test,./data/raw/FullLabelled/ok/ok_2526.jpg,./dataset/skeleton_final_v2/ok/ok_2526.npy
+ok,ok_Set2_ (36),test,./data/raw/FullLabelled/ok/ok_Set2_ (36).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (36).npy
+scissors,scissors (325),test,./data/raw/FullLabelled/scissors/scissors (325).jpg,./dataset/skeleton_final_v2/scissors/scissors (325).npy
+ok,ok_Set2_ (285),test,./data/raw/FullLabelled/ok/ok_Set2_ (285).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (285).npy
+the-finger,the-finger-set2 (436),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (436).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (436).npy
+rock,rock (189),test,./data/raw/FullLabelled/rock/rock (189).jpg,./dataset/skeleton_final_v2/rock/rock (189).npy
+ok,ok_6403,test,./data/raw/FullLabelled/ok/ok_6403.jpg,./dataset/skeleton_final_v2/ok/ok_6403.npy
+paper,paper_7621,test,./data/raw/FullLabelled/paper/paper_7621.jpg,./dataset/skeleton_final_v2/paper/paper_7621.npy
+rock,rock-set2 (220),test,./data/raw/FullLabelled/rock/rock-set2 (220).jpg,./dataset/skeleton_final_v2/rock/rock-set2 (220).npy
+the-finger,the-finger-set2 (383),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (383).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (383).npy
+ok,ok_5248,test,./data/raw/FullLabelled/ok/ok_5248.jpg,./dataset/skeleton_final_v2/ok/ok_5248.npy
+scissors,scissors-set2 (605),test,./data/raw/FullLabelled/scissors/scissors-set2 (605).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (605).npy
+scissors,scissors-set2 (261),test,./data/raw/FullLabelled/scissors/scissors-set2 (261).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (261).npy
+the-finger,the-finger-set2 (297),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (297).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (297).npy
+scissors,scissors_6720,test,./data/raw/FullLabelled/scissors/scissors_6720.jpg,./dataset/skeleton_final_v2/scissors/scissors_6720.npy
+scissors,scissors-set2 (151),test,./data/raw/FullLabelled/scissors/scissors-set2 (151).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (151).npy
+ok,ok_Set2_ (354),test,./data/raw/FullLabelled/ok/ok_Set2_ (354).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (354).npy
+paper,paper (188),test,./data/raw/FullLabelled/paper/paper (188).jpg,./dataset/skeleton_final_v2/paper/paper (188).npy
+scissors,scissors (327),test,./data/raw/FullLabelled/scissors/scissors (327).jpg,./dataset/skeleton_final_v2/scissors/scissors (327).npy
+ok,ok_5546,test,./data/raw/FullLabelled/ok/ok_5546.jpg,./dataset/skeleton_final_v2/ok/ok_5546.npy
+scissors,scissors-set2 (19),test,./data/raw/FullLabelled/scissors/scissors-set2 (19).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (19).npy
+paper,paper-set2 (266),test,./data/raw/FullLabelled/paper/paper-set2 (266).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (266).npy
+the-finger,the-finger (119),test,./data/raw/FullLabelled/the-finger/the-finger (119).jpg,./dataset/skeleton_final_v2/the-finger/the-finger (119).npy
+the-finger,the-finger_6274,test,./data/raw/FullLabelled/the-finger/the-finger_6274.jpg,./dataset/skeleton_final_v2/the-finger/the-finger_6274.npy
+rock,rock_8418,test,./data/raw/FullLabelled/rock/rock_8418.jpg,./dataset/skeleton_final_v2/rock/rock_8418.npy
+ok,ok_71,test,./data/raw/FullLabelled/ok/ok_71.jpg,./dataset/skeleton_final_v2/ok/ok_71.npy
+scissors,scissors-set2 (620),test,./data/raw/FullLabelled/scissors/scissors-set2 (620).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (620).npy
+paper,paper_1013,test,./data/raw/FullLabelled/paper/paper_1013.jpg,./dataset/skeleton_final_v2/paper/paper_1013.npy
+paper,paper (67),test,./data/raw/FullLabelled/paper/paper (67).jpg,./dataset/skeleton_final_v2/paper/paper (67).npy
+scissors,scissors_6969,test,./data/raw/FullLabelled/scissors/scissors_6969.jpg,./dataset/skeleton_final_v2/scissors/scissors_6969.npy
+paper,paper_3687,test,./data/raw/FullLabelled/paper/paper_3687.jpg,./dataset/skeleton_final_v2/paper/paper_3687.npy
+ok,ok_Set2_ (323),test,./data/raw/FullLabelled/ok/ok_Set2_ (323).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (323).npy
+scissors,scissors_2609,test,./data/raw/FullLabelled/scissors/scissors_2609.jpg,./dataset/skeleton_final_v2/scissors/scissors_2609.npy
+scissors,scissors_5753,test,./data/raw/FullLabelled/scissors/scissors_5753.jpg,./dataset/skeleton_final_v2/scissors/scissors_5753.npy
+ok,ok_Set2_ (26),test,./data/raw/FullLabelled/ok/ok_Set2_ (26).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (26).npy
+the-finger,the-finger_7270,test,./data/raw/FullLabelled/the-finger/the-finger_7270.jpg,./dataset/skeleton_final_v2/the-finger/the-finger_7270.npy
+paper,paper_6709,test,./data/raw/FullLabelled/paper/paper_6709.jpg,./dataset/skeleton_final_v2/paper/paper_6709.npy
+the-finger,the-finger (59),test,./data/raw/FullLabelled/the-finger/the-finger (59).jpg,./dataset/skeleton_final_v2/the-finger/the-finger (59).npy
+scissors,scissors-set2 (710),test,./data/raw/FullLabelled/scissors/scissors-set2 (710).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (710).npy
+paper,paper-set2 (360),test,./data/raw/FullLabelled/paper/paper-set2 (360).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (360).npy
+the-finger,the-finger_7273,test,./data/raw/FullLabelled/the-finger/the-finger_7273.jpg,./dataset/skeleton_final_v2/the-finger/the-finger_7273.npy
+the-finger,the-finger-set2 (71),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (71).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (71).npy
+rock,rock_302,test,./data/raw/FullLabelled/rock/rock_302.jpg,./dataset/skeleton_final_v2/rock/rock_302.npy
+paper,paper_3693,test,./data/raw/FullLabelled/paper/paper_3693.jpg,./dataset/skeleton_final_v2/paper/paper_3693.npy
+paper,paper-set2 (391),test,./data/raw/FullLabelled/paper/paper-set2 (391).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (391).npy
+scissors,scissors (36),test,./data/raw/FullLabelled/scissors/scissors (36).jpg,./dataset/skeleton_final_v2/scissors/scissors (36).npy
+ok,ok_791,test,./data/raw/FullLabelled/ok/ok_791.jpg,./dataset/skeleton_final_v2/ok/ok_791.npy
+paper,paper-set2 (90),test,./data/raw/FullLabelled/paper/paper-set2 (90).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (90).npy
+paper,paper-set2 (486),test,./data/raw/FullLabelled/paper/paper-set2 (486).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (486).npy
+rock,rock (99),test,./data/raw/FullLabelled/rock/rock (99).jpg,./dataset/skeleton_final_v2/rock/rock (99).npy
+scissors,scissors (24),test,./data/raw/FullLabelled/scissors/scissors (24).jpg,./dataset/skeleton_final_v2/scissors/scissors (24).npy
+the-finger,the-finger-set2 (408),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (408).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (408).npy
+ok,ok_Set2_ (509),test,./data/raw/FullLabelled/ok/ok_Set2_ (509).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (509).npy
+scissors,scissors_8776,test,./data/raw/FullLabelled/scissors/scissors_8776.jpg,./dataset/skeleton_final_v2/scissors/scissors_8776.npy
+paper,paper-set2 (226),test,./data/raw/FullLabelled/paper/paper-set2 (226).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (226).npy
+paper,paper-set2 (7),test,./data/raw/FullLabelled/paper/paper-set2 (7).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (7).npy
+ok,ok_2027,test,./data/raw/FullLabelled/ok/ok_2027.jpg,./dataset/skeleton_final_v2/ok/ok_2027.npy
+rock,rock_8372,test,./data/raw/FullLabelled/rock/rock_8372.jpg,./dataset/skeleton_final_v2/rock/rock_8372.npy
+the-finger,the-finger-set2 (318),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (318).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (318).npy
+ok,ok_Set2_ (349),test,./data/raw/FullLabelled/ok/ok_Set2_ (349).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (349).npy
+ok,ok_Set2_ (28),test,./data/raw/FullLabelled/ok/ok_Set2_ (28).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (28).npy
+scissors,scissors (387),test,./data/raw/FullLabelled/scissors/scissors (387).jpg,./dataset/skeleton_final_v2/scissors/scissors (387).npy
+scissors,scissors-set2 (327),test,./data/raw/FullLabelled/scissors/scissors-set2 (327).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (327).npy
+scissors,scissors_6559,test,./data/raw/FullLabelled/scissors/scissors_6559.jpg,./dataset/skeleton_final_v2/scissors/scissors_6559.npy
+the-finger,the-finger (15),test,./data/raw/FullLabelled/the-finger/the-finger (15).jpg,./dataset/skeleton_final_v2/the-finger/the-finger (15).npy
+the-finger,the-finger_6471,test,./data/raw/FullLabelled/the-finger/the-finger_6471.jpg,./dataset/skeleton_final_v2/the-finger/the-finger_6471.npy
+the-finger,the-finger (71),test,./data/raw/FullLabelled/the-finger/the-finger (71).jpg,./dataset/skeleton_final_v2/the-finger/the-finger (71).npy
+the-finger,the-finger-set2 (249),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (249).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (249).npy
+ok,ok_Set2_ (8),test,./data/raw/FullLabelled/ok/ok_Set2_ (8).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (8).npy
+scissors,scissors-set2 (156),test,./data/raw/FullLabelled/scissors/scissors-set2 (156).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (156).npy
+paper,paper-set2 (452),test,./data/raw/FullLabelled/paper/paper-set2 (452).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (452).npy
+ok,ok_Set2_ (554),test,./data/raw/FullLabelled/ok/ok_Set2_ (554).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (554).npy
+the-finger,the-finger_7810,test,./data/raw/FullLabelled/the-finger/the-finger_7810.jpg,./dataset/skeleton_final_v2/the-finger/the-finger_7810.npy
+the-finger,the-finger-set2 (222),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (222).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (222).npy
+paper,paper (269),test,./data/raw/FullLabelled/paper/paper (269).jpg,./dataset/skeleton_final_v2/paper/paper (269).npy
+the-finger,the-finger-set2 (165),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (165).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (165).npy
+scissors,scissors-set2 (636),test,./data/raw/FullLabelled/scissors/scissors-set2 (636).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (636).npy
+the-finger,the-finger_6877,test,./data/raw/FullLabelled/the-finger/the-finger_6877.jpg,./dataset/skeleton_final_v2/the-finger/the-finger_6877.npy
+ok,ok_Set2_ (236),test,./data/raw/FullLabelled/ok/ok_Set2_ (236).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (236).npy
+paper,paper-set2 (484),test,./data/raw/FullLabelled/paper/paper-set2 (484).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (484).npy
+scissors,scissors_5175,test,./data/raw/FullLabelled/scissors/scissors_5175.jpg,./dataset/skeleton_final_v2/scissors/scissors_5175.npy
+paper,paper-set2 (87),test,./data/raw/FullLabelled/paper/paper-set2 (87).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (87).npy
+the-finger,the-finger_3517,test,./data/raw/FullLabelled/the-finger/the-finger_3517.jpg,./dataset/skeleton_final_v2/the-finger/the-finger_3517.npy
+scissors,scissors-set2 (687),test,./data/raw/FullLabelled/scissors/scissors-set2 (687).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (687).npy
+paper,paper_1444,test,./data/raw/FullLabelled/paper/paper_1444.jpg,./dataset/skeleton_final_v2/paper/paper_1444.npy
+scissors,scissors_8810,test,./data/raw/FullLabelled/scissors/scissors_8810.jpg,./dataset/skeleton_final_v2/scissors/scissors_8810.npy
+scissors,scissors (289),test,./data/raw/FullLabelled/scissors/scissors (289).jpg,./dataset/skeleton_final_v2/scissors/scissors (289).npy
+scissors,scissors-set2 (253),test,./data/raw/FullLabelled/scissors/scissors-set2 (253).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (253).npy
+rock,rock-set2 (110),test,./data/raw/FullLabelled/rock/rock-set2 (110).jpg,./dataset/skeleton_final_v2/rock/rock-set2 (110).npy
+paper,paper (155),test,./data/raw/FullLabelled/paper/paper (155).jpg,./dataset/skeleton_final_v2/paper/paper (155).npy
+rock,rock-set2 (576),test,./data/raw/FullLabelled/rock/rock-set2 (576).jpg,./dataset/skeleton_final_v2/rock/rock-set2 (576).npy
+the-finger,the-finger-set2 (389),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (389).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (389).npy
+paper,paper_3636,test,./data/raw/FullLabelled/paper/paper_3636.jpg,./dataset/skeleton_final_v2/paper/paper_3636.npy
+paper,paper (42),test,./data/raw/FullLabelled/paper/paper (42).jpg,./dataset/skeleton_final_v2/paper/paper (42).npy
+scissors,scissors (31),test,./data/raw/FullLabelled/scissors/scissors (31).jpg,./dataset/skeleton_final_v2/scissors/scissors (31).npy
+scissors,scissors-set2 (656),test,./data/raw/FullLabelled/scissors/scissors-set2 (656).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (656).npy
+scissors,scissors-set2 (391),test,./data/raw/FullLabelled/scissors/scissors-set2 (391).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (391).npy
+ok,ok_Set2_ (83),test,./data/raw/FullLabelled/ok/ok_Set2_ (83).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (83).npy
+ok,ok_5266,test,./data/raw/FullLabelled/ok/ok_5266.jpg,./dataset/skeleton_final_v2/ok/ok_5266.npy
+paper,paper_1858,test,./data/raw/FullLabelled/paper/paper_1858.jpg,./dataset/skeleton_final_v2/paper/paper_1858.npy
+the-finger,the-finger-set2 (40),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (40).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (40).npy
+ok,ok_Set2_ (172),test,./data/raw/FullLabelled/ok/ok_Set2_ (172).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (172).npy
+scissors,scissors-set2 (689),test,./data/raw/FullLabelled/scissors/scissors-set2 (689).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (689).npy
+scissors,scissors-set2 (345),test,./data/raw/FullLabelled/scissors/scissors-set2 (345).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (345).npy
+rock,rock-set2 (309),test,./data/raw/FullLabelled/rock/rock-set2 (309).jpg,./dataset/skeleton_final_v2/rock/rock-set2 (309).npy
+rock,rock (16),test,./data/raw/FullLabelled/rock/rock (16).jpg,./dataset/skeleton_final_v2/rock/rock (16).npy
+scissors,scissors_7178,test,./data/raw/FullLabelled/scissors/scissors_7178.jpg,./dataset/skeleton_final_v2/scissors/scissors_7178.npy
+the-finger,the-finger-set2 (177),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (177).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (177).npy
+the-finger,the-finger (70),test,./data/raw/FullLabelled/the-finger/the-finger (70).jpg,./dataset/skeleton_final_v2/the-finger/the-finger (70).npy
+scissors,scissors_7972,test,./data/raw/FullLabelled/scissors/scissors_7972.jpg,./dataset/skeleton_final_v2/scissors/scissors_7972.npy
+paper,paper_2467,test,./data/raw/FullLabelled/paper/paper_2467.jpg,./dataset/skeleton_final_v2/paper/paper_2467.npy
+paper,paper_3806,test,./data/raw/FullLabelled/paper/paper_3806.jpg,./dataset/skeleton_final_v2/paper/paper_3806.npy
+ok,ok_5780,test,./data/raw/FullLabelled/ok/ok_5780.jpg,./dataset/skeleton_final_v2/ok/ok_5780.npy
+scissors,scissors-set2 (727),test,./data/raw/FullLabelled/scissors/scissors-set2 (727).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (727).npy
+rock,rock-set2 (148),test,./data/raw/FullLabelled/rock/rock-set2 (148).jpg,./dataset/skeleton_final_v2/rock/rock-set2 (148).npy
+rock,rock (200),test,./data/raw/FullLabelled/rock/rock (200).jpg,./dataset/skeleton_final_v2/rock/rock (200).npy
+paper,paper (35),test,./data/raw/FullLabelled/paper/paper (35).jpg,./dataset/skeleton_final_v2/paper/paper (35).npy
+scissors,scissors-set2 (65),test,./data/raw/FullLabelled/scissors/scissors-set2 (65).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (65).npy
+ok,ok_5552,test,./data/raw/FullLabelled/ok/ok_5552.jpg,./dataset/skeleton_final_v2/ok/ok_5552.npy
+the-finger,the-finger-set2 (90),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (90).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (90).npy
+scissors,scissors_3874,test,./data/raw/FullLabelled/scissors/scissors_3874.jpg,./dataset/skeleton_final_v2/scissors/scissors_3874.npy
+rock,rock-set2 (221),test,./data/raw/FullLabelled/rock/rock-set2 (221).jpg,./dataset/skeleton_final_v2/rock/rock-set2 (221).npy
+scissors,scissors (465),test,./data/raw/FullLabelled/scissors/scissors (465).jpg,./dataset/skeleton_final_v2/scissors/scissors (465).npy
+ok,ok_2750,test,./data/raw/FullLabelled/ok/ok_2750.jpg,./dataset/skeleton_final_v2/ok/ok_2750.npy
+paper,paper_716,test,./data/raw/FullLabelled/paper/paper_716.jpg,./dataset/skeleton_final_v2/paper/paper_716.npy
+the-finger,the-finger-set2 (178),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (178).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (178).npy
+scissors,scissors (375),test,./data/raw/FullLabelled/scissors/scissors (375).jpg,./dataset/skeleton_final_v2/scissors/scissors (375).npy
+paper,paper-set2 (284),test,./data/raw/FullLabelled/paper/paper-set2 (284).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (284).npy
+scissors,scissors-set2 (316),test,./data/raw/FullLabelled/scissors/scissors-set2 (316).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (316).npy
+the-finger,the-finger_7846,test,./data/raw/FullLabelled/the-finger/the-finger_7846.jpg,./dataset/skeleton_final_v2/the-finger/the-finger_7846.npy
+scissors,scissors-set2 (204),test,./data/raw/FullLabelled/scissors/scissors-set2 (204).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (204).npy
+paper,paper_6353,test,./data/raw/FullLabelled/paper/paper_6353.jpg,./dataset/skeleton_final_v2/paper/paper_6353.npy
+scissors,scissors-set2 (323),test,./data/raw/FullLabelled/scissors/scissors-set2 (323).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (323).npy
+paper,paper_8752,test,./data/raw/FullLabelled/paper/paper_8752.jpg,./dataset/skeleton_final_v2/paper/paper_8752.npy
+scissors,scissors (200),test,./data/raw/FullLabelled/scissors/scissors (200).jpg,./dataset/skeleton_final_v2/scissors/scissors (200).npy
+paper,paper_7944,test,./data/raw/FullLabelled/paper/paper_7944.jpg,./dataset/skeleton_final_v2/paper/paper_7944.npy
+paper,paper_7322,test,./data/raw/FullLabelled/paper/paper_7322.jpg,./dataset/skeleton_final_v2/paper/paper_7322.npy
+ok,ok (250),test,./data/raw/FullLabelled/ok/ok (250).jpg,./dataset/skeleton_final_v2/ok/ok (250).npy
+scissors,scissors_3841,test,./data/raw/FullLabelled/scissors/scissors_3841.jpg,./dataset/skeleton_final_v2/scissors/scissors_3841.npy
+scissors,scissors-set2 (64),test,./data/raw/FullLabelled/scissors/scissors-set2 (64).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (64).npy
+the-finger,the-finger_5366,test,./data/raw/FullLabelled/the-finger/the-finger_5366.jpg,./dataset/skeleton_final_v2/the-finger/the-finger_5366.npy
+paper,paper-set2 (370),test,./data/raw/FullLabelled/paper/paper-set2 (370).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (370).npy
+scissors,scissors (442),test,./data/raw/FullLabelled/scissors/scissors (442).jpg,./dataset/skeleton_final_v2/scissors/scissors (442).npy
+the-finger,the-finger-set2 (423),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (423).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (423).npy
+paper,paper-set2 (204),test,./data/raw/FullLabelled/paper/paper-set2 (204).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (204).npy
+paper,paper-set2 (170),test,./data/raw/FullLabelled/paper/paper-set2 (170).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (170).npy
+paper,paper (74),test,./data/raw/FullLabelled/paper/paper (74).jpg,./dataset/skeleton_final_v2/paper/paper (74).npy
+the-finger,the-finger_7079,test,./data/raw/FullLabelled/the-finger/the-finger_7079.jpg,./dataset/skeleton_final_v2/the-finger/the-finger_7079.npy
+scissors,scissors-set2 (524),test,./data/raw/FullLabelled/scissors/scissors-set2 (524).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (524).npy
+scissors,scissors (371),test,./data/raw/FullLabelled/scissors/scissors (371).jpg,./dataset/skeleton_final_v2/scissors/scissors (371).npy
+scissors,scissors (133),test,./data/raw/FullLabelled/scissors/scissors (133).jpg,./dataset/skeleton_final_v2/scissors/scissors (133).npy
+scissors,scissors (451),test,./data/raw/FullLabelled/scissors/scissors (451).jpg,./dataset/skeleton_final_v2/scissors/scissors (451).npy
+ok,ok_2774,test,./data/raw/FullLabelled/ok/ok_2774.jpg,./dataset/skeleton_final_v2/ok/ok_2774.npy
+scissors,scissors-set2 (302),test,./data/raw/FullLabelled/scissors/scissors-set2 (302).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (302).npy
+ok,ok_Set2_ (552),test,./data/raw/FullLabelled/ok/ok_Set2_ (552).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (552).npy
+the-finger,the-finger-set2 (262),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (262).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (262).npy
+paper,paper_6348,test,./data/raw/FullLabelled/paper/paper_6348.jpg,./dataset/skeleton_final_v2/paper/paper_6348.npy
+ok,ok_Set2_ (156),test,./data/raw/FullLabelled/ok/ok_Set2_ (156).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (156).npy
+the-finger,the-finger_7258,test,./data/raw/FullLabelled/the-finger/the-finger_7258.jpg,./dataset/skeleton_final_v2/the-finger/the-finger_7258.npy
+scissors,scissors-set2 (420),test,./data/raw/FullLabelled/scissors/scissors-set2 (420).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (420).npy
+the-finger,the-finger-set2 (67),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (67).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (67).npy
+scissors,scissors_6722,test,./data/raw/FullLabelled/scissors/scissors_6722.jpg,./dataset/skeleton_final_v2/scissors/scissors_6722.npy
+ok,ok_Set2_ (184),test,./data/raw/FullLabelled/ok/ok_Set2_ (184).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (184).npy
+the-finger,the-finger_6071,test,./data/raw/FullLabelled/the-finger/the-finger_6071.jpg,./dataset/skeleton_final_v2/the-finger/the-finger_6071.npy
+paper,paper_1031,test,./data/raw/FullLabelled/paper/paper_1031.jpg,./dataset/skeleton_final_v2/paper/paper_1031.npy
+paper,paper_5902,test,./data/raw/FullLabelled/paper/paper_5902.jpg,./dataset/skeleton_final_v2/paper/paper_5902.npy
+paper,paper-set2 (198),test,./data/raw/FullLabelled/paper/paper-set2 (198).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (198).npy
+ok,ok_Set2_ (120),test,./data/raw/FullLabelled/ok/ok_Set2_ (120).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (120).npy
+the-finger,the-finger-set2 (156),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (156).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (156).npy
+paper,paper-set2 (473),test,./data/raw/FullLabelled/paper/paper-set2 (473).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (473).npy
+paper,paper_7954,test,./data/raw/FullLabelled/paper/paper_7954.jpg,./dataset/skeleton_final_v2/paper/paper_7954.npy
+scissors,scissors-set2 (61),test,./data/raw/FullLabelled/scissors/scissors-set2 (61).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (61).npy
+the-finger,the-finger_6469,test,./data/raw/FullLabelled/the-finger/the-finger_6469.jpg,./dataset/skeleton_final_v2/the-finger/the-finger_6469.npy
+scissors,scissors-set2 (224),test,./data/raw/FullLabelled/scissors/scissors-set2 (224).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (224).npy
+ok,ok_7688,test,./data/raw/FullLabelled/ok/ok_7688.jpg,./dataset/skeleton_final_v2/ok/ok_7688.npy
+scissors,scissors_5193,test,./data/raw/FullLabelled/scissors/scissors_5193.jpg,./dataset/skeleton_final_v2/scissors/scissors_5193.npy
+the-finger,the-finger (143),test,./data/raw/FullLabelled/the-finger/the-finger (143).jpg,./dataset/skeleton_final_v2/the-finger/the-finger (143).npy
+rock,rock_3155,test,./data/raw/FullLabelled/rock/rock_3155.jpg,./dataset/skeleton_final_v2/rock/rock_3155.npy
+the-finger,the-finger_634,test,./data/raw/FullLabelled/the-finger/the-finger_634.jpg,./dataset/skeleton_final_v2/the-finger/the-finger_634.npy
+ok,ok_2652,test,./data/raw/FullLabelled/ok/ok_2652.jpg,./dataset/skeleton_final_v2/ok/ok_2652.npy
+ok,ok_Set2_ (121),test,./data/raw/FullLabelled/ok/ok_Set2_ (121).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (121).npy
+paper,paper_5890,test,./data/raw/FullLabelled/paper/paper_5890.jpg,./dataset/skeleton_final_v2/paper/paper_5890.npy
+paper,paper_5465,test,./data/raw/FullLabelled/paper/paper_5465.jpg,./dataset/skeleton_final_v2/paper/paper_5465.npy
+paper,paper-set2 (187),test,./data/raw/FullLabelled/paper/paper-set2 (187).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (187).npy
+the-finger,the-finger-set2 (420),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (420).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (420).npy
+paper,paper_6346,test,./data/raw/FullLabelled/paper/paper_6346.jpg,./dataset/skeleton_final_v2/paper/paper_6346.npy
+scissors,scissors-set2 (618),test,./data/raw/FullLabelled/scissors/scissors-set2 (618).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (618).npy
+the-finger,the-finger (85),test,./data/raw/FullLabelled/the-finger/the-finger (85).jpg,./dataset/skeleton_final_v2/the-finger/the-finger (85).npy
+ok,ok (24),test,./data/raw/FullLabelled/ok/ok (24).jpg,./dataset/skeleton_final_v2/ok/ok (24).npy
+the-finger,the-finger-set2 (330),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (330).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (330).npy
+ok,ok_6750,test,./data/raw/FullLabelled/ok/ok_6750.jpg,./dataset/skeleton_final_v2/ok/ok_6750.npy
+paper,paper_7143,test,./data/raw/FullLabelled/paper/paper_7143.jpg,./dataset/skeleton_final_v2/paper/paper_7143.npy
+scissors,scissors-set2 (257),test,./data/raw/FullLabelled/scissors/scissors-set2 (257).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (257).npy
+paper,paper-set2 (239),test,./data/raw/FullLabelled/paper/paper-set2 (239).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (239).npy
+scissors,scissors (188),test,./data/raw/FullLabelled/scissors/scissors (188).jpg,./dataset/skeleton_final_v2/scissors/scissors (188).npy
+scissors,scissors-set2 (15),test,./data/raw/FullLabelled/scissors/scissors-set2 (15).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (15).npy
+scissors,scissors-set2 (207),test,./data/raw/FullLabelled/scissors/scissors-set2 (207).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (207).npy
+the-finger,the-finger-set2 (387),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (387).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (387).npy
+scissors,scissors_5484,test,./data/raw/FullLabelled/scissors/scissors_5484.jpg,./dataset/skeleton_final_v2/scissors/scissors_5484.npy
+the-finger,the-finger_6081,test,./data/raw/FullLabelled/the-finger/the-finger_6081.jpg,./dataset/skeleton_final_v2/the-finger/the-finger_6081.npy
+scissors,scissors-set2 (371),test,./data/raw/FullLabelled/scissors/scissors-set2 (371).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (371).npy
+the-finger,the-finger_1366,test,./data/raw/FullLabelled/the-finger/the-finger_1366.jpg,./dataset/skeleton_final_v2/the-finger/the-finger_1366.npy
+ok,ok_Set2_ (562),test,./data/raw/FullLabelled/ok/ok_Set2_ (562).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (562).npy
+scissors,scissors-set2 (744),test,./data/raw/FullLabelled/scissors/scissors-set2 (744).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (744).npy
+scissors,scissors-set2 (685),test,./data/raw/FullLabelled/scissors/scissors-set2 (685).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (685).npy
+rock,rock-set2 (196),test,./data/raw/FullLabelled/rock/rock-set2 (196).jpg,./dataset/skeleton_final_v2/rock/rock-set2 (196).npy
+scissors,scissors-set2 (59),test,./data/raw/FullLabelled/scissors/scissors-set2 (59).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (59).npy
+scissors,scissors-set2 (639),test,./data/raw/FullLabelled/scissors/scissors-set2 (639).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (639).npy
+scissors,scissors-set2 (105),test,./data/raw/FullLabelled/scissors/scissors-set2 (105).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (105).npy
+paper,paper_6526,test,./data/raw/FullLabelled/paper/paper_6526.jpg,./dataset/skeleton_final_v2/paper/paper_6526.npy
+paper,paper (144),test,./data/raw/FullLabelled/paper/paper (144).jpg,./dataset/skeleton_final_v2/paper/paper (144).npy
+ok,ok_Set2_ (433),test,./data/raw/FullLabelled/ok/ok_Set2_ (433).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (433).npy
+paper,paper (169),test,./data/raw/FullLabelled/paper/paper (169).jpg,./dataset/skeleton_final_v2/paper/paper (169).npy
+scissors,scissors-set2 (164),test,./data/raw/FullLabelled/scissors/scissors-set2 (164).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (164).npy
+scissors,scissors (323),test,./data/raw/FullLabelled/scissors/scissors (323).jpg,./dataset/skeleton_final_v2/scissors/scissors (323).npy
+scissors,scissors-set2 (159),test,./data/raw/FullLabelled/scissors/scissors-set2 (159).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (159).npy
+scissors,scissors-set2 (612),test,./data/raw/FullLabelled/scissors/scissors-set2 (612).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (612).npy
+the-finger,the-finger-set2 (386),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (386).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (386).npy
+paper,paper (104),test,./data/raw/FullLabelled/paper/paper (104).jpg,./dataset/skeleton_final_v2/paper/paper (104).npy
+the-finger,the-finger-set2 (29),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (29).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (29).npy
+paper,paper-set2 (295),test,./data/raw/FullLabelled/paper/paper-set2 (295).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (295).npy
+ok,ok_Set2_ (489),test,./data/raw/FullLabelled/ok/ok_Set2_ (489).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (489).npy
+scissors,scissors-set2 (707),test,./data/raw/FullLabelled/scissors/scissors-set2 (707).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (707).npy
+scissors,scissors-set2 (359),test,./data/raw/FullLabelled/scissors/scissors-set2 (359).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (359).npy
+scissors,scissors (38),test,./data/raw/FullLabelled/scissors/scissors (38).jpg,./dataset/skeleton_final_v2/scissors/scissors (38).npy
+paper,paper-set2 (459),test,./data/raw/FullLabelled/paper/paper-set2 (459).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (459).npy
+ok,ok_Set2_ (521),test,./data/raw/FullLabelled/ok/ok_Set2_ (521).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (521).npy
+ok,ok_Set2_ (427),test,./data/raw/FullLabelled/ok/ok_Set2_ (427).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (427).npy
+the-finger,the-finger_7274,test,./data/raw/FullLabelled/the-finger/the-finger_7274.jpg,./dataset/skeleton_final_v2/the-finger/the-finger_7274.npy
+paper,paper_9132,test,./data/raw/FullLabelled/paper/paper_9132.jpg,./dataset/skeleton_final_v2/paper/paper_9132.npy
+ok,ok_Set2_ (144),test,./data/raw/FullLabelled/ok/ok_Set2_ (144).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (144).npy
+paper,paper_6926,test,./data/raw/FullLabelled/paper/paper_6926.jpg,./dataset/skeleton_final_v2/paper/paper_6926.npy
+scissors,scissors-set2 (533),test,./data/raw/FullLabelled/scissors/scissors-set2 (533).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (533).npy
+paper,paper_6514,test,./data/raw/FullLabelled/paper/paper_6514.jpg,./dataset/skeleton_final_v2/paper/paper_6514.npy
+paper,paper_7310,test,./data/raw/FullLabelled/paper/paper_7310.jpg,./dataset/skeleton_final_v2/paper/paper_7310.npy
+the-finger,the-finger_3486,test,./data/raw/FullLabelled/the-finger/the-finger_3486.jpg,./dataset/skeleton_final_v2/the-finger/the-finger_3486.npy
+the-finger,the-finger-set2 (254),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (254).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (254).npy
+paper,paper_3660,test,./data/raw/FullLabelled/paper/paper_3660.jpg,./dataset/skeleton_final_v2/paper/paper_3660.npy
+the-finger,the-finger-set2 (413),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (413).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (413).npy
+paper,paper (203),test,./data/raw/FullLabelled/paper/paper (203).jpg,./dataset/skeleton_final_v2/paper/paper (203).npy
+paper,paper-set2 (489),test,./data/raw/FullLabelled/paper/paper-set2 (489).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (489).npy
+ok,ok_Set2_ (436),test,./data/raw/FullLabelled/ok/ok_Set2_ (436).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (436).npy
+paper,paper (294),test,./data/raw/FullLabelled/paper/paper (294).jpg,./dataset/skeleton_final_v2/paper/paper (294).npy
+paper,paper-set2 (474),test,./data/raw/FullLabelled/paper/paper-set2 (474).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (474).npy
+ok,ok (205),test,./data/raw/FullLabelled/ok/ok (205).jpg,./dataset/skeleton_final_v2/ok/ok (205).npy
+scissors,scissors-set2 (313),test,./data/raw/FullLabelled/scissors/scissors-set2 (313).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (313).npy
+the-finger,the-finger_6287,test,./data/raw/FullLabelled/the-finger/the-finger_6287.jpg,./dataset/skeleton_final_v2/the-finger/the-finger_6287.npy
+the-finger,the-finger-set2 (20),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (20).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (20).npy
+scissors,scissors-set2 (737),test,./data/raw/FullLabelled/scissors/scissors-set2 (737).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (737).npy
+paper,paper (53),test,./data/raw/FullLabelled/paper/paper (53).jpg,./dataset/skeleton_final_v2/paper/paper (53).npy
+paper,paper (68),test,./data/raw/FullLabelled/paper/paper (68).jpg,./dataset/skeleton_final_v2/paper/paper (68).npy
+ok,ok_Set2_ (306),test,./data/raw/FullLabelled/ok/ok_Set2_ (306).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (306).npy
+paper,paper-set2 (371),test,./data/raw/FullLabelled/paper/paper-set2 (371).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (371).npy
+scissors,scissors_4627,test,./data/raw/FullLabelled/scissors/scissors_4627.jpg,./dataset/skeleton_final_v2/scissors/scissors_4627.npy
+paper,paper (129),test,./data/raw/FullLabelled/paper/paper (129).jpg,./dataset/skeleton_final_v2/paper/paper (129).npy
+scissors,scissors-set2 (357),test,./data/raw/FullLabelled/scissors/scissors-set2 (357).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (357).npy
+rock,rock (230),test,./data/raw/FullLabelled/rock/rock (230).jpg,./dataset/skeleton_final_v2/rock/rock (230).npy
+scissors,scissors-set2 (683),test,./data/raw/FullLabelled/scissors/scissors-set2 (683).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (683).npy
+scissors,scissors_2795,test,./data/raw/FullLabelled/scissors/scissors_2795.jpg,./dataset/skeleton_final_v2/scissors/scissors_2795.npy
+rock,rock-set2 (353),test,./data/raw/FullLabelled/rock/rock-set2 (353).jpg,./dataset/skeleton_final_v2/rock/rock-set2 (353).npy
+scissors,scissors (293),test,./data/raw/FullLabelled/scissors/scissors (293).jpg,./dataset/skeleton_final_v2/scissors/scissors (293).npy
+paper,paper_3650,test,./data/raw/FullLabelled/paper/paper_3650.jpg,./dataset/skeleton_final_v2/paper/paper_3650.npy
+the-finger,the-finger_616,test,./data/raw/FullLabelled/the-finger/the-finger_616.jpg,./dataset/skeleton_final_v2/the-finger/the-finger_616.npy
+scissors,scissors-set2 (654),test,./data/raw/FullLabelled/scissors/scissors-set2 (654).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (654).npy
+rock,rock-set2 (425),test,./data/raw/FullLabelled/rock/rock-set2 (425).jpg,./dataset/skeleton_final_v2/rock/rock-set2 (425).npy
+paper,paper (274),test,./data/raw/FullLabelled/paper/paper (274).jpg,./dataset/skeleton_final_v2/paper/paper (274).npy
+scissors,scissors_5735,test,./data/raw/FullLabelled/scissors/scissors_5735.jpg,./dataset/skeleton_final_v2/scissors/scissors_5735.npy
+the-finger,the-finger (60),test,./data/raw/FullLabelled/the-finger/the-finger (60).jpg,./dataset/skeleton_final_v2/the-finger/the-finger (60).npy
+the-finger,the-finger-set2 (421),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (421).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (421).npy
+rock,rock_7906,test,./data/raw/FullLabelled/rock/rock_7906.jpg,./dataset/skeleton_final_v2/rock/rock_7906.npy
+the-finger,the-finger_6060,test,./data/raw/FullLabelled/the-finger/the-finger_6060.jpg,./dataset/skeleton_final_v2/the-finger/the-finger_6060.npy
+paper,paper-set2 (16),test,./data/raw/FullLabelled/paper/paper-set2 (16).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (16).npy
+rock,rock_20,test,./data/raw/FullLabelled/rock/rock_20.jpg,./dataset/skeleton_final_v2/rock/rock_20.npy
+ok,ok (252),test,./data/raw/FullLabelled/ok/ok (252).jpg,./dataset/skeleton_final_v2/ok/ok (252).npy
+scissors,scissors_5229,test,./data/raw/FullLabelled/scissors/scissors_5229.jpg,./dataset/skeleton_final_v2/scissors/scissors_5229.npy
+the-finger,the-finger_1345,test,./data/raw/FullLabelled/the-finger/the-finger_1345.jpg,./dataset/skeleton_final_v2/the-finger/the-finger_1345.npy
+paper,paper-set2 (28),test,./data/raw/FullLabelled/paper/paper-set2 (28).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (28).npy
+scissors,scissors-set2 (437),test,./data/raw/FullLabelled/scissors/scissors-set2 (437).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (437).npy
+scissors,scissors-set2 (424),test,./data/raw/FullLabelled/scissors/scissors-set2 (424).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (424).npy
+ok,ok (37),test,./data/raw/FullLabelled/ok/ok (37).jpg,./dataset/skeleton_final_v2/ok/ok (37).npy
+ok,ok_Set2_ (333),test,./data/raw/FullLabelled/ok/ok_Set2_ (333).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (333).npy
+paper,paper_6700,test,./data/raw/FullLabelled/paper/paper_6700.jpg,./dataset/skeleton_final_v2/paper/paper_6700.npy
+the-finger,the-finger_6074,test,./data/raw/FullLabelled/the-finger/the-finger_6074.jpg,./dataset/skeleton_final_v2/the-finger/the-finger_6074.npy
+scissors,scissors (348),test,./data/raw/FullLabelled/scissors/scissors (348).jpg,./dataset/skeleton_final_v2/scissors/scissors (348).npy
+ok,ok_2959,test,./data/raw/FullLabelled/ok/ok_2959.jpg,./dataset/skeleton_final_v2/ok/ok_2959.npy
+scissors,scissors-set2 (559),test,./data/raw/FullLabelled/scissors/scissors-set2 (559).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (559).npy
+ok,ok (45),test,./data/raw/FullLabelled/ok/ok (45).jpg,./dataset/skeleton_final_v2/ok/ok (45).npy
+scissors,scissors-set2 (742),test,./data/raw/FullLabelled/scissors/scissors-set2 (742).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (742).npy
+the-finger,the-finger (5),test,./data/raw/FullLabelled/the-finger/the-finger (5).jpg,./dataset/skeleton_final_v2/the-finger/the-finger (5).npy
+scissors,scissors (294),test,./data/raw/FullLabelled/scissors/scissors (294).jpg,./dataset/skeleton_final_v2/scissors/scissors (294).npy
+rock,rock-set2 (185),test,./data/raw/FullLabelled/rock/rock-set2 (185).jpg,./dataset/skeleton_final_v2/rock/rock-set2 (185).npy
+paper,paper-set2 (171),test,./data/raw/FullLabelled/paper/paper-set2 (171).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (171).npy
+the-finger,the-finger_8650,test,./data/raw/FullLabelled/the-finger/the-finger_8650.jpg,./dataset/skeleton_final_v2/the-finger/the-finger_8650.npy
+the-finger,the-finger_7091,test,./data/raw/FullLabelled/the-finger/the-finger_7091.jpg,./dataset/skeleton_final_v2/the-finger/the-finger_7091.npy
+the-finger,the-finger_6301,test,./data/raw/FullLabelled/the-finger/the-finger_6301.jpg,./dataset/skeleton_final_v2/the-finger/the-finger_6301.npy
+scissors,scissors (216),test,./data/raw/FullLabelled/scissors/scissors (216).jpg,./dataset/skeleton_final_v2/scissors/scissors (216).npy
+ok,ok_Set2_ (536),test,./data/raw/FullLabelled/ok/ok_Set2_ (536).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (536).npy
+paper,paper_6696,test,./data/raw/FullLabelled/paper/paper_6696.jpg,./dataset/skeleton_final_v2/paper/paper_6696.npy
+scissors,scissors (449),test,./data/raw/FullLabelled/scissors/scissors (449).jpg,./dataset/skeleton_final_v2/scissors/scissors (449).npy
+ok,ok_Set2_ (238),test,./data/raw/FullLabelled/ok/ok_Set2_ (238).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (238).npy
+the-finger,the-finger (64),test,./data/raw/FullLabelled/the-finger/the-finger (64).jpg,./dataset/skeleton_final_v2/the-finger/the-finger (64).npy
+paper,paper_1035,test,./data/raw/FullLabelled/paper/paper_1035.jpg,./dataset/skeleton_final_v2/paper/paper_1035.npy
+paper,paper (31),test,./data/raw/FullLabelled/paper/paper (31).jpg,./dataset/skeleton_final_v2/paper/paper (31).npy
+rock,rock-set2 (341),test,./data/raw/FullLabelled/rock/rock-set2 (341).jpg,./dataset/skeleton_final_v2/rock/rock-set2 (341).npy
+rock,rock-set2 (47),test,./data/raw/FullLabelled/rock/rock-set2 (47).jpg,./dataset/skeleton_final_v2/rock/rock-set2 (47).npy
+scissors,scissors-set2 (20),test,./data/raw/FullLabelled/scissors/scissors-set2 (20).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (20).npy
+scissors,scissors (336),test,./data/raw/FullLabelled/scissors/scissors (336).jpg,./dataset/skeleton_final_v2/scissors/scissors (336).npy
+paper,paper_7611,test,./data/raw/FullLabelled/paper/paper_7611.jpg,./dataset/skeleton_final_v2/paper/paper_7611.npy
+ok,ok_4992,test,./data/raw/FullLabelled/ok/ok_4992.jpg,./dataset/skeleton_final_v2/ok/ok_4992.npy
+paper,paper_6712,test,./data/raw/FullLabelled/paper/paper_6712.jpg,./dataset/skeleton_final_v2/paper/paper_6712.npy
+scissors,scissors-set2 (643),test,./data/raw/FullLabelled/scissors/scissors-set2 (643).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (643).npy
+scissors,scissors_8782,test,./data/raw/FullLabelled/scissors/scissors_8782.jpg,./dataset/skeleton_final_v2/scissors/scissors_8782.npy
+ok,ok_Set2_ (40),test,./data/raw/FullLabelled/ok/ok_Set2_ (40).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (40).npy
+scissors,scissors-set2 (355),test,./data/raw/FullLabelled/scissors/scissors-set2 (355).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (355).npy
+scissors,scissors-set2 (354),test,./data/raw/FullLabelled/scissors/scissors-set2 (354).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (354).npy
+paper,paper-set2 (116),test,./data/raw/FullLabelled/paper/paper-set2 (116).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (116).npy
+paper,paper-set2 (147),test,./data/raw/FullLabelled/paper/paper-set2 (147).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (147).npy
+scissors,scissors-set2 (471),test,./data/raw/FullLabelled/scissors/scissors-set2 (471).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (471).npy
+scissors,scissors_8450,test,./data/raw/FullLabelled/scissors/scissors_8450.jpg,./dataset/skeleton_final_v2/scissors/scissors_8450.npy
+ok,ok_5260,test,./data/raw/FullLabelled/ok/ok_5260.jpg,./dataset/skeleton_final_v2/ok/ok_5260.npy
+scissors,scissors_4671,test,./data/raw/FullLabelled/scissors/scissors_4671.jpg,./dataset/skeleton_final_v2/scissors/scissors_4671.npy
+paper,paper-set2 (230),test,./data/raw/FullLabelled/paper/paper-set2 (230).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (230).npy
+scissors,scissors-set2 (274),test,./data/raw/FullLabelled/scissors/scissors-set2 (274).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (274).npy
+paper,paper-set2 (252),test,./data/raw/FullLabelled/paper/paper-set2 (252).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (252).npy
+the-finger,the-finger_9058,test,./data/raw/FullLabelled/the-finger/the-finger_9058.jpg,./dataset/skeleton_final_v2/the-finger/the-finger_9058.npy
+scissors,scissors_2721,test,./data/raw/FullLabelled/scissors/scissors_2721.jpg,./dataset/skeleton_final_v2/scissors/scissors_2721.npy
+paper,paper (280),test,./data/raw/FullLabelled/paper/paper (280).jpg,./dataset/skeleton_final_v2/paper/paper (280).npy
+rock,rock (265),test,./data/raw/FullLabelled/rock/rock (265).jpg,./dataset/skeleton_final_v2/rock/rock (265).npy
+scissors,scissors_7186,test,./data/raw/FullLabelled/scissors/scissors_7186.jpg,./dataset/skeleton_final_v2/scissors/scissors_7186.npy
+scissors,scissors (210),test,./data/raw/FullLabelled/scissors/scissors (210).jpg,./dataset/skeleton_final_v2/scissors/scissors (210).npy
+the-finger,the-finger-set2 (217),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (217).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (217).npy
+paper,paper_6116,test,./data/raw/FullLabelled/paper/paper_6116.jpg,./dataset/skeleton_final_v2/paper/paper_6116.npy
+scissors,scissors_2758,test,./data/raw/FullLabelled/scissors/scissors_2758.jpg,./dataset/skeleton_final_v2/scissors/scissors_2758.npy
+ok,ok_Set2_ (357),test,./data/raw/FullLabelled/ok/ok_Set2_ (357).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (357).npy
+ok,ok_Set2_ (212),test,./data/raw/FullLabelled/ok/ok_Set2_ (212).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (212).npy
+paper,paper-set2 (297),test,./data/raw/FullLabelled/paper/paper-set2 (297).jpg,./dataset/skeleton_final_v2/paper/paper-set2 (297).npy
+ok,ok_Set2_ (17),test,./data/raw/FullLabelled/ok/ok_Set2_ (17).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (17).npy
+scissors,scissors_1121,test,./data/raw/FullLabelled/scissors/scissors_1121.jpg,./dataset/skeleton_final_v2/scissors/scissors_1121.npy
+ok,ok_Set2_ (166),test,./data/raw/FullLabelled/ok/ok_Set2_ (166).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (166).npy
+ok,ok_Set2_ (50),test,./data/raw/FullLabelled/ok/ok_Set2_ (50).jpg,./dataset/skeleton_final_v2/ok/ok_Set2_ (50).npy
+the-finger,the-finger_7495,test,./data/raw/FullLabelled/the-finger/the-finger_7495.jpg,./dataset/skeleton_final_v2/the-finger/the-finger_7495.npy
+rock,rock_688,test,./data/raw/FullLabelled/rock/rock_688.jpg,./dataset/skeleton_final_v2/rock/rock_688.npy
+scissors,scissors-set2 (283),test,./data/raw/FullLabelled/scissors/scissors-set2 (283).jpg,./dataset/skeleton_final_v2/scissors/scissors-set2 (283).npy
+the-finger,the-finger-set2 (86),test,./data/raw/FullLabelled/the-finger/the-finger-set2 (86).jpg,./dataset/skeleton_final_v2/the-finger/the-finger-set2 (86).npy
+ok,ok_5293,test,./data/raw/FullLabelled/ok/ok_5293.jpg,./dataset/skeleton_final_v2/ok/ok_5293.npy
+paper,paper_8734,test,./data/raw/FullLabelled/paper/paper_8734.jpg,./dataset/skeleton_final_v2/paper/paper_8734.npy
+rock,rock (13),test,./data/raw/FullLabelled/rock/rock (13).jpg,./dataset/skeleton_final_v2/rock/rock (13).npy

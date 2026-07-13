@@ -1,0 +1,47 @@
+{
+  "protocol": "fitted single-view baseline; fair control for fitted+Blender8",
+  "best_epoch": 27,
+  "best_val_acc": 1.0,
+  "evaluations": {
+    "salux_fitted": {
+      "accuracy": 0.9989827060020345,
+      "balanced_accuracy": 0.9965986394557823,
+      "macro_f1": 0.99754104620084,
+      "weighted_f1": 0.9989797228718688,
+      "rows": 983
+    },
+    "salux_raw": {
+      "accuracy": 0.18921668362156663,
+      "balanced_accuracy": 0.1842976891130984,
+      "macro_f1": 0.07720883065112623,
+      "weighted_f1": 0.06697898920662783,
+      "rows": 983
+    },
+    "droh_raw": {
+      "accuracy": 0.2074074074074074,
+      "balanced_accuracy": 0.19266055045871558,
+      "macro_f1": 0.09415280275779377,
+      "weighted_f1": 0.09786712296829204,
+      "rows": 675
+    },
+    "droh_fitted_oracle": {
+      "accuracy": 0.8177777777777778,
+      "balanced_accuracy": 0.8315522785867988,
+      "macro_f1": 0.7735267057884957,
+      "weighted_f1": 0.7616929878419977,
+      "rows": 675
+    }
+  },
+  "settings": {
+    "normalization": "wrist-middle-MCP",
+    "batch_size": 64,
+    "optimizer": "Adam",
+    "lr": 0.001,
+    "hidden_dim": 128,
+    "seed": 42,
+    "max_epochs": 150,
+    "patience": 20
+  },
+  "warning": "DrOh fitted is a ground-truth class-template oracle diagnostic.",
+  "checkpoint": "./results/fitted_baseline_6cls/best.pt"
+}

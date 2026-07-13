@@ -1,0 +1,47 @@
+{
+  "valid_for_requested_protocol": true,
+  "protocol": "fitted Salux anchor + 8 camera-space views generated from fitted anchor",
+  "best_epoch": 27,
+  "best_val_acc": 0.9989816700610998,
+  "evaluations": {
+    "salux_fitted": {
+      "accuracy": 0.9989827060020345,
+      "balanced_accuracy": 0.9992138364779874,
+      "macro_f1": 0.9988652482269503,
+      "weighted_f1": 0.9989837641801885,
+      "rows": 983
+    },
+    "salux_raw": {
+      "accuracy": 0.474059003051882,
+      "balanced_accuracy": 0.4675811145154902,
+      "macro_f1": 0.39917296714272954,
+      "weighted_f1": 0.39918813991808677,
+      "rows": 983
+    },
+    "droh_raw": {
+      "accuracy": 0.36148148148148146,
+      "balanced_accuracy": 0.35282031657521057,
+      "macro_f1": 0.31154257742510383,
+      "weighted_f1": 0.31677944164214394,
+      "rows": 675
+    },
+    "droh_fitted_oracle": {
+      "accuracy": 0.8933333333333333,
+      "balanced_accuracy": 0.9010639988422149,
+      "macro_f1": 0.8896852143534066,
+      "weighted_f1": 0.8855051249510439,
+      "rows": 675
+    }
+  },
+  "external_protocol": "DrOh raw single-view only; no fitting and no multiview",
+  "classes": {
+    "ok": 0,
+    "paper": 1,
+    "rock": 2,
+    "scissors": 3,
+    "the-finger": 4,
+    "thumb": 5
+  },
+  "checkpoint": "./results/fitted_anchor_multiview_6cls/best.pt",
+  "warning": "DrOh fitted is a ground-truth class-template oracle diagnostic."
+}

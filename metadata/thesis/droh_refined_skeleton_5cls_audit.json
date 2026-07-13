@@ -1,0 +1,16 @@
+{
+  "source_rows_5cls": 553,
+  "matched_rows": 553,
+  "missing_count": 0,
+  "invalid_count": 0,
+  "missing": [],
+  "invalid": [],
+  "class_counts": {
+    "ok": 106,
+    "paper": 123,
+    "rock": 109,
+    "scissors": 112,
+    "the-finger": 103
+  },
+  "refined_root": "./data/droh_refined"
+}

@@ -1,0 +1,26 @@
+{
+  "source_rows": 675,
+  "matched_rows": 675,
+  "missing_count": 0,
+  "invalid_count": 0,
+  "missing": [],
+  "invalid": [],
+  "class_counts_merged": {
+    "ok": 106,
+    "paper": 123,
+    "rock": 109,
+    "scissors": 112,
+    "the-finger": 103,
+    "thumb": 122
+  },
+  "source_action_counts": {
+    "ok": 106,
+    "paper": 123,
+    "rock": 109,
+    "scissors": 112,
+    "the-finger": 103,
+    "thumbdown": 52,
+    "thumbup": 70
+  },
+  "warning": "Fitted DrOh uses the ground-truth class to select a template; oracle diagnostic only."
+}

@@ -1,0 +1,36 @@
+{
+  "protocol": "fair five-seed probability ensembles; same raw normalized single-view inference",
+  "seeds": [
+    0,
+    1,
+    7,
+    21,
+    42
+  ],
+  "baseline": {
+    "name": "Raw single-view baseline",
+    "training_views": 0,
+    "consistency_lambda": 0.0,
+    "correct": 518,
+    "rows": 675,
+    "accuracy": 0.7674074074074074,
+    "macro_f1": 0.7575434389351728
+  },
+  "final": {
+    "name": "Blender8 + consistency fine-tune",
+    "training_views": 8,
+    "consistency_lambda": 0.3,
+    "correct": 576,
+    "rows": 675,
+    "accuracy": 0.8533333333333334,
+    "macro_f1": 0.8519409417351459
+  },
+  "difference_pp": 8.592592592592595,
+  "baseline_only_correct": 20,
+  "final_only_correct": 78,
+  "mcnemar_p": 2.8720914669754686e-09,
+  "bootstrap_95ci_pp": [
+    5.777777777777782,
+    11.40740740740741
+  ]
+}
