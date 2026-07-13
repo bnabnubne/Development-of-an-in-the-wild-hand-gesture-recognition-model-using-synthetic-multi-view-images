@@ -1,0 +1,32 @@
+{
+  "experiment": "gru_mv8_lambda0.3",
+  "backbone": "gru",
+  "seed": 42,
+  "num_views": 8,
+  "consistency_weight": 0.3,
+  "batch_size": 64,
+  "learning_rate": 0.001,
+  "max_epochs": 150,
+  "patience": 20,
+  "selection_set": "CanonicalSet validation only",
+  "best_epoch": 128,
+  "best_val_accuracy": 0.9531568228105907,
+  "canonical_test_accuracy": 0.9460834181078331,
+  "handinwild_test_accuracy": 0.7585185185185185,
+  "split_sizes": {
+    "train": 4582,
+    "validation": 982,
+    "canonical_test": 983,
+    "handinwild_test": 675
+  },
+  "class_names": [
+    "ok",
+    "paper",
+    "rock",
+    "scissors",
+    "the-finger",
+    "thumbdown",
+    "thumbup"
+  ],
+  "device": "cpu"
+}

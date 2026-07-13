@@ -1,0 +1,13 @@
+              precision    recall  f1-score   support
+
+          ok     0.9747    0.9448    0.9595       163
+       paper     1.0000    1.0000    1.0000       180
+        rock     0.6591    0.5918    0.6237        49
+    scissors     0.9761    0.9623    0.9691       212
+  the-finger     0.8047    0.9196    0.8583       112
+   thumbdown     0.8878    0.7016    0.7838       124
+     thumbup     0.7048    0.8182    0.7573       143
+
+    accuracy                         0.8891       983
+   macro avg     0.8582    0.8483    0.8502       983
+weighted avg     0.8943    0.8891    0.8891       983

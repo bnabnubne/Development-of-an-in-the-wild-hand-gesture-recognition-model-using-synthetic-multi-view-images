@@ -1,0 +1,24 @@
+{
+  "num_samples": 675,
+  "num_shape_ok": 675,
+  "num_has_nan": 0,
+  "num_has_inf": 0,
+  "num_wrist_ok": 675,
+  "num_mid_scale_ok": 675,
+  "wrist_norm_mean": 0.0,
+  "wrist_norm_std": 0.0,
+  "mid_scale_mean": 0.9999954880608453,
+  "mid_scale_std": 3.634069504369714e-06,
+  "mean_mean": 0.01967107479012123,
+  "std_mean": 0.7306877932725129,
+  "num_outliers": 0,
+  "per_class_counts": {
+    "paper": 123,
+    "scissors": 112,
+    "rock": 109,
+    "ok": 106,
+    "the-finger": 103,
+    "thumbup": 70,
+    "thumbdown": 52
+  }
+}

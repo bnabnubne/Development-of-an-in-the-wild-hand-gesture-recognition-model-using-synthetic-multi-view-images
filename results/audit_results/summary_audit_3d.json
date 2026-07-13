@@ -1,0 +1,48 @@
+{
+  "salux_3d": {
+    "num_samples": 6547,
+    "num_shape_ok": 6547,
+    "num_has_nan": 0,
+    "num_has_inf": 0,
+    "num_wrist_ok": 6547,
+    "num_mid_scale_ok": 6547,
+    "wrist_norm_mean": 0.0,
+    "wrist_norm_std": 0.0,
+    "mid_scale_mean": 0.9999966846088498,
+    "mid_scale_std": 5.510207425736914e-07,
+    "palm_sign_z_mean": 1.0,
+    "num_outliers": 0,
+    "per_class_counts": {
+      "scissors": 1413,
+      "paper": 1200,
+      "ok": 1083,
+      "thumbup": 952,
+      "thumbdown": 823,
+      "the-finger": 751,
+      "rock": 325
+    }
+  },
+  "droh_3d": {
+    "num_samples": 675,
+    "num_shape_ok": 675,
+    "num_has_nan": 0,
+    "num_has_inf": 0,
+    "num_wrist_ok": 675,
+    "num_mid_scale_ok": 675,
+    "wrist_norm_mean": 0.0,
+    "wrist_norm_std": 0.0,
+    "mid_scale_mean": 0.9999957045802363,
+    "mid_scale_std": 7.512041142597361e-07,
+    "palm_sign_z_mean": 1.0,
+    "num_outliers": 0,
+    "per_class_counts": {
+      "paper": 123,
+      "scissors": 112,
+      "rock": 109,
+      "ok": 106,
+      "the-finger": 103,
+      "thumbup": 70,
+      "thumbdown": 52
+    }
+  }
+}

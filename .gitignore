@@ -1,0 +1,27 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+*.log
+
+# Large/raw datasets and generated arrays
+dataset/
+test/
+render_context/
+debug_raw_skeleton_*/
+*.npy
+*.npz
+*.zip
+
+# Model/checkpoint artifacts
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# Blender backup/cache files
+*.blend1
+*.blend2
+
+# Local PDF inspection exports
+pdf_check_*/
+
