@@ -1,4 +1,3 @@
-"""Audit and summarize the normalized Blender8 raw-domain consistency sweep."""
 
 from __future__ import annotations
 
@@ -122,28 +121,20 @@ def main():
     (OUT / "protocol_and_selection.json").write_text(json.dumps(protocol, indent=2), encoding="utf-8")
 
     lines = [
-        "# Normalized Blender8 Consistency Lambda Sweep", "",
+        "Normalized Blender8 consistency lambda sweep", "",
         "All mean +/- SD values use three seeds (0, 1, 42); SD is sample SD (ddof=1).", "",
-        "| lambda | Salux val acc | Salux test acc | DrOh acc | DrOh macro-F1 | Ensemble DrOh |",
-        "|---:|---:|---:|---:|---:|---:|",
     ]
     for _, row in aggregate.iterrows():
         weight = float(row["lambda"])
         ens = ensemble_frame[ensemble_frame["lambda"] == weight].iloc[0]
-        lines.append(
-            f"| {weight:g} | {100*row['salux_val_mean']:.2f} +/- {100*row['salux_val_std']:.2f} | "
-            f"{100*row['salux_test_mean']:.2f} +/- {100*row['salux_test_std']:.2f} | "
-            f"{100*row['droh_accuracy_mean']:.2f} +/- {100*row['droh_accuracy_std']:.2f} | "
-            f"{100*row['droh_macro_f1_mean']:.2f} +/- {100*row['droh_macro_f1_std']:.2f} | "
-            f"{100*ens.accuracy:.2f} ({int(ens.correct)}/675) |"
-        )
+        lines.append(f"lambda {weight:g}: Salux val {100*row['salux_val_mean']:.2f} +/- {100*row['salux_val_std']:.2f}, Salux test {100*row['salux_test_mean']:.2f} +/- {100*row['salux_test_std']:.2f}, DrOh {100*row['droh_accuracy_mean']:.2f} +/- {100*row['droh_accuracy_std']:.2f}, macro F1 {100*row['droh_macro_f1_mean']:.2f} +/- {100*row['droh_macro_f1_std']:.2f}, ensemble {100*ens.accuracy:.2f} ({int(ens.correct)}/675)")
     lines += [
-        "", f"Validation-selected lambda: **{selected_weight:g}**.",
+        "", f"Validation-selected lambda: {selected_weight:g}.",
         f"Descriptive best mean DrOh lambda (not selection): {descriptive_droh_best:g}.",
         f"Descriptive best ensemble DrOh lambda (not selection): {descriptive_ensemble_best:g}.",
         "", "The selected model must be reported using the validation-selected lambda; DrOh sweep maxima are descriptive only.",
     ]
-    (OUT / "FINAL_REPORT.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    (OUT / "final_report.txt").write_text("\n".join(lines) + "\n", encoding="utf-8")
     print("\n".join(lines))
 
 

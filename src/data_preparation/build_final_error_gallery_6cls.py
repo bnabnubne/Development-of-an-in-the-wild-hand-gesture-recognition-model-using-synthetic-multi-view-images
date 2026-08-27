@@ -1,4 +1,3 @@
-"""Export real RGB failure cases of the final five-seed model for defense slides."""
 
 from __future__ import annotations
 
@@ -174,7 +173,6 @@ def main():
         cv2.imwrite(str(OUT / "top_6_confusion_pairs_contact_sheet.jpg"), overview,
                     [cv2.IMWRITE_JPEG_QUALITY, 94])
 
-    # Compact 16:9 overview for direct insertion into a defense slide.
     slide = np.full((1080, 1920, 3), (15, 17, 22), dtype=np.uint8)
     cv2.putText(slide, "Representative errors from the final model (top confusion pairs)",
                 (42, 58), cv2.FONT_HERSHEY_SIMPLEX, 1.05, (245, 245, 245), 2, cv2.LINE_AA)
@@ -196,21 +194,26 @@ def main():
     cv2.imwrite(str(OUT / "slide_top_6_confusions_16x9.jpg"), slide,
                 [cv2.IMWRITE_JPEG_QUALITY, 95])
 
-    readme = f"""# Final-model DrOh Error Gallery
+    readme = f"""Final model DrOh error gallery
 
-- Model: five-seed Blender8 + consistency lambda=0.3 probability ensemble.
-- DrOh post-filter result: 531/605 correct (87.77%); 74 misclassified samples.
-- Folders are ranked by confusion-pair frequency and named `ground_truth_to_prediction`.
-- Each pair contains available untouched RGB copies, annotated copies, and a contact sheet.
-- Every sample in this post-filter gallery has its current source RGB image.
-- `confusion_pairs.csv` contains pair counts; `all_errors.csv` maps every exported image.
-- `top_6_confusion_pairs_contact_sheet.jpg` is a ready-to-use visual overview for slides.
-- `slide_top_6_confusions_16x9.jpg` is the compact 1920x1080 slide-ready version.
+Model:
+five-seed Blender8 + consistency lambda 0.3 probability ensemble
 
-The folder ranking and `confusion_pairs.csv` are the source of truth for the largest
-remaining confusion pairs after filtering.
+DrOh post-filter result:
+531 of 605 correct
+87.77 percent accuracy
+74 misclassified samples
+
+Folder naming:
+ground_truth_to_prediction
+
+Files:
+confusion_pairs.csv stores pair counts
+all_errors.csv maps exported images
+top_6_confusion_pairs_contact_sheet.jpg stores the main contact sheet
+slide_top_6_confusions_16x9.jpg stores a 1920x1080 contact sheet
 """
-    (OUT / "README.md").write_text(readme, encoding="utf-8")
+    (OUT / "notes.txt").write_text(readme, encoding="utf-8")
     print(f"Exported {len(exported_rows)} errors across {len(pair_counts)} confusion pairs to {OUT}")
 
 

@@ -1,9 +1,3 @@
-"""Re-audit all saved DrOh predictions against the post-filter RGB dataset snapshot.
-
-This script never edits old checkpoints, manifests, or result folders. It derives the
-valid subset by requiring both membership in the locked 675-row manifest and existence
-of the source RGB image after the later Scissors filtering step.
-"""
 
 from __future__ import annotations
 
@@ -205,21 +199,34 @@ def main():
     }
     (OUT / "audit.json").write_text(json.dumps(snapshot,indent=2),encoding="utf-8")
 
-    report=f"""# DrOh Post-filter Audit (605 samples)
+    report=f"""DrOh post-filter audit, 605 samples
 
 The 675-row manifest was created before the later Scissors RGB filtering. Seventy rows
 still had cached skeletons but no longer had a source RGB image. The reproducible current
 snapshot contains 605 samples: 106 OK, 123 Paper, 109 Rock, 42 Scissors, 103 The-Finger,
 52 Thumbdown, and 70 Thumbup.
 
-## Key five-model ensembles
+Key five-model ensembles
 
-| System | Accuracy | Macro-F1 |
-|---|---:|---:|
-| Raw single-view baseline | {100*key_metrics['raw_baseline_5ensemble']['accuracy']:.2f}% ({key_metrics['raw_baseline_5ensemble']['correct']}/605) | {100*key_metrics['raw_baseline_5ensemble']['macro_f1']:.2f}% |
-| Blender8 CE checkpoint | {100*key_metrics['ce_checkpoint_5ensemble']['accuracy']:.2f}% ({key_metrics['ce_checkpoint_5ensemble']['correct']}/605) | {100*key_metrics['ce_checkpoint_5ensemble']['macro_f1']:.2f}% |
-| Matched low-LR CE control | {100*key_metrics['low_lr_ce_control_5ensemble']['accuracy']:.2f}% ({key_metrics['low_lr_ce_control_5ensemble']['correct']}/605) | {100*key_metrics['low_lr_ce_control_5ensemble']['macro_f1']:.2f}% |
-| Low-LR consistency lambda=0.3 | {100*key_metrics['low_lr_consistency_5ensemble']['accuracy']:.2f}% ({key_metrics['low_lr_consistency_5ensemble']['correct']}/605) | {100*key_metrics['low_lr_consistency_5ensemble']['macro_f1']:.2f}% |
+Raw single-view baseline:
+accuracy {100*key_metrics['raw_baseline_5ensemble']['accuracy']:.2f} percent
+correct {key_metrics['raw_baseline_5ensemble']['correct']} of 605
+macro F1 {100*key_metrics['raw_baseline_5ensemble']['macro_f1']:.2f} percent
+
+Blender8 CE checkpoint:
+accuracy {100*key_metrics['ce_checkpoint_5ensemble']['accuracy']:.2f} percent
+correct {key_metrics['ce_checkpoint_5ensemble']['correct']} of 605
+macro F1 {100*key_metrics['ce_checkpoint_5ensemble']['macro_f1']:.2f} percent
+
+Matched low-LR CE control:
+accuracy {100*key_metrics['low_lr_ce_control_5ensemble']['accuracy']:.2f} percent
+correct {key_metrics['low_lr_ce_control_5ensemble']['correct']} of 605
+macro F1 {100*key_metrics['low_lr_ce_control_5ensemble']['macro_f1']:.2f} percent
+
+Low-LR consistency lambda 0.3:
+accuracy {100*key_metrics['low_lr_consistency_5ensemble']['accuracy']:.2f} percent
+correct {key_metrics['low_lr_consistency_5ensemble']['correct']} of 605
+macro F1 {100*key_metrics['low_lr_consistency_5ensemble']['macro_f1']:.2f} percent
 
 Full pipeline: raw baseline to final is +{comparisons['raw_baseline_vs_final']['difference_pp']:.2f} pp,
 McNemar p={comparisons['raw_baseline_vs_final']['mcnemar_p']:.6g}.
@@ -229,14 +236,19 @@ Consistency-only matched comparison: CE control to lambda=0.3 is
 McNemar p={comparisons['matched_ce_control_vs_final']['mcnemar_p']:.6g}. Therefore the
 filtered snapshot does not support a statistically significant consistency-only gain.
 
-## Paper-controlled seed42 checkpoints on the filtered snapshot
+Paper-controlled seed42 checkpoints on the filtered snapshot
 
-- Raw baseline: {100*paper_metrics['baseline']['accuracy']:.2f}% ({paper_metrics['baseline']['correct']}/605).
-- Blender8 consistency lambda=0.3: {100*paper_metrics['mv']['accuracy']:.2f}% ({paper_metrics['mv']['correct']}/605).
+Raw baseline:
+{100*paper_metrics['baseline']['accuracy']:.2f} percent
+{paper_metrics['baseline']['correct']} of 605 correct
+
+Blender8 consistency lambda 0.3:
+{100*paper_metrics['mv']['accuracy']:.2f} percent
+{paper_metrics['mv']['correct']} of 605 correct
 
 Old 675-row artifacts remain untouched and must be labelled pre-filter/historical.
 """
-    (OUT/"FINAL_REPORT.md").write_text(report,encoding="utf-8")
+    (OUT/"final_report.txt").write_text(report,encoding="utf-8")
     print(report)
 
 

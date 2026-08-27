@@ -1,4 +1,3 @@
-"""Aggregate clean 2x2 runs and evaluate held-out synthetic camera angles."""
 
 from __future__ import annotations
 
@@ -126,31 +125,28 @@ def main():
 
     def pct(value): return f"{100*value:.2f}"
     lines = [
-        "# Clean Viewpoint Factorial 6-Class Results", "",
-        "All values are mean ± sample standard deviation across seeds 0, 1, and 42.", "",
-        "| Config | Salux test acc | DrOh acc | DrOh macro-F1 |",
-        "|---|---:|---:|---:|",
+        "Clean viewpoint factorial 6-class results", "",
+        "All values are mean +/- sample standard deviation across seeds 0, 1, and 42.", "",
+        "Aggregate results", "",
     ]
     for row in aggregate.itertuples(index=False):
-        lines.append(f"| {row.config} | {pct(row.salux_accuracy_mean)} ± {pct(row.salux_accuracy_std)} | {pct(row.droh_accuracy_mean)} ± {pct(row.droh_accuracy_std)} | {pct(row.droh_macro_f1_mean)} ± {pct(row.droh_macro_f1_std)} |")
-    lines += ["", "## Unseen-angle Salux accuracy", "", "| Config | -30° | 15° | 75° | 105° | 150° |", "|---|---:|---:|---:|---:|---:|"]
+        lines.append(f"{row.config}: Salux {pct(row.salux_accuracy_mean)} +/- {pct(row.salux_accuracy_std)}, DrOh {pct(row.droh_accuracy_mean)} +/- {pct(row.droh_accuracy_std)}, macro F1 {pct(row.droh_macro_f1_mean)} +/- {pct(row.droh_macro_f1_std)}")
+    lines += ["", "Unseen-angle Salux accuracy", ""]
     for config in exp.CONFIGS:
         subset = angle_aggregate[angle_aggregate.config == config].set_index("angle")
         values = [f"{pct(subset.loc[a].accuracy_mean)} ± {pct(subset.loc[a].accuracy_std)}" for a in UNSEEN_ANGLES]
-        lines.append("| " + config + " | " + " | ".join(values) + " |")
+        lines.append(config + ": " + ", ".join(f"{angle} deg {value.replace('±', '+/-')}" for angle, value in zip(UNSEEN_ANGLES, values)))
     lines += [
-        "", "## Paired 3-seed probability ensembles on DrOh", "",
-        f"- Camera-coordinate MV − single: **{paired['camera_mv_minus_single']['difference_percentage_points']:+.2f} pp**, exact McNemar p = {paired['camera_mv_minus_single']['mcnemar_exact_p']:.3g}, bootstrap 95% CI [{paired['camera_mv_minus_single']['bootstrap_95_ci_percentage_points'][0]:.2f}, {paired['camera_mv_minus_single']['bootstrap_95_ci_percentage_points'][1]:.2f}] pp.",
-        f"- Canonical MV − single: **{paired['canonical_mv_minus_single']['difference_percentage_points']:+.2f} pp**, exact McNemar p = {paired['canonical_mv_minus_single']['mcnemar_exact_p']:.3g}, bootstrap 95% CI [{paired['canonical_mv_minus_single']['bootstrap_95_ci_percentage_points'][0]:.2f}, {paired['canonical_mv_minus_single']['bootstrap_95_ci_percentage_points'][1]:.2f}] pp.",
-        "", "## Protocol", "",
-        "- Same 4,582 Salux train anchors and fixed train/val/test split.",
-        "- Same GRU, CE-only loss, batch size, optimizer, early stopping, and optimizer-step budget.",
-        "- MV samples exactly one of identity + Blender8 per anchor/update.",
-        "- Shuffle RNG is separated from view-selection RNG.",
-        "- DrOh is single-view evaluation only: no fitting, no TTA, no checkpoint selection.",
-        "- `camera_*` keeps camera-relative palm orientation; `canonical_*` applies palm-axis alignment.",
+        "", "Paired 3-seed probability ensembles on DrOh", "",
+        f"Camera-coordinate MV minus single: {paired['camera_mv_minus_single']['difference_percentage_points']:+.2f} pp, McNemar p = {paired['camera_mv_minus_single']['mcnemar_exact_p']:.3g}, bootstrap 95 percent CI [{paired['camera_mv_minus_single']['bootstrap_95_ci_percentage_points'][0]:.2f}, {paired['camera_mv_minus_single']['bootstrap_95_ci_percentage_points'][1]:.2f}] pp.",
+        f"Canonical MV minus single: {paired['canonical_mv_minus_single']['difference_percentage_points']:+.2f} pp, McNemar p = {paired['canonical_mv_minus_single']['mcnemar_exact_p']:.3g}, bootstrap 95 percent CI [{paired['canonical_mv_minus_single']['bootstrap_95_ci_percentage_points'][0]:.2f}, {paired['canonical_mv_minus_single']['bootstrap_95_ci_percentage_points'][1]:.2f}] pp.",
+        "", "Protocol", "",
+        "Same Salux split, GRU, CE loss, batch size, optimizer, early stopping, and optimizer-step budget.",
+        "DrOh is single-view evaluation only.",
+        "camera_* keeps camera-relative palm orientation.",
+        "canonical_* applies palm-axis alignment.",
     ]
-    (OUT / "FINAL_REPORT.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    (OUT / "final_report.txt").write_text("\n".join(lines) + "\n", encoding="utf-8")
     print("\n".join(lines))
 
 

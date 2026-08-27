@@ -1,4 +1,3 @@
-"""Aggregate post-submission experiments into defense-ready tables and figures."""
 
 from __future__ import annotations
 
@@ -312,22 +311,22 @@ def ensemble_figures(ensembles):
     plt.close(fig)
 
 
-def write_markdown(runs, aggregate, paired, ensembles):
+def write_report(runs, aggregate, paired, ensembles):
     lines = [
-        "# Post-submission defense experiments", "",
+        "Post-submission experiment summary", "",
         "DrOh was used only for final external evaluation. Checkpoints were selected using Salux validation accuracy.", "",
-        "## Aggregate results", "",
-        aggregate.to_markdown(index=False, floatfmt=".6f") if len(aggregate) else "No complete runs.", "",
-        "## Paired DrOh comparisons", "",
+        "Aggregate results", "",
+        aggregate.to_string(index=False, float_format=lambda value: f"{value:.6f}") if len(aggregate) else "No complete runs.", "",
+        "Paired DrOh comparisons", "",
     ]
     if paired:
-        lines.append(pd.DataFrame(paired).to_markdown(index=False, floatfmt=".6f"))
+        lines.append(pd.DataFrame(paired).to_string(index=False, float_format=lambda value: f"{value:.6f}"))
     else:
         lines.append("Core paired comparisons are not complete yet.")
-    lines.extend(["", "## Fixed three-seed ensembles", ""])
-    lines.append(ensembles.to_markdown(index=False, floatfmt=".6f") if len(ensembles) else "No ensemble results.")
-    lines.extend(["", "## Individual runs", "", runs.to_markdown(index=False, floatfmt=".6f")])
-    (OUT_ROOT / "DEFENSE_EXPERIMENT_REPORT.md").write_text("\n".join(lines), encoding="utf-8")
+    lines.extend(["", "Fixed three-seed ensembles", ""])
+    lines.append(ensembles.to_string(index=False, float_format=lambda value: f"{value:.6f}") if len(ensembles) else "No ensemble results.")
+    lines.extend(["", "Individual runs", "", runs.to_string(index=False, float_format=lambda value: f"{value:.6f}")])
+    (OUT_ROOT / "defense_experiment_report.txt").write_text("\n".join(lines), encoding="utf-8")
 
 
 def main():
@@ -345,8 +344,8 @@ def main():
     ensembles = ensemble_table()
     ensembles.to_csv(OUT_ROOT / "ensemble_results.csv", index=False)
     ensemble_figures(ensembles)
-    write_markdown(runs, aggregate, paired, ensembles)
-    print(OUT_ROOT / "DEFENSE_EXPERIMENT_REPORT.md")
+    write_report(runs, aggregate, paired, ensembles)
+    print(OUT_ROOT / "defense_experiment_report.txt")
     print(OUT_ROOT / "aggregate_results.csv")
     print(OUT_ROOT / "paired_significance.json")
 
