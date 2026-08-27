@@ -23,9 +23,6 @@ DROPOUT = 0.0
 SEED = 42
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
-# =========================
-# SEED
-# =========================
 def set_seed(seed=42):
     random.seed(seed)
     np.random.seed(seed)
@@ -34,9 +31,6 @@ def set_seed(seed=42):
 
 set_seed(SEED)
 
-# =========================
-# DATASET
-# =========================
 class Skeleton3DDataset(Dataset):
     def __init__(self, df: pd.DataFrame, label_to_idx=None):
         self.df = df.reset_index(drop=True)
@@ -58,9 +52,6 @@ class Skeleton3DDataset(Dataset):
         y = torch.tensor(self.label_to_idx[row["action"]], dtype=torch.long)
         return x, y
 
-# =========================
-# MODEL
-# =========================
 class BaselineGRU3D(nn.Module):
     def __init__(self, input_dim=3, hidden_dim=128, num_layers=1, num_classes=7, dropout=0.0):
         super().__init__()
@@ -74,15 +65,11 @@ class BaselineGRU3D(nn.Module):
         self.fc = nn.Linear(hidden_dim, num_classes)
 
     def forward(self, x):
-        # x: (B,21,3)
         out, _ = self.gru(x)
         feat = out[:, -1, :]
         logits = self.fc(feat)
         return logits
 
-# =========================
-# UTILS
-# =========================
 def evaluate(model, loader, device):
     model.eval()
     all_preds, all_targets = [], []
@@ -114,9 +101,6 @@ def save_confmat(cm, class_names, out_path, title):
     plt.savefig(out_path, dpi=200, bbox_inches="tight")
     plt.close()
 
-# =========================
-# LOAD DATA
-# =========================
 df = pd.read_csv(CSV_PATH)
 df["action"] = df["action"].replace({
     "thumbup": "thumb",
@@ -138,9 +122,6 @@ train_loader = DataLoader(train_ds, batch_size=BATCH_SIZE, shuffle=True)
 val_loader   = DataLoader(val_ds, batch_size=BATCH_SIZE, shuffle=False)
 test_loader  = DataLoader(test_ds, batch_size=BATCH_SIZE, shuffle=False)
 
-# =========================
-# TRAIN
-# =========================
 model = BaselineGRU3D(
     input_dim=3,
     hidden_dim=HIDDEN_DIM,
@@ -190,9 +171,6 @@ for epoch in range(1, EPOCHS + 1):
 
 print("\nBest val acc:", best_val_acc)
 
-# =========================
-# INTERNAL TEST ON SALUX
-# =========================
 ckpt = torch.load(best_path, map_location=DEVICE)
 model.load_state_dict(ckpt["model_state_dict"])
 

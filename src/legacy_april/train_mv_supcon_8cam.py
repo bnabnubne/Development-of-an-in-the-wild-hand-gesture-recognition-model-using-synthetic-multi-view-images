@@ -11,9 +11,6 @@ from torch.utils.data import Dataset, DataLoader
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 import matplotlib.pyplot as plt
 
-# =========================
-# CONFIG
-# =========================
 SALUX_MV_CSV = "./metadata/salux_multiview3d_8cam_front.csv"
 SALUX_ORIG_CSV = "./metadata/salux_baseline.csv"
 
@@ -40,9 +37,6 @@ SEED = 42
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
-# =========================
-# SEED
-# =========================
 def set_seed(seed=42):
     random.seed(seed)
     np.random.seed(seed)
@@ -51,9 +45,6 @@ def set_seed(seed=42):
 
 set_seed(SEED)
 
-# =========================
-# DATASET
-# =========================
 class SupConAnchorDataset(Dataset):
     def __init__(self, df: pd.DataFrame, cam_cols, label_to_idx=None):
         self.df = df.reset_index(drop=True)
@@ -97,9 +88,6 @@ def collate_anchor(batch):
 
     return x_orig, views, y
 
-# =========================
-# MODEL
-# =========================
 class SingleViewGRU3D(nn.Module):
     def __init__(self, input_dim=3, hidden_dim=128, num_layers=1, num_classes=7, dropout=0.0):
         super().__init__()
@@ -120,9 +108,6 @@ class SingleViewGRU3D(nn.Module):
         logits = self.fc(z)
         return logits, z
 
-# =========================
-# LOSSES / EVAL
-# =========================
 def supervised_contrastive_loss(features, labels, temperature=0.1):
     device = features.device
 
@@ -184,9 +169,6 @@ def save_confmat(cm, class_names, out_path, title):
     plt.savefig(out_path, dpi=200, bbox_inches="tight")
     plt.close()
 
-# =========================
-# LOAD DATA
-# =========================
 mv_df = pd.read_csv(SALUX_MV_CSV)
 orig_df = pd.read_csv(SALUX_ORIG_CSV)
 
@@ -235,9 +217,6 @@ print("Classes:", label_to_idx)
 print("Merged rows:", len(df))
 print("Train:", len(train_ds), "Val:", len(val_ds), "Test:", len(test_ds))
 
-# =========================
-# TRAIN
-# =========================
 model = SingleViewGRU3D(
     input_dim=3,
     hidden_dim=HIDDEN_DIM,
@@ -340,9 +319,6 @@ for epoch in range(1, EPOCHS + 1):
 
 print(f"\nBest val acc: {best_val_acc:.6f} at epoch {best_epoch}")
 
-# =========================
-# INTERNAL TEST
-# =========================
 ckpt = torch.load(best_path, map_location=DEVICE)
 model.load_state_dict(ckpt["model_state_dict"])
 

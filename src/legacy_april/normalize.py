@@ -12,24 +12,19 @@ def align_hand(kp):
     middle = kp[9]
     pinky = kp[17]
 
-# y: hướng từ wrist -> middle_mcp
     y = (middle - wrist)
     y /= np.linalg.norm(y) + 1e-6
 
-# x: ngang lòng bàn tay
     x = (pinky - index)
     x /= np.linalg.norm(x) + 1e-6
 
-#z: pháp tuyến của lòng bàn tay
     z = np.cross(x, y)
     z /= np.linalg.norm(z) + 1e-6
 
-    #  fix flip: đảm bảo normal luôn hướng cùng phía
     if z[2] < 0:
         x = -x
         z = -z
 
-    # re-orthogonalize
     x = np.cross(y, z)
 
     R = np.stack([x, y, z], axis=1)
@@ -40,10 +35,8 @@ def align_hand(kp):
 def normalize_hand(kp: np.ndarray) -> np.ndarray:
     kp = kp.copy().astype(np.float32)
 
-    # center by wrist
     kp = kp - kp[0]
 
-    # scale by wrist -> middle MCP
     scale = np.linalg.norm(kp[9] - kp[0]) + 1e-6
     kp = kp / scale
     

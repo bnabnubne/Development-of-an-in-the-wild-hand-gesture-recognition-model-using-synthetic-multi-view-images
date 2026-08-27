@@ -4,9 +4,6 @@ import numpy as np
 import pandas as pd
 from pathlib import Path
 
-# =========================
-# CONFIG
-# =========================
 INPUT_ROOT = Path("./data/raw_droh")   # ảnh gốc theo class
 RAW_OUT_ROOT = Path("./test/skeleton_raw")
 VIS_OUT_ROOT = Path("./test/visualize")
@@ -21,9 +18,6 @@ MIN_TRACK_CONF = 0.5
 
 DRAW_VIS = True
 
-# =========================
-# MEDIAPIPE
-# =========================
 mp_hands = mp.solutions.hands
 mp_draw = mp.solutions.drawing_utils
 mp_styles = mp.solutions.drawing_styles
@@ -39,9 +33,6 @@ rows = []
 saved = 0
 failed = 0
 
-# =========================
-# MAIN
-# =========================
 for class_dir in sorted(INPUT_ROOT.iterdir()):
     if not class_dir.is_dir():
         continue

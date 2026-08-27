@@ -2,9 +2,6 @@ import pandas as pd
 from pathlib import Path
 from sklearn.model_selection import train_test_split
 
-# =========================
-# CONFIG
-# =========================
 ROOT = Path("./dataset/multiview_blender")
 OUT_DIR = Path("./metadata")
 OUT_DIR.mkdir(parents=True, exist_ok=True)

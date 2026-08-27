@@ -3,9 +3,6 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-# =========================
-# CONFIG
-# =========================
 VIS_ROOT = Path("./test/visualize")
 RAW_ROOT = Path("./test/skeleton_raw")
 META_CSV = Path("./test/mediapipe_metadata.csv")
@@ -22,16 +19,10 @@ IMAGE_EXTS = {".jpg", ".jpeg", ".png", ".bmp", ".webp"}
 WRIST_IDX = 0
 MIDDLE_MCP_IDX = 9
 
-# =========================
-# PREPARE OUTPUT
-# =========================
 if REMOVE_OLD_OUTPUT and OUT_ROOT.exists():
     shutil.rmtree(OUT_ROOT)
 OUT_ROOT.mkdir(parents=True, exist_ok=True)
 
-# =========================
-# LOAD HANDEDNESS META
-# =========================
 stem_to_handedness = {}
 
 if META_CSV.exists():
@@ -48,25 +39,17 @@ if META_CSV.exists():
         if image_path:
             stem_to_handedness[Path(image_path).stem] = handedness
 
-# =========================
-# FUNCTIONS
-# =========================
 def normalize_2d(coords_2d: np.ndarray) -> np.ndarray:
     coords_2d = coords_2d.astype(np.float32).copy()
 
-    # center theo wrist
     wrist = coords_2d[WRIST_IDX].copy()
     coords_2d = coords_2d - wrist
 
-    # scale theo wrist -> middle_mcp
     scale = np.linalg.norm(coords_2d[MIDDLE_MCP_IDX]) + 1e-6
     coords_2d = coords_2d / scale
 
     return coords_2d
 
-# =========================
-# MAIN
-# =========================
 rows = []
 saved = 0
 missing = 0
@@ -92,9 +75,6 @@ for vis_class_dir in sorted(VIS_ROOT.iterdir()):
             skipped += 1
             continue
 
-        # ví dụ:
-        # IMG_6289_vis.jpg -> IMG_6289
-        # IMG_6289.jpg     -> IMG_6289
         stem = vis_path.stem
         if stem.endswith("_vis"):
             base_name = stem[:-4]
@@ -114,13 +94,10 @@ for vis_class_dir in sorted(VIS_ROOT.iterdir()):
             skipped += 1
             continue
 
-        # lấy 2D thật từ DrOh, KHÔNG qua Blender
         coords_2d = kp[:, :2].copy()
 
-        # canonicalize nếu sample là Left
         handedness = stem_to_handedness.get(base_name, "")
         if handedness.lower() == "left":
-            # mediapipe x trong ảnh là normalized [0,1]
             coords_2d[:, 0] = 1.0 - coords_2d[:, 0]
 
         coords_2d = normalize_2d(coords_2d)

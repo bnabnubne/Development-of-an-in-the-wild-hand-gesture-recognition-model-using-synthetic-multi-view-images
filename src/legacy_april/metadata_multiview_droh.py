@@ -1,9 +1,6 @@
 import pandas as pd
 from pathlib import Path
 
-# =========================
-# CONFIG
-# =========================
 ROOT = Path("./test/multiview_blender") 
 OUT_DIR = Path("./metadata")
 OUT_DIR.mkdir(parents=True, exist_ok=True)

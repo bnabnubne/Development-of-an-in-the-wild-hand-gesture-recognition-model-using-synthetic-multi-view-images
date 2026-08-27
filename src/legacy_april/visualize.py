@@ -7,9 +7,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-# =========================================================
-# CONFIG
-# =========================================================
 SALUX_ORIG_CSV = "./metadata/salux_baseline.csv"
 
 OUT_DIR = Path("./debug_raw_skeleton_spherical_8cam")
@@ -22,8 +19,6 @@ SELECT_SAMPLE_IDS = []
 
 SEED = 42
 
-# This camera setup is designed to include actual elevation changes.
-# It is different from the old front-biased azimuth-only setup.
 CAMERA_CONFIGS = [
     {"az":   0, "el":   0, "name": "front"},
     {"az":  45, "el":   0, "name": "front_right"},
@@ -39,19 +34,12 @@ CAMERA_CONFIGS = [
 
 CAMERA_RADIUS = 3.0
 
-# Must match your export pipeline
 CENTER_BY_MEAN_BEFORE_CAMERA = True
 CENTER_ON_WRIST_AFTER_CAMERA = True
 
-# Plot mode:
-# "3d" is recommended.
-# "xy", "xz", "yz" can be used to inspect projected 2D planes.
 PLOT_MODE = "3d"
 
 
-# =========================================================
-# MEDIAPIPE HAND CONNECTIONS
-# =========================================================
 BONES = [
     (0, 1), (1, 2), (2, 3), (3, 4),          # thumb
     (0, 5), (5, 6), (6, 7), (7, 8),          # index
@@ -62,9 +50,6 @@ BONES = [
 ]
 
 
-# =========================================================
-# CAMERA TRANSFORM
-# =========================================================
 def normalize_input_skeleton(kp: np.ndarray) -> np.ndarray:
     kp = kp.astype(np.float32)
 
@@ -78,12 +63,6 @@ def normalize_input_skeleton(kp: np.ndarray) -> np.ndarray:
 
 
 def camera_position_from_spherical(azimuth_deg: float, elevation_deg: float, radius: float) -> np.ndarray:
-    """
-    Coordinate convention consistent with your old Blender export:
-    - azimuth = 0: camera at y = -radius, looking to origin
-    - azimuth changes around z-axis
-    - elevation controls real top/bottom angle
-    """
     az = math.radians(azimuth_deg)
     el = math.radians(elevation_deg)
 
@@ -95,23 +74,13 @@ def camera_position_from_spherical(azimuth_deg: float, elevation_deg: float, rad
 
 
 def look_at_rotation_world_to_camera(cam_pos: np.ndarray, target: np.ndarray = np.zeros(3, dtype=np.float32)) -> np.ndarray:
-    """
-    Build world-to-camera rotation similar to Blender camera coordinates:
-    - camera forward axis is -Z
-    - camera up axis is +Y
-
-    Returns R_wc such that:
-        p_cam = R_wc @ (p_world - cam_pos)
-    """
     forward = target - cam_pos
     forward = forward / (np.linalg.norm(forward) + 1e-8)
 
-    # Camera local -Z points along forward, so local z axis points backward.
     z_cam_world = -forward
 
     world_up = np.array([0, 0, 1], dtype=np.float32)
 
-    # If camera is too close to vertical, choose another up vector to avoid degeneracy.
     if abs(np.dot(z_cam_world, world_up)) > 0.98:
         world_up = np.array([0, 1, 0], dtype=np.float32)
 
@@ -121,7 +90,6 @@ def look_at_rotation_world_to_camera(cam_pos: np.ndarray, target: np.ndarray = n
     y_cam_world = np.cross(z_cam_world, x_cam_world)
     y_cam_world = y_cam_world / (np.linalg.norm(y_cam_world) + 1e-8)
 
-    # Rows are camera axes expressed in world coordinates.
     R_wc = np.stack([x_cam_world, y_cam_world, z_cam_world], axis=0).astype(np.float32)
 
     return R_wc
@@ -138,17 +106,12 @@ def transform_to_camera_space(points_world: np.ndarray, azimuth_deg: float, elev
 
     points_cam = (R_wc @ (points_world - cam_pos).T).T.astype(np.float32)
 
-    # In Blender camera coordinates, points in front of the camera have negative z.
-    # The actual model uses centered camera-space coordinates, so this is fine.
     if CENTER_ON_WRIST_AFTER_CAMERA:
         points_cam = points_cam - points_cam[0:1]
 
     return points_cam
 
 
-# =========================================================
-# PLOTTING
-# =========================================================
 def load_skeleton(path: str) -> np.ndarray:
     x = np.load(path).astype(np.float32)
     if x.shape != (21, 3):
@@ -183,10 +146,8 @@ def plot_skeleton_3d(ax, pts, title, center, radius):
 
     ax.scatter(pts[:, 0], pts[:, 1], pts[:, 2], s=18)
 
-    # wrist
     ax.scatter(pts[0, 0], pts[0, 1], pts[0, 2], s=55, marker="s")
 
-    # thumb tip
     ax.scatter(pts[4, 0], pts[4, 1], pts[4, 2], s=75, marker="*")
 
     ax.set_title(title, fontsize=9)
@@ -196,8 +157,6 @@ def plot_skeleton_3d(ax, pts, title, center, radius):
 
     set_equal_3d_axis(ax, center, radius)
 
-    # Fixed display angle only for matplotlib viewing.
-    # This does not affect data transformation.
     ax.view_init(elev=20, azim=-70)
 
 
@@ -275,9 +234,6 @@ def visualize_one_sample(row):
     print(f"[SAVED] {out_path}")
 
 
-# =========================================================
-# MAIN
-# =========================================================
 def main():
     random.seed(SEED)
 

@@ -98,7 +98,6 @@ class MV3DModel(nn.Module):
         return logits, z0, z1, z2, z3
     
 def alignment_loss(z0, z1, z2, z3):
-    # cosine alignment
     l01 = 1.0 - F.cosine_similarity(z0, z1, dim=1).mean()
     l02 = 1.0 - F.cosine_similarity(z0, z2, dim=1).mean()
     l03 = 1.0 - F.cosine_similarity(z0, z3, dim=1).mean()

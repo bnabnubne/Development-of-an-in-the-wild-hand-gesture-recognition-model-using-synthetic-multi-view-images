@@ -7,15 +7,9 @@ import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 import matplotlib.pyplot as plt
-# =========================
-# CONFIG
-# =========================
 MERGE_THUMB = False
 POOLING = "last"
 EXPERIMENT = "consistency"
-# options:
-# "consistency"
-# "supcon"
 
 if EXPERIMENT == "consistency":
     if MERGE_THUMB:
@@ -45,9 +39,6 @@ OUT_DIR.mkdir(parents=True, exist_ok=True)
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 BATCH_SIZE = 64
 
-# =========================
-# DATASETS
-# =========================
 class SaluxMultiViewDataset(Dataset):
     def __init__(self, df: pd.DataFrame, cam_cols, label_to_idx):
         self.df = df.reset_index(drop=True)
@@ -100,9 +91,6 @@ class SingleView3DDataset(Dataset):
         y = torch.tensor(self.label_to_idx[row["action"]], dtype=torch.long)
         return x, y
 
-# =========================
-# MODEL
-# =========================
 class SingleViewGRU3D(nn.Module):
     def __init__(
         self,
@@ -149,9 +137,6 @@ class SingleViewGRU3D(nn.Module):
 
         logits = self.fc(z)
         return logits, z
-# =========================
-# EVALUATION
-# =========================
 def evaluate_single_view(model, loader, device):
     model.eval()
     all_preds, all_targets = [], []
@@ -222,11 +207,6 @@ def evaluate_salux_avgN(model, loader, device, num_cams):
 
 
 def save_confmat(cm, class_names, out_path, normalize=True):
-    """
-    Save confusion matrix as percentage heatmap.
-    Rows = actual labels, columns = predicted labels.
-    If normalize=True, each row sums to 100%.
-    """
     cm = np.asarray(cm)
 
     if normalize:
@@ -261,13 +241,11 @@ def save_confmat(cm, class_names, out_path, normalize=True):
     ax.set_xticklabels(class_names, rotation=45, ha="right", fontsize=18)
     ax.set_yticklabels(class_names, fontsize=18)
 
-    # Draw values inside cells
     threshold = data.max() * 0.55 if data.max() > 0 else 0
     for i in range(data.shape[0]):
         for j in range(data.shape[1]):
             value = data[i, j]
 
-            # Hide zero values for cleaner paper figure
             if value == 0:
                 continue
 
@@ -286,9 +264,6 @@ def save_confmat(cm, class_names, out_path, normalize=True):
     plt.savefig(out_path, dpi=300, bbox_inches="tight")
     plt.close()
 
-# =========================
-# LOAD CHECKPOINT
-# =========================
 ckpt = torch.load(CKPT_PATH, map_location=DEVICE)
 
 label_to_idx = ckpt["label_to_idx"]
@@ -307,9 +282,6 @@ model = SingleViewGRU3D(
 model.load_state_dict(ckpt["model_state_dict"])
 class_names = [idx_to_label[i] for i in range(len(idx_to_label))]
 
-# =========================
-# LOAD DATA
-# =========================
 salux_mv_df = pd.read_csv(SALUX_MV_CSV)
 salux_orig_df = pd.read_csv(SALUX_ORIG_CSV)
 droh_df = pd.read_csv(DROH_CSV)
@@ -344,9 +316,6 @@ print("CKPT_PATH:", CKPT_PATH)
 print("CAM_COLS:", cam_cols)
 print("Classes:", label_to_idx)
 
-# =========================
-# EVALUATE
-# =========================
 salux_orig_acc, y_true_salux_orig, y_pred_salux_orig = evaluate_single_view(
     model, salux_orig_loader, DEVICE
 )
@@ -363,9 +332,6 @@ droh_acc, y_true_droh, y_pred_droh = evaluate_single_view(
     model, droh_loader, DEVICE
 )
 
-# =========================
-# REPORTS
-# =========================
 report_salux_orig = classification_report(
     y_true_salux_orig,
     y_pred_salux_orig,

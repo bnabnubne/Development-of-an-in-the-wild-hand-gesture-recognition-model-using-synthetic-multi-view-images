@@ -2,9 +2,6 @@ import numpy as np
 import pandas as pd
 from pathlib import Path
 
-# =========================
-# CONFIG
-# =========================
 RAW_ROOT = Path("./test/skeleton_raw")
 META_CSV = Path("./test/mediapipe_metadata.csv")
 FINAL_ROOT = Path("./test/skeleton_final")
@@ -15,15 +12,7 @@ INDEX_MCP_IDX = 5
 MIDDLE_MCP_IDX = 9
 PINKY_MCP_IDX = 17
 
-# =========================
-# FUNCTIONS
-# =========================
 def canonicalize_hand(kp: np.ndarray, handedness: str) -> np.ndarray:
-    """
-    Đưa toàn bộ về cùng 1 hệ tay.
-    Chọn chuẩn là Right-hand space.
-    Nếu sample là Left thì flip trục X.
-    """
     kp = kp.copy()
     if handedness.lower() == "left":
         kp[:, 0] = 1.0 - kp[:, 0]   # vì MediaPipe x đang ở image normalized [0,1]
@@ -37,27 +26,21 @@ def align_hand(kp: np.ndarray) -> np.ndarray:
     middle = kp[MIDDLE_MCP_IDX]
     pinky = kp[PINKY_MCP_IDX]
 
-    # y: hướng wrist -> middle_mcp
     y = middle - wrist
     y = y / (np.linalg.norm(y) + 1e-6)
 
-    # x: ngang lòng bàn tay
     x = pinky - index
     x = x / (np.linalg.norm(x) + 1e-6)
 
-    # z: pháp tuyến lòng bàn tay
     z = np.cross(x, y)
     z = z / (np.linalg.norm(z) + 1e-6)
 
-    # trực chuẩn lại
     x = np.cross(y, z)
     x = x / (np.linalg.norm(x) + 1e-6)
 
-    # row-vector convention
     R = np.stack([x, y, z], axis=1)
     kp_aligned = kp @ R
 
-    # ===== CHECK SAU ALIGN =====
     wrist2 = kp_aligned[WRIST_IDX]
     index2 = kp_aligned[INDEX_MCP_IDX]
     middle2 = kp_aligned[MIDDLE_MCP_IDX]
@@ -72,7 +55,6 @@ def align_hand(kp: np.ndarray) -> np.ndarray:
     z2 = np.cross(x2, y2)
     z2 = z2 / (np.linalg.norm(z2) + 1e-6)
 
-    # nếu vẫn âm thì flip X và Z trên output
     if z2[2] < 0:
         kp_aligned[:, 0] *= -1
         kp_aligned[:, 2] *= -1
@@ -83,25 +65,18 @@ def align_hand(kp: np.ndarray) -> np.ndarray:
 def normalize_hand(kp: np.ndarray, handedness: str) -> np.ndarray:
     kp = kp.copy().astype(np.float32)
 
-    # canonicalize left/right trước
     kp = canonicalize_hand(kp, handedness)
 
-    # center by wrist
     kp = kp - kp[WRIST_IDX]
 
-    # scale by wrist -> middle MCP
     scale = np.linalg.norm(kp[MIDDLE_MCP_IDX] - kp[WRIST_IDX]) + 1e-6
     kp = kp / scale
 
-    # align orientation
     kp = align_hand(kp)
 
     return kp.astype(np.float32)
 
 
-# =========================
-# MAIN
-# =========================
 df = pd.read_csv(META_CSV)
 
 saved = 0

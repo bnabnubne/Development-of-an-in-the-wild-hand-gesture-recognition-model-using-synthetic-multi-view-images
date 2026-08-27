@@ -1,30 +1,19 @@
 import shutil
 from pathlib import Path
 
-# =========================
-# CONFIG
-# =========================
 VIS_ROOT = Path("./test/visualize")
 SRC_ROOT = Path("./test/skeleton_final")
 OUT_ROOT = Path("./test/skeleton_final_v2")
 
-# nếu muốn xóa folder output cũ trước khi chạy
 REMOVE_OLD_OUTPUT = True
 
-# các đuôi ảnh chấp nhận trong visualize
 IMAGE_EXTS = {".jpg", ".jpeg", ".png", ".bmp", ".webp"}
 
-# =========================
-# PREPARE OUTPUT
-# =========================
 if REMOVE_OLD_OUTPUT and OUT_ROOT.exists():
     shutil.rmtree(OUT_ROOT)
 
 OUT_ROOT.mkdir(parents=True, exist_ok=True)
 
-# =========================
-# MAIN
-# =========================
 copied = 0
 missing = 0
 skipped = 0
@@ -50,9 +39,6 @@ for vis_class_dir in sorted(VIS_ROOT.iterdir()):
             skipped += 1
             continue
 
-        # ví dụ:
-        # IMG_6289_vis.jpg -> IMG_6289
-        # IMG_6289.jpg     -> IMG_6289
         stem = vis_path.stem
         if stem.endswith("_vis"):
             base_name = stem[:-4]

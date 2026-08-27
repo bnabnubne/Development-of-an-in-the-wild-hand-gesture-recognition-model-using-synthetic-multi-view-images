@@ -122,7 +122,6 @@ def evaluate_droh(model, loader, device):
             x = x.to(device)   # (B,21,3)
             y = y.to(device)
 
-            # replicate 1 real DrOh view to 4 branches
             logits, _, _, _, _ = model(x, x, x, x)
             preds = torch.argmax(logits, dim=1)
 

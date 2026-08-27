@@ -9,9 +9,6 @@ from torch.utils.data import Dataset, DataLoader
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 import matplotlib.pyplot as plt
 
-# =========================
-# CONFIG
-# =========================
 MERGE_THUMB = False   # True = 6 classes, False = 7 classes
 
 if MERGE_THUMB:
@@ -31,9 +28,6 @@ OUT_DIR.mkdir(parents=True, exist_ok=True)
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 BATCH_SIZE = 64
 
-# =========================
-# DATASETS
-# =========================
 class SaluxMultiViewDataset(Dataset):
     def __init__(self, df: pd.DataFrame, label_to_idx):
         self.df = df.reset_index(drop=True)
@@ -72,9 +66,6 @@ class SingleView3DDataset(Dataset):
         y = torch.tensor(self.label_to_idx[row["action"]], dtype=torch.long)
         return x, y
 
-# =========================
-# MODEL
-# =========================
 class SingleViewGRU3D(nn.Module):
     def __init__(self, input_dim=3, hidden_dim=128, num_layers=1, num_classes=7, dropout=0.0):
         super().__init__()
@@ -95,9 +86,6 @@ class SingleViewGRU3D(nn.Module):
         logits = self.fc(z)
         return logits, z
 
-# =========================
-# EVALUATION
-# =========================
 def evaluate_single_view(model, loader, device):
     model.eval()
     all_preds, all_targets = [], []
@@ -175,9 +163,6 @@ def save_confmat(cm, class_names, out_path, title):
     plt.savefig(out_path, dpi=200, bbox_inches="tight")
     plt.close()
 
-# =========================
-# LOAD CHECKPOINT
-# =========================
 ckpt = torch.load(CKPT_PATH, map_location=DEVICE)
 
 label_to_idx = ckpt["label_to_idx"]
@@ -203,9 +188,6 @@ print("SALUX_ORIG_CSV:", SALUX_ORIG_CSV)
 print("DROH_CSV:", DROH_CSV)
 print("Classes:", label_to_idx)
 
-# =========================
-# LOAD DATA
-# =========================
 salux_mv_df = pd.read_csv(SALUX_MV_CSV)
 salux_orig_df = pd.read_csv(SALUX_ORIG_CSV)
 droh_df = pd.read_csv(DROH_CSV)
@@ -228,9 +210,6 @@ salux_mv_loader = DataLoader(salux_mv_ds, batch_size=BATCH_SIZE, shuffle=False)
 salux_orig_loader = DataLoader(salux_orig_ds, batch_size=BATCH_SIZE, shuffle=False)
 droh_loader = DataLoader(droh_ds, batch_size=BATCH_SIZE, shuffle=False)
 
-# =========================
-# EVALUATE
-# =========================
 salux_orig_acc, y_true_salux_orig, y_pred_salux_orig = evaluate_single_view(
     model, salux_orig_loader, DEVICE
 )
@@ -259,9 +238,6 @@ droh_acc, y_true_droh, y_pred_droh = evaluate_single_view(
     model, droh_loader, DEVICE
 )
 
-# =========================
-# REPORTS
-# =========================
 report_salux_orig = classification_report(
     y_true_salux_orig,
     y_pred_salux_orig,

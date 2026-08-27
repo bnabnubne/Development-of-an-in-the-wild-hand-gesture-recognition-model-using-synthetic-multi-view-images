@@ -11,9 +11,6 @@ from torch.utils.data import Dataset, DataLoader
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 import matplotlib.pyplot as plt
 
-# =========================
-# CONFIG
-# =========================
 SALUX_MV_CSV = "./metadata/salux_multiview3d.csv"
 SALUX_ORIG_CSV = "./metadata/salux_baseline.csv"
 
@@ -38,9 +35,6 @@ CONS_WEIGHT = 0.05
 SEED = 42
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
-# =========================
-# SEED
-# =========================
 def set_seed(seed=42):
     random.seed(seed)
     np.random.seed(seed)
@@ -49,9 +43,6 @@ def set_seed(seed=42):
 
 set_seed(SEED)
 
-# =========================
-# DATASET
-# =========================
 class AnchorConsistencyDataset(Dataset):
     def __init__(self, df: pd.DataFrame, label_to_idx=None):
         self.df = df.reset_index(drop=True)
@@ -81,9 +72,6 @@ class AnchorConsistencyDataset(Dataset):
 
         return x_orig, cams[0], cams[1], cams[2], cams[3], y
 
-# =========================
-# MODEL
-# =========================
 class SingleViewGRU3D(nn.Module):
     def __init__(self, input_dim=3, hidden_dim=128, num_layers=1, num_classes=7, dropout=0.0):
         super().__init__()
@@ -104,9 +92,6 @@ class SingleViewGRU3D(nn.Module):
         logits = self.fc(z)
         return logits, z
 
-# =========================
-# LOSSES
-# =========================
 def anchor_consistency_loss(z_orig, z0, z1, z2, z3):
     losses = [
         1.0 - F.cosine_similarity(z_orig, z0, dim=1).mean(),
@@ -116,9 +101,6 @@ def anchor_consistency_loss(z_orig, z0, z1, z2, z3):
     ]
     return sum(losses) / len(losses)
 
-# =========================
-# EVALUATION
-# =========================
 def evaluate_original(model, loader, device):
     model.eval()
     all_preds, all_targets = [], []
@@ -150,9 +132,6 @@ def save_confmat(cm, class_names, out_path, title):
     plt.savefig(out_path, dpi=200, bbox_inches="tight")
     plt.close()
 
-# =========================
-# LOAD + MERGE DATA
-# =========================
 mv_df = pd.read_csv(SALUX_MV_CSV)
 orig_df = pd.read_csv(SALUX_ORIG_CSV)
 
@@ -192,9 +171,6 @@ print("Classes:", label_to_idx)
 print("Merged rows:", len(df))
 print("Train:", len(train_ds), "Val:", len(val_ds), "Test:", len(test_ds))
 
-# =========================
-# TRAIN
-# =========================
 model = SingleViewGRU3D(
     input_dim=3,
     hidden_dim=HIDDEN_DIM,
@@ -290,9 +266,6 @@ for epoch in range(1, EPOCHS + 1):
 
 print(f"\nBest val acc: {best_val_acc:.6f} at epoch {best_epoch}")
 
-# =========================
-# INTERNAL TEST ON SALUX ORIGINAL
-# =========================
 ckpt = torch.load(best_path, map_location=DEVICE)
 model.load_state_dict(ckpt["model_state_dict"])
 

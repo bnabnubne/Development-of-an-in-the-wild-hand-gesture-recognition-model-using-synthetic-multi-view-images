@@ -9,9 +9,6 @@ from torch.utils.data import Dataset, DataLoader
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 import matplotlib.pyplot as plt
 
-# =========================
-# CONFIG
-# =========================
 CKPT_PATH = "./results/baseline_salux/best_baseline_salux.pt"
 SALUX_CSV = "./metadata/salux_baseline.csv"
 DROH_CSV  = "./metadata/droh_baseline.csv"
@@ -21,9 +18,6 @@ OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
-# =========================
-# DATASET
-# =========================
 class Skeleton3DDataset(Dataset):
     def __init__(self, df: pd.DataFrame, label_to_idx):
         self.df = df.reset_index(drop=True)
@@ -40,9 +34,6 @@ class Skeleton3DDataset(Dataset):
         y = torch.tensor(self.label_to_idx[row["action"]], dtype=torch.long)
         return x, y
 
-# =========================
-# MODEL
-# =========================
 class BaselineGRU3D(nn.Module):
     def __init__(self, input_dim=3, hidden_dim=128, num_layers=1, num_classes=7, dropout=0.0):
         super().__init__()
@@ -61,9 +52,6 @@ class BaselineGRU3D(nn.Module):
         logits = self.fc(feat)
         return logits
 
-# =========================
-# UTILS
-# =========================
 def evaluate(model, loader, device):
     model.eval()
     all_preds, all_targets = [], []
@@ -83,11 +71,6 @@ def evaluate(model, loader, device):
     return acc, all_targets, all_preds
 
 def save_confmat(cm, class_names, out_path, normalize=True):
-    """
-    Save confusion matrix as percentage heatmap.
-    Rows = actual labels, columns = predicted labels.
-    If normalize=True, each row sums to 100%.
-    """
     cm = np.asarray(cm)
 
     if normalize:
@@ -122,13 +105,11 @@ def save_confmat(cm, class_names, out_path, normalize=True):
     ax.set_xticklabels(class_names, rotation=45, ha="right", fontsize=10)
     ax.set_yticklabels(class_names, fontsize=10)
 
-    # Draw values inside cells
     threshold = data.max() * 0.55 if data.max() > 0 else 0
     for i in range(data.shape[0]):
         for j in range(data.shape[1]):
             value = data[i, j]
 
-            # Hide zero values for cleaner paper figure
             if value == 0:
                 continue
 
@@ -148,9 +129,6 @@ def save_confmat(cm, class_names, out_path, normalize=True):
     plt.close()
 
 
-# =========================
-# LOAD MODEL
-# =========================
 ckpt = torch.load(CKPT_PATH, map_location=DEVICE)
 label_to_idx = ckpt["label_to_idx"]
 idx_to_label = {v: k for k, v in label_to_idx.items()}
@@ -166,9 +144,6 @@ model = BaselineGRU3D(
 
 model.load_state_dict(ckpt["model_state_dict"])
 
-# =========================
-# LOAD DATA
-# =========================
 salux_df = pd.read_csv(SALUX_CSV)
 droh_df = pd.read_csv(DROH_CSV)
 
@@ -184,9 +159,6 @@ droh_loader = DataLoader(droh_ds, batch_size=64, shuffle=False)
 
 class_names = [idx_to_label[i] for i in range(len(idx_to_label))]
 
-# =========================
-# TEST SALUX
-# =========================
 salux_acc, y_true_salux, y_pred_salux = evaluate(model, salux_loader, DEVICE)
 report_salux = classification_report(y_true_salux, y_pred_salux, target_names=class_names, digits=4)
 cm_salux = confusion_matrix(y_true_salux, y_pred_salux)
@@ -194,9 +166,6 @@ cm_salux = confusion_matrix(y_true_salux, y_pred_salux)
 (OUT_DIR / "report_salux_test.txt").write_text(report_salux, encoding="utf-8")
 save_confmat(cm_salux, class_names, OUT_DIR / "confmat_salux_test.png")
 
-# =========================
-# TEST DROH
-# =========================
 droh_acc, y_true_droh, y_pred_droh = evaluate(model, droh_loader, DEVICE)
 report_droh = classification_report(y_true_droh, y_pred_droh, target_names=class_names, digits=4)
 cm_droh = confusion_matrix(y_true_droh, y_pred_droh)
