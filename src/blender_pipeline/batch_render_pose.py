@@ -6,23 +6,17 @@ import numpy as np
 from mathutils import Matrix, Vector
 
 
-# =========================================================
-# CONFIG
-# =========================================================
 PROJECT_ROOT = Path(".")
 
-# Edit these values before running in Blender.
 POSES = ["ok", "paper", "rock", "scissors", "thefinger"]
 START_INDEX = 0
-LIMIT = 200  # Pilot: render at most this many fitted samples for each pose. None = all.
-SAMPLES = []  # Example: ["ok (1)", "ok (20)"]. Empty = use all samples.
+LIMIT = 200
+SAMPLES = []
 SAMPLES_BY_POSE = {
-    # "ok": ["ok (1)", "ok (20)"],
-    # "thefinger": ["the-finger (1)"],
 }
 
-FITTED_DIR = None  # Only use this for a single pose. None = batch_{pose}/fitted.
-OUT_ROOT = None  # None = renders_{pose}. With multiple poses, custom root writes to OUT_ROOT / pose.
+FITTED_DIR = None
+OUT_ROOT = None
 
 SKIP_EXISTING = True
 FLAT_OUTPUT = False
@@ -83,9 +77,6 @@ BONE_SEGMENTS = [
 ]
 
 
-# =========================================================
-# BASIC
-# =========================================================
 def get_obj(name):
     obj = bpy.data.objects.get(name)
     if obj is None:
@@ -144,9 +135,6 @@ def show_render_objects():
             obj.hide_render = False
 
 
-# =========================================================
-# RETARGET
-# =========================================================
 def rotate_posebone_y_to_target(arm, bone_name, target_dir_world):
     pb = arm.pose.bones[bone_name]
 
@@ -227,9 +215,6 @@ def apply_retarget(fitted_npy, use_bone_scale=True, bone_scale_min=0.75, bone_sc
     bpy.ops.object.mode_set(mode="OBJECT")
 
 
-# =========================================================
-# CAMERA / RENDER
-# =========================================================
 def clear_old_cameras():
     for obj in list(bpy.context.scene.objects):
         if obj.name.startswith(PREFIX):
@@ -375,9 +360,6 @@ def update_cameras(cameras):
         )
 
 
-# =========================================================
-# MAIN
-# =========================================================
 def collect_samples(fitted_dir, requested_samples, start_index, limit):
     if requested_samples:
         sample_paths = []

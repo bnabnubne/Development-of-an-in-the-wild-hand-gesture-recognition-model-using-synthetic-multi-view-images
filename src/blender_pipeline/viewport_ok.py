@@ -4,9 +4,6 @@ from pathlib import Path
 import json
 import math
 
-# =========================================================
-# PATHS
-# =========================================================
 TEMPLATE_PATH = "./templates/ok_template_joints.npy"
 SALUX_2D_PATH = "./2d/ok/ok_6990.npy"
 
@@ -17,9 +14,6 @@ OUT_NPY = OUT_DIR / "ok_6990_fitted_template_joints.npy"
 OUT_JSON = OUT_DIR / "ok_6990_fit_log.json"
 OUT_PNG = OUT_DIR / "ok_6990_fit_overlay.png"
 
-# =========================================================
-# CONFIG
-# =========================================================
 CONNECTIONS = [
     (0,1),(1,2),(2,3),(3,4),
     (0,5),(5,6),(6,7),(7,8),
@@ -56,10 +50,7 @@ FINGER_PIVOTS = {
     "pinky": 17,
 }
 
-# Hierarchical refinement:
-# pivot joint -> affected downstream joints
 JOINT_GROUPS = {
-    # thumb
     "thumb_mcp": {
         "pivot": 1,
         "affected": [2, 3, 4],
@@ -76,7 +67,6 @@ JOINT_GROUPS = {
         "target_ids": [4],
     },
 
-    # index
     "index_mcp": {
         "pivot": 5,
         "affected": [6, 7, 8],
@@ -93,7 +83,6 @@ JOINT_GROUPS = {
         "target_ids": [8],
     },
 
-    # middle
     "middle_mcp": {
         "pivot": 9,
         "affected": [10, 11, 12],
@@ -110,7 +99,6 @@ JOINT_GROUPS = {
         "target_ids": [12],
     },
 
-    # ring
     "ring_mcp": {
         "pivot": 13,
         "affected": [14, 15, 16],
@@ -127,7 +115,6 @@ JOINT_GROUPS = {
         "target_ids": [16],
     },
 
-    # pinky
     "pinky_mcp": {
         "pivot": 17,
         "affected": [18, 19, 20],
@@ -145,24 +132,17 @@ JOINT_GROUPS = {
     },
 }
 
-# Viewpoint search coarse grid
 RX_VALUES = range(-90, 91, 10)
 RY_VALUES = range(-90, 91, 10)
 RZ_VALUES = range(-180, 181, 10)
 
-# Whole finger refinement
 WHOLE_FINGER_ANGLE_RANGE = range(-35, 36, 5)
 
-# Hierarchical refinement
 JOINT_ANGLE_RANGE = range(-25, 26, 5)
 
-# Number of passes for hierarchical refine
 HIERARCHICAL_PASSES = 2
 
 
-# =========================================================
-# ROTATION
-# =========================================================
 def rot_x(deg):
     a = math.radians(deg)
     c, s = math.cos(a), math.sin(a)
@@ -197,9 +177,6 @@ def make_rotation(rx, ry, rz):
     return rot_z(rz) @ rot_y(ry) @ rot_x(rx)
 
 
-# =========================================================
-# PROJECTION + ERROR
-# =========================================================
 def project_points(points3d_centered, R, scale, translation):
     pts_rot = (R @ points3d_centered.T).T
     pts_2d = pts_rot[:, :2]
@@ -219,7 +196,6 @@ def fit_similarity_2d_positive(src, dst):
 
     s = np.sum(src_c * dst_c) / denom
 
-    # Reject mirrored solution
     if s <= 0:
         return None, None, None
 
@@ -234,11 +210,6 @@ def mean_err(P, U, ids):
 
 
 def total_score(P, U):
-    """
-    Score tổng.
-    Ưu tiên tips vì tips thể hiện gesture rõ nhất.
-    Giữ palm vì palm đã fit global.
-    """
     return (
         0.45 * mean_err(P, U, ALL_IDS)
         + 0.35 * mean_err(P, U, TIP_IDS)
@@ -246,9 +217,6 @@ def total_score(P, U):
     )
 
 
-# =========================================================
-# VIEWPOINT SEARCH
-# =========================================================
 def search_best_view(T0, U):
     best = None
 
@@ -295,9 +263,6 @@ def search_best_view(T0, U):
     return best
 
 
-# =========================================================
-# TRANSFORM TEMPLATE IN 3D TEMPLATE SPACE
-# =========================================================
 def rotate_points_about_pivot(T, pivot_id, affected_ids, axis, angle_deg):
     T_new = T.copy()
 
@@ -323,7 +288,6 @@ def refine_group(T_current, U, R, scale, translation, group_name, group_def, ang
     base_P = project_points(T_current, R, scale, translation)
     base_score = total_score(base_P, U)
 
-    # thêm local score cho nhóm này
     base_local = mean_err(base_P, U, group_def["target_ids"])
     base = base_score + 0.50 * base_local
 
@@ -391,23 +355,17 @@ def refine_whole_finger(T_current, U, R, scale, translation, finger_name):
     )
 
 
-# =========================================================
-# VISUALIZATION
-# =========================================================
 def draw_overlay(U, P_initial, P_final, title, out_path):
     plt.figure(figsize=(8, 8))
 
-    # Salux
     for a, b in CONNECTIONS:
         plt.plot([U[a,0], U[b,0]], [U[a,1], U[b,1]], color="red", linewidth=2, alpha=0.7)
     plt.scatter(U[:,0], U[:,1], color="red", s=35, label="Salux 2D")
 
-    # Initial
     for a, b in CONNECTIONS:
         plt.plot([P_initial[a,0], P_initial[b,0]], [P_initial[a,1], P_initial[b,1]], color="gray", linewidth=1.4, alpha=0.45)
     plt.scatter(P_initial[:,0], P_initial[:,1], color="gray", s=20, label="Initial projection")
 
-    # Final
     for a, b in CONNECTIONS:
         plt.plot([P_final[a,0], P_final[b,0]], [P_final[a,1], P_final[b,1]], color="blue", linewidth=2, alpha=0.9)
     plt.scatter(P_final[:,0], P_final[:,1], color="blue", s=35, label="Fitted template")
@@ -425,9 +383,6 @@ def draw_overlay(U, P_initial, P_final, title, out_path):
     plt.show()
 
 
-# =========================================================
-# MAIN
-# =========================================================
 def main():
     T_raw = np.load(TEMPLATE_PATH).astype(np.float32)
     U = np.load(SALUX_2D_PATH).astype(np.float32)
@@ -437,10 +392,8 @@ def main():
     if U.shape != (21, 2):
         raise ValueError(U.shape)
 
-    # Center template at wrist
     T0 = T_raw - T_raw[0]
 
-    # 1. Search viewpoint
     best_view = search_best_view(T0, U)
 
     R = np.array(best_view["R"], dtype=np.float32)
@@ -457,7 +410,6 @@ def main():
     print("tips:", mean_err(P_initial, U, TIP_IDS))
     print("palm:", mean_err(P_initial, U, PALM_IDS))
 
-    # 2. Whole-finger refine
     T_fit = T0.copy()
     whole_logs = []
 
@@ -467,12 +419,10 @@ def main():
         whole_logs.append(log)
         print(log)
 
-    # 3. Hierarchical joint refinement
     hier_logs = []
 
     print("\n=== HIERARCHICAL JOINT REFINE ===")
     ordered_groups = [
-        # OK pose: thumb/index most important, so refine early
         "thumb_mcp", "thumb_ip", "thumb_tip",
         "index_mcp", "index_pip", "index_dip",
 
@@ -515,7 +465,6 @@ def main():
     print("\n=== FINAL ERRORS ===")
     print(json.dumps(final_errors, indent=2))
 
-    # Save fitted template centered at wrist
     np.save(OUT_NPY, T_fit)
 
     result = {

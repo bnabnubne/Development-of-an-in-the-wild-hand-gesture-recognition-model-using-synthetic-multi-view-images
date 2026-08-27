@@ -7,9 +7,6 @@ import numpy as np
 from tqdm import tqdm
 
 
-# =========================================================
-# PATHS
-# =========================================================
 POSE_NAME = "ok"
 PROJECT_ROOT = Path(".")
 RAW_POSE_DIR = Path(f"./dataset/skeleton_raw/{POSE_NAME}")
@@ -28,9 +25,6 @@ MAX_FILES = None
 SAVE_OVERLAY = False
 
 
-# =========================================================
-# CONFIG
-# =========================================================
 CONNECTIONS = [
     (0, 1), (1, 2), (2, 3), (3, 4),
     (0, 5), (5, 6), (6, 7), (7, 8),
@@ -129,9 +123,6 @@ EXTENDED_FINGER_CONNECTIONS = [
 ]
 
 
-# =========================================================
-# GEOMETRY
-# =========================================================
 def rot_x(d):
     a = math.radians(d)
     c, s = math.cos(a), math.sin(a)
@@ -501,9 +492,6 @@ def refine_finger_scale(T, U, R, s, t, group_name, group_def):
     return best_T, best
 
 
-# =========================================================
-# VISUALIZATION
-# =========================================================
 def draw_overlay(U, P_initial, P_final, title, out_path):
     plt.figure(figsize=(8, 8))
 
@@ -533,9 +521,6 @@ def draw_overlay(U, P_initial, P_final, title, out_path):
     plt.close()
 
 
-# =========================================================
-# FIT
-# =========================================================
 def direction_report(P_initial, P_final, U):
     return {
         finger: {

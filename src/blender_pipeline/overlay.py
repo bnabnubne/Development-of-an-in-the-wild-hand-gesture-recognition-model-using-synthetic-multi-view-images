@@ -22,7 +22,6 @@ xy = np.load(XY_PATH).astype(np.float32)
 
 h, w = img.shape[:2]
 
-# nếu xy đang normalized 0-1
 pts = xy.copy()
 pts[:, 0] *= w
 pts[:, 1] *= h

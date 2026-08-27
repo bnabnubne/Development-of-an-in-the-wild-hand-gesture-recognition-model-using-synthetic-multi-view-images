@@ -3,9 +3,6 @@ from pathlib import Path
 import pandas as pd
 
 
-# =========================================================
-# CONFIG
-# =========================================================
 PROJECT_ROOT = Path(".")
 MODEL_ROOT = PROJECT_ROOT / "model"
 APRIL_ROOT = Path(".")
@@ -14,24 +11,17 @@ SKELETON_CSV = APRIL_ROOT / "metadata" / "salux_baseline.csv"
 SKELETON_MV_CSV = APRIL_ROOT / "metadata" / "salux_multiview3d_8cam_front.csv"
 OUT_CSV = MODEL_ROOT / "metadata" / "rgb_skeleton_multiview.csv"
 
-# Use the poses that already have fitted/rendered data in Jun.
 POSES = ["ok", "paper", "rock", "scissors", "thefinger"]
 CAMERA_IDS = list(range(8))
 
-# Pilot mode: cap each pose so already-rendered classes like ok/paper do not dominate.
-# Set to None for full dataset metadata after rendering everything.
 MAX_SAMPLES_PER_POSE = 200
 MIN_SAMPLES_PER_POSE = 50
 REQUIRE_ALL_SPLITS_PER_POSE = True
 BALANCE_RANDOM_STATE = 42
 
-# If True, only keep samples with every camera image present.
-# If False, keep rows and mark missing camera paths as empty strings.
 REQUIRE_ALL_CAMS = True
 REQUIRE_ALL_SKELETON_CAMS = True
 
-# Default render layout:
-#   data/renders_ok/ok_123/ok_123_cam_00.png
 RENDER_DIR_TEMPLATE = "renders_{pose}"
 
 APRIL_TO_JUN_POSE = {
@@ -86,7 +76,6 @@ def cap_samples_per_pose(df):
             capped.append(pose_df)
             continue
 
-        # Preserve split proportions as much as possible, then fill any remainder.
         sampled_parts = []
         remaining_budget = MAX_SAMPLES_PER_POSE
         split_counts = pose_df["split"].value_counts(normalize=True)

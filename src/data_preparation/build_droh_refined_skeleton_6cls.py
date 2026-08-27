@@ -1,4 +1,3 @@
-"""Build and strictly audit the 6-class DrOh raw/fitted evaluation manifest."""
 
 import json
 from pathlib import Path

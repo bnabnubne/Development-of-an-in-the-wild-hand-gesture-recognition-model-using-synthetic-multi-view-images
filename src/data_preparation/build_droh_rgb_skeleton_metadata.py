@@ -3,9 +3,6 @@ from pathlib import Path
 import pandas as pd
 
 
-# =========================================================
-# CONFIG
-# =========================================================
 APRIL_ROOT = Path(".")
 MODEL_ROOT = Path(".")
 

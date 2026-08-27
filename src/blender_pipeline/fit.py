@@ -23,7 +23,6 @@ CONNECTIONS = [
 
 PALM_IDS = [0,5,9,13,17]
 ALIGN_IDS = [0, 5, 9, 13, 17]
-# Wrist được tăng trọng số vì wrist là root của toàn bộ hand skeleton.
 ALIGN_WEIGHTS = np.array([5.0, 1.2, 1.5, 1.5, 1.2], dtype=np.float32)
 
 TIP_IDS = [4,8,12,16,20]
@@ -119,14 +118,6 @@ def make_R(rx, ry, rz):
     return rot_z(rz) @ rot_y(ry) @ rot_x(rx)
 
 def fit_similarity_weighted(src, dst, weights):
-    """
-    Estimate positive scale and translation from src to dst:
-        dst ~= s * src + t
-
-    src: (N, 2)
-    dst: (N, 2)
-    weights: (N,)
-    """
     w = np.asarray(weights, dtype=np.float32)
     w = w / (np.sum(w) + 1e-8)
 
@@ -728,7 +719,6 @@ def main():
     print("Saved:", OUT_NPY)
     print("Saved:", OUT_JSON)
     print("Saved:", OUT_PNG)
-
 
 
 if __name__ == "__main__":

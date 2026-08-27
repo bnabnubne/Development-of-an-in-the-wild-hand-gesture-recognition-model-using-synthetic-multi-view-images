@@ -4,9 +4,6 @@ from pathlib import Path
 import json
 import math
 
-# =========================================================
-# PATHS
-# =========================================================
 TEMPLATE_PATH = "./templates/ok_template_joints.npy"
 SALUX_2D_PATH = "./2d/ok/ok_6990.npy"
 BEST_VIEW_JSON = "./debug/ok_6990_best_view.json"
@@ -18,9 +15,6 @@ OUT_NPY = OUT_DIR / "ok_6990_fitted_template_joints.npy"
 OUT_JSON = OUT_DIR / "ok_6990_finger_refine.json"
 OUT_PNG = OUT_DIR / "ok_6990_finger_refine_overlay.png"
 
-# =========================================================
-# CONFIG
-# =========================================================
 CONNECTIONS = [
     (0,1),(1,2),(2,3),(3,4),
     (0,5),(5,6),(6,7),(7,8),
@@ -45,9 +39,6 @@ FINGERTIPS = {
     "pinky": 20,
 }
 
-# Finger base:
-# Với thumb dùng joint 1 làm pivot.
-# Với 4 ngón còn lại dùng MCP: 5/9/13/17.
 PIVOTS = {
     "thumb": 1,
     "index": 5,
@@ -56,21 +47,11 @@ PIVOTS = {
     "pinky": 17,
 }
 
-# Các ngón được phép refine.
-# Có thể bỏ thumb nếu thumb bị quá nhạy.
 REFINE_FINGERS = ["thumb", "index", "middle", "ring", "pinky"]
 
-# Góc refine quanh mỗi axis, đơn vị degree.
-# Bản đầu tiên để range vừa phải, tránh phá template.
 ANGLE_RANGE = range(-35, 36, 5)
 
-# Nếu muốn tinh hơn sau khi pass: đổi step từ 5 sang 2.
-# Không làm ngay từ đầu để tránh lâu.
 
-
-# =========================================================
-# ROTATION UTILS
-# =========================================================
 def rot_x(deg):
     a = math.radians(deg)
     c, s = math.cos(a), math.sin(a)
@@ -105,14 +86,7 @@ def make_rotation(rx, ry, rz):
     return rot_z(rz) @ rot_y(ry) @ rot_x(rx)
 
 
-# =========================================================
-# PROJECTION
-# =========================================================
 def project_points(points3d_centered, R, scale, translation):
-    """
-    points3d_centered: template joints đã center về wrist.
-    R, scale, translation lấy từ best_view.json.
-    """
     pts_rot = (R @ points3d_centered.T).T
     pts_2d = pts_rot[:, :2]
     pts_proj = scale * pts_2d + translation
@@ -123,15 +97,7 @@ def mean_err(P, U, ids):
     return float(np.mean(np.linalg.norm(P[ids] - U[ids], axis=1)))
 
 
-# =========================================================
-# FINGER ROTATION IN TEMPLATE SPACE
-# =========================================================
 def rotate_finger_chain(T, finger_name, axis_name, angle_deg):
-    """
-    Xoay toàn bộ chain của một ngón quanh pivot trong TEMPLATE SPACE.
-    Không thay đổi bone length.
-    Đây là bản refine cấp finger-level, chưa xoay từng khớp.
-    """
     T_new = T.copy()
 
     if axis_name == "x":
@@ -156,14 +122,9 @@ def rotate_finger_chain(T, finger_name, axis_name, angle_deg):
 
 
 def refine_one_finger(T_current, U, R, scale, translation, finger_name):
-    """
-    Tìm rotation axis/angle tốt nhất cho một ngón,
-    dựa trên lỗi fingertip + lỗi chain 2D.
-    """
     tip_id = FINGERTIPS[finger_name]
     chain_ids = FINGERS[finger_name]
 
-    # baseline
     P0 = project_points(T_current, R, scale, translation)
     base_tip_err = np.linalg.norm(P0[tip_id] - U[tip_id])
     base_chain_err = mean_err(P0, U, chain_ids)
@@ -197,7 +158,6 @@ def refine_one_finger(T_current, U, R, scale, translation, finger_name):
             tip_err = np.linalg.norm(P[tip_id] - U[tip_id])
             chain_err = mean_err(P, U, chain_ids)
 
-            # ưu tiên fingertip, nhưng vẫn kiểm chain để không xoay quá dị
             score = float(tip_err + 0.35 * chain_err)
 
             if score < best["score"]:
@@ -215,13 +175,9 @@ def refine_one_finger(T_current, U, R, scale, translation, finger_name):
     return best_T, best
 
 
-# =========================================================
-# VISUALIZATION
-# =========================================================
 def draw_overlay(U, P_before, P_after, title, out_path):
     plt.figure(figsize=(8, 8))
 
-    # Salux red
     for a, b in CONNECTIONS:
         plt.plot(
             [U[a,0], U[b,0]],
@@ -232,7 +188,6 @@ def draw_overlay(U, P_before, P_after, title, out_path):
         )
     plt.scatter(U[:,0], U[:,1], color="red", s=35, label="Salux 2D")
 
-    # Before gray
     for a, b in CONNECTIONS:
         plt.plot(
             [P_before[a,0], P_before[b,0]],
@@ -243,7 +198,6 @@ def draw_overlay(U, P_before, P_after, title, out_path):
         )
     plt.scatter(P_before[:,0], P_before[:,1], color="gray", s=20, label="Before refine")
 
-    # After blue
     for a, b in CONNECTIONS:
         plt.plot(
             [P_after[a,0], P_after[b,0]],
@@ -254,7 +208,6 @@ def draw_overlay(U, P_before, P_after, title, out_path):
         )
     plt.scatter(P_after[:,0], P_after[:,1], color="blue", s=35, label="After refine")
 
-    # labels only salux + after
     for i in range(21):
         plt.text(U[i,0], U[i,1], str(i), color="red", fontsize=8)
         plt.text(P_after[i,0], P_after[i,1], str(i), color="blue", fontsize=8)
@@ -268,9 +221,6 @@ def draw_overlay(U, P_before, P_after, title, out_path):
     plt.show()
 
 
-# =========================================================
-# MAIN
-# =========================================================
 def main():
     T_raw = np.load(TEMPLATE_PATH).astype(np.float32)
     U = np.load(SALUX_2D_PATH).astype(np.float32)
@@ -285,7 +235,6 @@ def main():
     if scale <= 0:
         raise ValueError(f"Scale must be positive. Got {scale}")
 
-    # Center template về wrist giống viewpoint search
     T0 = T_raw - T_raw[0]
 
     P_before = project_points(T0, R, scale, translation)
@@ -299,7 +248,6 @@ def main():
     T_fit = T0.copy()
     logs = []
 
-    # Refine tuần tự từng ngón
     for finger in REFINE_FINGERS:
         T_fit, log = refine_one_finger(
             T_fit,
