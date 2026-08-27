@@ -12,9 +12,6 @@ from torch.utils.data import DataLoader, Dataset
 from torchvision import models, transforms
 
 
-# =========================================================
-# CONFIG
-# =========================================================
 CSV_PATH = Path("./metadata/rgb_skeleton_multiview.csv")
 OUT_DIR = Path("./results/rgb_only")
 
@@ -26,7 +23,7 @@ WEIGHT_DECAY = 1e-4
 SEED = 42
 IMAGE_SIZE = 160
 DROPOUT = 0.2
-TRAIN_RGB_MODE = "random_cam"  # "random_cam" or "all_cams"
+TRAIN_RGB_MODE = "random_cam"
 EVAL_CAM_ID = 0
 NUM_WORKERS = 0
 

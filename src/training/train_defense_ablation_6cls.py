@@ -1,8 +1,3 @@
-"""Controlled post-submission ablations for the six-class raw-skeleton pipeline.
-
-All checkpoint selection uses Salux validation only. DrOh is evaluated once after
-training and is never used for model or hyperparameter selection.
-"""
 
 from __future__ import annotations
 

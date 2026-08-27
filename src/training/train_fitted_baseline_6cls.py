@@ -1,4 +1,3 @@
-"""Fair no-multiview control for the fitted-anchor Blender experiment."""
 
 import json
 import random

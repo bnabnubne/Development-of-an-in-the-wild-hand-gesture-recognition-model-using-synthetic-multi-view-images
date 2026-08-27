@@ -43,7 +43,6 @@ def normalize_skeleton(x):
 
 
 def align_refined_to_raw(raw, refined):
-    """Rigidly align normalized refined row-vectors to normalized raw coordinates."""
     u, _, vt = np.linalg.svd(refined.T @ raw)
     rotation = u @ vt
     if np.linalg.det(rotation) < 0:

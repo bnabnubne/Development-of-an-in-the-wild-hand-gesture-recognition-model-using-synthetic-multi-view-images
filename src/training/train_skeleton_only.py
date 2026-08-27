@@ -10,9 +10,6 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 from torch.utils.data import DataLoader, Dataset
 
 
-# =========================================================
-# CONFIG
-# =========================================================
 CSV_PATH = Path("./metadata/rgb_skeleton_multiview.csv")
 OUT_DIR = Path("./results/skeleton_only")
 

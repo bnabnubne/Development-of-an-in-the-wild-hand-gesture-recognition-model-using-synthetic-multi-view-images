@@ -1,9 +1,3 @@
-"""CE warm-up followed by original-anchored cosine-consistency fine-tuning.
-
-The warm-up checkpoint is the completed Blender8 CE-only model for the same seed.
-Fine-tuned checkpoints are selected only by mean accuracy across the Salux validation
-anchor and eight synthetic views. DrOh remains external evaluation only.
-"""
 
 from __future__ import annotations
 

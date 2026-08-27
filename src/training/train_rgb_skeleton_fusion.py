@@ -12,9 +12,6 @@ from torch.utils.data import DataLoader, Dataset
 from torchvision import models, transforms
 
 
-# =========================================================
-# CONFIG
-# =========================================================
 CSV_PATH = Path("./metadata/rgb_skeleton_multiview.csv")
 OUT_DIR = Path("./results/rgb_skeleton_fusion")
 
@@ -34,15 +31,10 @@ SKEL_HIDDEN_DIM = 128
 FUSION_DIM = 256
 DROPOUT = 0.2
 
-# "random_cam" trains on one random rendered view per sample.
-# "all_cams" expands every camera as a separate training item.
 TRAIN_RGB_MODE = "random_cam"
 
-# Validation/test during training. Final test script can evaluate avg over all cams.
 EVAL_CAM_ID = 0
 
-# "view_aligned": use skeleton_cam_i with rgb_cam_i.
-# "original": use the original MediaPipe-normalized skeleton for every RGB view.
 SKELETON_MODE = "view_aligned"
 
 USE_IMAGENET_WEIGHTS = False

@@ -44,13 +44,11 @@ class HybridDataset(Dataset):
 
     def __getitem__(self, idx):
         row = self.df.iloc[idx]
-        # Anchor matches the representation available at external inference.
         anchor = preprocess(np.load(row["mediapipe_path"]), "scale")
         y = self.labels[row["action"]]
         if not self.include_views:
             return torch.from_numpy(anchor), y
 
-        # Only the training-time view branch uses anatomically fitted skeletons.
         refined = preprocess(np.load(row["refined_path"]), "scale")
         views = np.stack([(r @ refined.T).T for r in CAMERA_ROTATIONS]).astype(np.float32)
         views -= views[:, 0:1, :]

@@ -23,8 +23,6 @@ CONS_WEIGHT = 0.3
 SEED = 42
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
-# Recovered from April/salux_multiview3d_8cam_front with rigid Procrustes.
-# Each matrix maps a column-vector world point into the original camera space.
 CAMERA_ROTATIONS = np.asarray([
     [[.707106773, -.707106789, 0.], [.182195065, .182194999, .966234930], [-.683231271, -.683231272, .257662685]],
     [[1., 0., 0.], [0., .257662698, .966234927], [0., -.966234927, .257662698]],

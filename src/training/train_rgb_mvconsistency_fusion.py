@@ -12,9 +12,6 @@ from torch.utils.data import DataLoader, Dataset
 from torchvision import models, transforms
 
 
-# =========================================================
-# CONFIG
-# =========================================================
 CSV_PATH = Path("./metadata/rgb_skeleton_multiview.csv")
 MVCONSISTENCY_CKPT = Path(
     "./results/mv_consistency_anchor_8cam_model_lambda0.3/"
@@ -37,7 +34,6 @@ DROPOUT = 0.2
 
 TRAIN_RGB_MODE = "random_cam"
 
-# "original" matches DrOh inference. "view_aligned" can be used for synthetic-only ablation.
 SKELETON_INPUT_MODE = "original"
 FREEZE_SKELETON_ENCODER = True
 

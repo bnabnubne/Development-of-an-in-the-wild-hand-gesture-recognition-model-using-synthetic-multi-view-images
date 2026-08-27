@@ -1,9 +1,3 @@
-"""Run fitted-anchor Blender8 6-class training across multiple seeds.
-
-This script is intentionally separate from the older single-seed fitted scripts so
-that defense-slide multi-seed results can be generated without overwriting the
-historical seed-42 artifacts.
-"""
 
 import argparse
 import json

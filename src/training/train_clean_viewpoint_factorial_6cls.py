@@ -1,9 +1,3 @@
-"""Clean 2x2 test of canonicalization and skeleton-space multiview augmentation.
-
-The four cells differ only by palm-axis canonicalization and random Blender8
-training augmentation. Every run has the same samples, optimizer steps, model,
-and Salux-only checkpoint selection. DrOh is evaluation-only.
-"""
 
 from __future__ import annotations
 
@@ -180,7 +174,6 @@ def evaluate(model, dataset):
     model.eval()
     with torch.no_grad():
         for x, y in loader:
-            # Evaluation always uses exactly one observed anchor.
             if x.ndim == 4:
                 x = x[:, 0]
             probabilities.append(torch.softmax(model(x.to(DEVICE)), 1).cpu().numpy())
@@ -241,7 +234,6 @@ def run(config, seed, salux, droh, force=False):
         model.train(); total = 0.0
         for x, y in train_loader:
             if multiview:
-                # One input per anchor/update, sampled from identity + Blender8.
                 indices = torch.randint(0, x.shape[1], (x.shape[0],), generator=view_generator)
                 x = x[torch.arange(x.shape[0]), indices]
             x, y = x.to(DEVICE), y.to(DEVICE)

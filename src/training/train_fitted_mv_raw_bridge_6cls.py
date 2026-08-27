@@ -1,7 +1,3 @@
-"""Fitted-anchor Blender8 pipeline with balanced paired-raw supervision.
-
-DrOh is evaluation-only.  Gamma is selected using Salux validation metrics.
-"""
 
 import argparse
 import json

@@ -1,4 +1,3 @@
-"""Raw anchor + Blender views generated from fitted skeleton; raw single-view deployment."""
 
 import json
 import random

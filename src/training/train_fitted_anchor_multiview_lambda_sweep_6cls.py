@@ -1,9 +1,3 @@
-"""Fitted-anchor Blender8 6-class experiment with configurable consistency lambda.
-
-This is the refinement-side counterpart of the raw multiview lambda sweep.
-It keeps the model/data/split/normalization fixed and changes only the
-anchor-view consistency weight.
-"""
 
 import argparse
 import json

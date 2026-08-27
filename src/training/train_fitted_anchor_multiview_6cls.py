@@ -1,4 +1,3 @@
-"""Full-stack 6-class experiment: fitted anchor + eight fitted camera views."""
 
 import json
 import random
