@@ -3,9 +3,6 @@ from pathlib import Path
 import pandas as pd
 
 
-# =========================================================
-# CONFIG
-# =========================================================
 CSV_PATH = Path("./metadata/rgb_skeleton_multiview.csv")
 EXPECTED_NUM_CAMS = 8
 

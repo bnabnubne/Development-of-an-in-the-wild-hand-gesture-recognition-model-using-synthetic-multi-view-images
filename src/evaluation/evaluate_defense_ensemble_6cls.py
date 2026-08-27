@@ -1,4 +1,3 @@
-"""Evaluate fixed equal-weight three-seed ensembles from saved predictions."""
 
 from __future__ import annotations
 

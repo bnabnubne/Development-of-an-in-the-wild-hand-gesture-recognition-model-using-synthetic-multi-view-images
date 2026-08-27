@@ -1,4 +1,3 @@
-"""Run controlled post-submission experiment suites sequentially."""
 
 from __future__ import annotations
 

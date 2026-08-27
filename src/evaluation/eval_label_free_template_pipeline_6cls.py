@@ -1,10 +1,3 @@
-"""Label-free 6-template recognition pipeline for 6-class skeleton gestures.
-
-This evaluates a deployable alternative to the previous oracle-fitted protocol:
-at test time each sample is fitted against every class template without using
-the ground-truth label, then the final class is selected by fitting cost and/or
-the skeleton classifier.
-"""
 
 import argparse
 from concurrent.futures import ProcessPoolExecutor, as_completed

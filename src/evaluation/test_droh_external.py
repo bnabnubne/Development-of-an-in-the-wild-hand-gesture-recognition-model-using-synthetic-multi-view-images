@@ -11,9 +11,6 @@ from torch.utils.data import DataLoader, Dataset
 from torchvision import models, transforms
 
 
-# =========================================================
-# CONFIG
-# =========================================================
 DROH_CSV = Path("./metadata/droh_rgb_skeleton_5cls.csv")
 OUT_DIR = Path("./results/droh_external")
 

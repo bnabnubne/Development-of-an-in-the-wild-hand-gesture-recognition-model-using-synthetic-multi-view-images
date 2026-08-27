@@ -11,9 +11,6 @@ from torch.utils.data import DataLoader, Dataset
 from torchvision import models, transforms
 
 
-# =========================================================
-# CONFIG
-# =========================================================
 CSV_PATH = Path("./metadata/rgb_skeleton_multiview.csv")
 CKPT_PATH = Path("./results/rgb_only/best_rgb_only.pt")
 OUT_DIR = Path("./results/rgb_only_eval")
@@ -28,7 +25,6 @@ elif torch.backends.mps.is_available():
 else:
     DEVICE = "cpu"
 
-# "single_cam" or "avg_all_cams"
 EVAL_MODE = "avg_all_cams"
 SINGLE_CAM_ID = 0
 

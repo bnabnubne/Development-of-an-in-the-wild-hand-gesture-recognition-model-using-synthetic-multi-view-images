@@ -1,4 +1,3 @@
-"""Run the fitted MV-consistency lambda sweep sequentially."""
 
 import subprocess
 import sys

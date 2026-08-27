@@ -9,9 +9,6 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 from torch.utils.data import DataLoader, Dataset
 
 
-# =========================================================
-# CONFIG
-# =========================================================
 DROH_CSV = Path("./metadata/droh_rgb_skeleton_7cls.csv")
 CKPT_PATH = Path(
     "./results/mv_consistency_anchor_8cam_model_lambda0.3/"

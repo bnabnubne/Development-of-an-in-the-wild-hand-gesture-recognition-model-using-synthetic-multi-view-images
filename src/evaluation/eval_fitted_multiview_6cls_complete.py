@@ -1,4 +1,3 @@
-"""Complete the four-domain evaluation of the already-trained fitted+Blender8 checkpoint."""
 
 import json
 from pathlib import Path

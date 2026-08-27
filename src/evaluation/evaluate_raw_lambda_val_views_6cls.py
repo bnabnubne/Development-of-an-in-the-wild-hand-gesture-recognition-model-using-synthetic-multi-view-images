@@ -1,4 +1,3 @@
-"""Evaluate saved raw-lambda checkpoints on held-out Salux anchor + eight views."""
 
 from pathlib import Path
 import json

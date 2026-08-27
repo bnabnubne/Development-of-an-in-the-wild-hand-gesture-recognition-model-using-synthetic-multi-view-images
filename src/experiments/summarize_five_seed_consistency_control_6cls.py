@@ -27,8 +27,6 @@ ce=ens["ce_checkpoint"];a2=int((ce&~right).sum());b2=int((~ce&right).sum());idx2
 stats["consistency_vs_original_ce_ensemble"]={"ce_accuracy":ce.mean(),"consistency_accuracy":right.mean(),"difference_pp":100*(right.mean()-ce.mean()),"ce_only_correct":a2,"consistency_only_correct":b2,"mcnemar_p":binomtest(min(a2,b2),a2+b2,.5).pvalue,"bootstrap_95ci_pp":[float(x) for x in np.quantile(d2,[.025,.975])]}
 (OUT/"statistics.json").write_text(json.dumps(stats,indent=2))
 
-# Internal Salux test check for the same five-member ensembles. This is reported
-# separately from DrOh and is never used to tune a checkpoint.
 salux_groups={
     "ce_checkpoint":[O/f"gru_wrist_middle_views8_lambda0p0_seed{s}/predictions_salux_raw.csv" for s in S],
     "low_lr_ce_control":[N/f"lambda0p0_lr1em4_seed{s}/predictions_salux_raw.csv" for s in S],
@@ -46,7 +44,6 @@ for name,paths in salux_groups.items():
                        "macro_f1":float(f1_score(truth,pred,average="macro"))})
 pd.DataFrame(salux_rows).to_csv(OUT/"salux_ensembles.csv",index=False)
 
-# Per-class DrOh comparison for the matched control and consistency ensembles.
 truth=pd.read_csv(groups["low_lr_ce_control"][0]).true_class.to_numpy()
 per_class=[]
 for class_name in C:

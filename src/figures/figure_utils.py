@@ -79,7 +79,6 @@ def set_equal_limits(ax, *point_sets, pad=0.08):
 
 
 def project_template_from_log(log_path: str | Path):
-    """Return observed U, initial projected template, refined projected template, and log."""
     import sys
 
     if str(PROJECT_ROOT) not in sys.path:

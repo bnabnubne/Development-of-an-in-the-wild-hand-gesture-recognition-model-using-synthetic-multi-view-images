@@ -1,4 +1,3 @@
-"""Build the locked five-seed baseline/final comparison used by webcam demos."""
 
 from __future__ import annotations
 

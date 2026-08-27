@@ -1,4 +1,3 @@
-"""Lock the naive-camera baseline versus full proposed pipeline comparison."""
 
 from __future__ import annotations
 

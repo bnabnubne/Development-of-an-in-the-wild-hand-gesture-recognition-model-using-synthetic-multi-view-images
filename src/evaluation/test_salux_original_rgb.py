@@ -11,9 +11,6 @@ from torch.utils.data import DataLoader, Dataset
 from torchvision import models, transforms
 
 
-# =========================================================
-# CONFIG
-# =========================================================
 APRIL_ROOT = Path(".")
 MODEL_ROOT = Path(".")
 SALUX_IMAGE_ROOT = Path("./data/raw/FullLabelled")
@@ -37,9 +34,6 @@ else:
     DEVICE = "cpu"
 
 
-# =========================================================
-# DATA
-# =========================================================
 def find_image(action, sample_id):
     class_dir = SALUX_IMAGE_ROOT / action
     for suffix in [".jpg", ".jpeg", ".png", ".JPG", ".JPEG", ".PNG"]:
@@ -112,9 +106,6 @@ class SaluxOriginalRGBDataset(Dataset):
         return image, skeleton, label
 
 
-# =========================================================
-# MODELS
-# =========================================================
 class RGBOnlyNet(nn.Module):
     def __init__(self, num_classes, dropout=0.2):
         super().__init__()
@@ -181,9 +172,6 @@ class FusionNet(nn.Module):
         return self.classifier(torch.cat([rgb_feat, skel_feat], dim=1))
 
 
-# =========================================================
-# EVAL
-# =========================================================
 def evaluate_rgb(model, loader):
     model.eval()
     all_preds = []

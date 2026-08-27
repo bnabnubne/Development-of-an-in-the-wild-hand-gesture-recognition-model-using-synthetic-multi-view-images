@@ -9,9 +9,6 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 from torch.utils.data import DataLoader, Dataset
 
 
-# =========================================================
-# CONFIG
-# =========================================================
 APRIL_ROOT = Path(".")
 MODEL_ROOT = Path(".")
 
@@ -39,9 +36,6 @@ else:
     DEVICE = "cpu"
 
 
-# =========================================================
-# DATASETS
-# =========================================================
 class SingleViewSkeletonDataset(Dataset):
     def __init__(self, df, path_col, label_to_idx):
         self.df = df.reset_index(drop=True)
@@ -89,9 +83,6 @@ def collate_multiview(batch):
     return views, y
 
 
-# =========================================================
-# MODEL
-# =========================================================
 class SingleViewGRU3D(nn.Module):
     def __init__(self, input_dim=3, hidden_dim=128, num_layers=1, num_classes=7, dropout=0.0):
         super().__init__()
@@ -111,9 +102,6 @@ class SingleViewGRU3D(nn.Module):
         return logits, z
 
 
-# =========================================================
-# EVAL
-# =========================================================
 def evaluate_single(model, loader):
     model.eval()
     all_preds = []
