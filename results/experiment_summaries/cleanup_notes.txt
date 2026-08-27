@@ -1,0 +1,7 @@
+Cleanup notes
+
+This folder keeps only small summary files and selected thesis figures.
+
+Large run folders, checkpoints, logs, raw datasets, debug images, and old smoke-test outputs are not part of the public repository.
+
+Code for old experiments is kept in src when it helps trace the work. The result files here should be treated as the small public record, not as the full experiment archive.

@@ -1,0 +1,63 @@
+Final experiment audit, 2026-07-08
+
+Data
+
+Six classes:
+OK, Paper, Rock, Scissors, The-Finger, Thumb.
+
+Salux split:
+4582 train
+982 validation
+983 internal test
+
+DrOh external test:
+675 samples
+
+Final matched seeds:
+0, 1, 7, 21, 42
+
+The final prediction files use the same sample order, ground truth labels, and six-class label set.
+
+Five-seed single-model means
+
+Original Blender8 CE checkpoint:
+DrOh 80.68 +/- 1.73 percent
+Macro F1 80.34 +/- 1.75 percent
+
+Matched low-learning-rate CE control, lambda 0:
+DrOh 81.24 +/- 1.86 percent
+Macro F1 80.80 +/- 1.98 percent
+
+Matched low-learning-rate consistency, lambda 0.3:
+DrOh 83.44 +/- 1.97 percent
+Macro F1 83.21 +/- 2.02 percent
+
+The mean gain over the matched control is 2.19 percentage points. With five seed pairs, the paired t-test gives p = 0.126.
+
+Five-model ensembles
+
+Raw single-view baseline:
+Salux not listed
+DrOh 76.74 percent, 518 of 675
+Macro F1 75.75 percent
+
+Original Blender8 CE:
+Salux 97.25 percent
+DrOh 84.30 percent, 569 of 675
+Macro F1 84.10 percent
+
+Matched low-learning-rate CE control:
+Salux 97.15 percent
+DrOh 83.70 percent, 565 of 675
+Macro F1 83.53 percent
+
+Matched low-learning-rate consistency, lambda 0.3:
+Salux 97.25 percent
+DrOh 85.33 percent, 576 of 675
+Macro F1 85.19 percent
+
+The matched ensemble comparison is 83.70 percent versus 85.33 percent. McNemar p = 0.0347. Bootstrap 95 percent CI is 0.30 to 2.96 percentage points.
+
+Notes
+
+Oracle-fitted DrOh results are only diagnostics. Label-free fitting is exploratory. The strongest deployable result in this audit is the five-model consistency ensemble.

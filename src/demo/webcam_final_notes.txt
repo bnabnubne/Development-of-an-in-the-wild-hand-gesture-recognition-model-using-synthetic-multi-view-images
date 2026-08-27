@@ -1,0 +1,25 @@
+Final webcam demo notes
+
+The final demo uses a five-seed probability ensemble trained with Blender8 views and a consistency fine-tuning stage.
+
+Run the final model:
+
+python src/demo/webcam_final_5seed_demo.py
+
+Run final model versus baseline:
+
+python src/demo/webcam_final_vs_baseline_demo.py
+
+Run full pipeline versus a simple camera-coordinate baseline:
+
+python src/demo/webcam_full_pipeline_vs_naive_demo.py
+
+Optional arguments:
+
+--camera 1
+--record output.mp4
+--smoothing-window 5
+
+The live demos use the same webcam frame and the same MediaPipe detection for both compared models. The full-pipeline comparison also changes preprocessing, so report it as a system comparison, not only as the effect of multi-view training.
+
+On macOS, run the demo from a normal graphical terminal and allow camera access when asked.

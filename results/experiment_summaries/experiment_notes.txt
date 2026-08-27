@@ -1,0 +1,44 @@
+Experiment notes
+
+Task
+
+Six-class static hand gesture recognition:
+OK, Paper, Rock, Scissors, The-Finger, Thumb.
+
+Submitted raw-domain result
+
+Raw baseline, seed 42:
+Salux 96.85 percent
+DrOh 77.93 percent
+
+Raw skeleton with eight Blender views and consistency, seed 42:
+Salux 97.05 percent
+DrOh 78.96 percent
+
+This is the result used in the submitted thesis.
+
+Fitted-domain analysis
+
+The fitted-template experiments are useful for analysis, but they are not deployable in the same way as the raw skeleton model. DrOh fitted results use gesture-template information and should be described as oracle diagnostics.
+
+Post-submission checks
+
+The later three-seed runs show that supervised eight-view training is the strongest stable part of the method.
+
+Raw GRU:
+DrOh 75.41 +/- 4.23 percent
+Macro F1 74.51 +/- 4.49 percent
+
+GRU with eight-view consistency:
+DrOh 78.81 +/- 1.86 percent
+Macro F1 78.10 +/- 2.33 percent
+
+GRU with eight-view CE training:
+DrOh 81.33 +/- 1.82 percent
+Macro F1 81.00 +/- 1.87 percent
+
+Three-seed CE ensemble:
+DrOh 84.00 percent
+Macro F1 83.83 percent
+
+Files in this folder are summaries. The full training outputs are not included.

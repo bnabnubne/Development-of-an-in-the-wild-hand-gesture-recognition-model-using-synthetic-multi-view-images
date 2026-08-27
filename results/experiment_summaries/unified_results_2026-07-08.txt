@@ -1,0 +1,62 @@
+Unified result notes, 2026-07-08
+
+Project direction
+
+The deployable pipeline is:
+
+single RGB image
+MediaPipe 3D hand skeleton
+geometric normalization
+single-view GRU inference
+
+Synthetic Blender views are used during training. DrOh is used as external test data.
+
+Submitted thesis result
+
+Raw baseline:
+Salux 96.85 percent
+DrOh 77.93 percent
+
+Raw skeleton with Blender8 consistency, lambda 0.3:
+Salux 97.05 percent
+DrOh 78.96 percent
+
+The gain is 1.03 percentage points on DrOh.
+
+Fitted-template results
+
+Fitted-template experiments give high oracle numbers when the correct gesture template is known. They should not be reported as normal in-the-wild accuracy.
+
+Post-submission result
+
+Three-seed normalized skeleton runs:
+
+Raw baseline:
+DrOh 75.41 +/- 4.23 percent
+Macro F1 74.51 +/- 4.49 percent
+
+Blender8 CE-only:
+DrOh 81.33 +/- 1.82 percent
+Macro F1 81.00 +/- 1.87 percent
+
+Blender8 with consistency, lambda 0.3:
+DrOh 78.81 +/- 1.86 percent
+Macro F1 78.10 +/- 2.33 percent
+
+Three-seed ensembles:
+
+Raw baseline:
+DrOh 76.44 percent
+Macro F1 75.44 percent
+
+Blender8 CE-only:
+DrOh 84.00 percent
+Macro F1 83.83 percent
+
+Blender8 with consistency:
+DrOh 79.70 percent
+Macro F1 78.89 percent
+
+Main interpretation
+
+The submitted result remains valid. Later checks show that most of the gain comes from supervised synthetic-view augmentation. The consistency term is useful in some schedules, but it should be compared with a matched training schedule.

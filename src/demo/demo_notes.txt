@@ -1,0 +1,44 @@
+Six-class hand gesture recognition demos
+
+The demo code uses a webcam frame, MediaPipe Hands, skeleton preprocessing, and a trained model ensemble.
+
+Main demo
+
+python src/demo/webcam_demo.py
+
+Press Q or Esc to close the window.
+
+Record a video:
+
+python src/demo/webcam_demo.py --record demo.mp4
+
+The webcam frame is mirrored by default. Use --no-mirror for an external camera if the handedness looks wrong.
+
+View test demo
+
+python src/demo/webcam_multiview_live_demo.py
+
+This script evaluates the current hand skeleton under the same eight Blender camera transforms used in training. It is useful for checking how predictions change when the hand is rotated.
+
+Real viewpoint demo
+
+python src/demo/webcam_real_viewpoint_demo.py
+
+This script compares models on the same live skeleton and groups frames by rough palm yaw. It does not use synthetic test-time views.
+
+Showcase demo
+
+python src/demo/defense_showcase_demo.py
+
+This script combines a live webcam view with saved examples from the DrOh test set.
+
+Keys
+
+1 OK
+2 Paper
+3 Rock
+4 Scissors
+5 The-Finger
+6 Thumb
+R reset the current rolling statistics
+Q or Esc quit

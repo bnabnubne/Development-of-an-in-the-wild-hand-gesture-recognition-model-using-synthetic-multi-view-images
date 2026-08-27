@@ -1,0 +1,93 @@
+Master result notes
+
+Use these categories separately.
+
+Submitted thesis result:
+fixed seed 42 and original protocol.
+
+Multi-seed result:
+mean and sample standard deviation across trained seeds.
+
+Ensemble result:
+one predictor made by averaging model probabilities.
+
+Oracle result:
+uses ground-truth template information and is not deployable.
+
+Submitted thesis result
+
+Raw baseline:
+DrOh 77.93 percent, 526 of 675
+
+Raw skeleton with Blender8 consistency, lambda 0.3:
+DrOh 78.96 percent, 533 of 675
+
+Fitted baseline:
+DrOh raw 20.74 percent
+DrOh oracle-fitted 81.78 percent
+
+Fitted with Blender8 consistency:
+DrOh raw 36.15 percent
+DrOh oracle-fitted 89.33 percent
+
+Final matched five-seed comparison
+
+Original Blender8 CE:
+DrOh 80.68 +/- 1.73 percent
+Macro F1 80.34 +/- 1.75 percent
+
+Matched low-learning-rate CE control:
+DrOh 81.24 +/- 1.86 percent
+Macro F1 80.80 +/- 1.98 percent
+
+Matched low-learning-rate consistency:
+DrOh 83.44 +/- 1.97 percent
+Macro F1 83.21 +/- 2.02 percent
+
+Final equal-size five-model ensembles
+
+Raw single-view baseline:
+DrOh 76.74 percent
+Macro F1 75.75 percent
+
+Original Blender8 CE:
+DrOh 84.30 percent
+Macro F1 84.10 percent
+
+Matched low-learning-rate CE control:
+DrOh 83.70 percent
+Macro F1 83.53 percent
+
+Matched low-learning-rate consistency:
+DrOh 85.33 percent
+Macro F1 85.19 percent
+
+Class notes for the matched ensemble
+
+OK:
+control 90.57 percent
+consistency 90.57 percent
+
+Paper:
+control 85.37 percent
+consistency 86.99 percent
+
+Rock:
+control 81.65 percent
+consistency 77.98 percent
+
+Scissors:
+control 64.29 percent
+consistency 73.21 percent
+
+The-Finger:
+control 88.35 percent
+consistency 90.29 percent
+
+Thumb:
+control 91.80 percent
+consistency 92.62 percent
+
+Report carefully
+
+The consistency result should be compared with the matched low-learning-rate control. Oracle-fitted results should not be reported as normal DrOh accuracy.
