@@ -1,9 +1,3 @@
-"""Fair live comparison using only real webcam viewpoints.
-
-No synthetic view is created at inference. Both models receive the same
-MediaPipe skeleton and the same DrOh preprocessing. The presenter physically
-rotates the hand; results are accumulated over observed palm-yaw bins.
-"""
 
 from __future__ import annotations
 
@@ -29,7 +23,6 @@ ANGLE_LABELS = ["-75", "-45", "-15", "+15", "+45", "+75"]
 
 
 def estimate_palm_yaw(raw_landmarks):
-    """Estimate camera-relative palm yaw from the unaligned MediaPipe hand."""
     points = np.asarray(raw_landmarks, dtype=np.float32)
     wrist = points[0]
     across = points[17] - points[5]
@@ -39,7 +32,6 @@ def estimate_palm_yaw(raw_landmarks):
     if norm < 1e-8:
         return 0.0
     normal /= norm
-    # Frontal palm is near 0; left/right turns have opposite signs.
     return float(np.degrees(np.arctan2(normal[0], abs(normal[2]) + 1e-6)))
 
 
@@ -49,7 +41,6 @@ def angle_bin(angle):
 
 @dataclass
 class ViewpointStats:
-    # Latest stable observation per real angle bin avoids over-counting easy frontal frames.
     baseline_correct: list = field(default_factory=lambda: [None] * 6)
     proposed_correct: list = field(default_factory=lambda: [None] * 6)
     baseline_class: list = field(default_factory=lambda: [None] * 6)
@@ -178,7 +169,6 @@ def main():
             yaw = 0.0
             now = perf_counter()
             if extraction is not None:
-                # Identical deployment input for both models; no generated camera view.
                 skeleton = extraction["skeleton"]
                 baseline_prediction = baseline.predict_skeleton(skeleton, smooth=False)
                 proposed_prediction = proposed.predict_skeleton(skeleton, smooth=False)

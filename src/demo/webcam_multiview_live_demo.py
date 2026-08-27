@@ -1,8 +1,3 @@
-"""Continuous webcam demo of viewpoint robustness for the defense presentation.
-
-This keeps webcam_demo.py unchanged. Every detected live skeleton is evaluated
-under the exact Blender8 camera transforms used during multiview training.
-"""
 
 from __future__ import annotations
 

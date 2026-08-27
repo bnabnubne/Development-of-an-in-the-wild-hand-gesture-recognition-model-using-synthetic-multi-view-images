@@ -1,8 +1,3 @@
-"""Live webcam deployment of the final five-seed consistency ensemble.
-
-The deployment path is MediaPipe -> canonical six-class skeleton -> probability
-ensemble. Blender8 views are training-only; no synthetic view or fitting is used here.
-"""
 
 from __future__ import annotations
 

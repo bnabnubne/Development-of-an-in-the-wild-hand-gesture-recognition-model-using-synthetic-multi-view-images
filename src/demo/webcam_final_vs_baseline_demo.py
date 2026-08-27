@@ -1,9 +1,3 @@
-"""Fair live comparison: five-seed raw baseline versus five-seed final model.
-
-Both systems receive the same single MediaPipe skeleton after identical preprocessing.
-The baseline is the weakest legitimate method (no multiview training), not a selected
-bad seed. The proposed system uses Blender8 training and lambda=0.3 consistency.
-"""
 
 from __future__ import annotations
 

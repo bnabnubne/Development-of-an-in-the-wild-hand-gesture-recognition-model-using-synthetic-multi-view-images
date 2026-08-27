@@ -1,8 +1,3 @@
-"""Defense showcase: live deployment plus curated, locked DrOh evidence replay.
-
-The replay is explicitly labelled as curated evidence. It uses every rescued/reverse
-count from the locked 675-sample test and never presents selected cases as random.
-"""
 
 from __future__ import annotations
 
@@ -70,7 +65,6 @@ def load_evidence():
     )
     frame["rescued"] = (~frame.baseline_correct) & frame.proposed_correct
     frame["regressed"] = frame.baseline_correct & (~frame.proposed_correct)
-    # Hard angles first; this ordering is deterministic and declared in the UI.
     return frame.sort_values(["rescued", "yaw", "proposed_confidence"], ascending=[False, False, False]).reset_index(drop=True)
 
 
@@ -113,7 +107,6 @@ def draw_evidence(row, position, visual_total, rescued_total, regressed_total, m
     output[95:665, :550] = image_panel
 
     raw = np.load(row.raw_path).astype(np.float32)
-    # Overlay coordinates must follow letterboxing of the original RGB image.
     px = raw.copy()
     px[:, 0] = (off_x + raw[:, 0] * image.shape[1] * scale) / 550.0
     px[:, 1] = (off_y + raw[:, 1] * image.shape[0] * scale) / 570.0

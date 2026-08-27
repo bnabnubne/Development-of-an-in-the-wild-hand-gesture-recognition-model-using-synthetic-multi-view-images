@@ -1,9 +1,3 @@
-"""Naive RGB-skeleton baseline versus the complete proposed deployment pipeline.
-
-This is intentionally a system-level comparison. The two systems share the same RGB
-frame and MediaPipe landmarks, but the naive baseline keeps camera-relative orientation
-while the full system applies canonicalization and uses Blender8+consistency training.
-"""
 
 from __future__ import annotations
 
@@ -64,7 +58,6 @@ def main():
             if extraction is None:
                 baseline.reset();proposed.reset()
             else:
-                # Deliberately different preprocessing, as declared in the UI.
                 bp=baseline.predict_skeleton(extraction["camera_skeleton"],smooth=True)
                 pp=proposed.predict_skeleton(extraction["skeleton"],smooth=True)
                 if ground_truth is not None:

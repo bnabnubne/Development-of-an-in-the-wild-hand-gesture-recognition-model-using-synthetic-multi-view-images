@@ -1,4 +1,3 @@
-"""Shared inference utilities for the six-class defense demo."""
 
 from __future__ import annotations
 
@@ -62,7 +61,6 @@ class GRU6(nn.Module):
 
 
 def canonicalize_and_align(landmarks, handedness):
-    """Reproduce the skeleton_final_v2 preprocessing used for DrOh."""
     points = np.asarray(landmarks, dtype=np.float32).reshape(21, 3).copy()
     if str(handedness).lower() == "left":
         points[:, 0] = 1.0 - points[:, 0]
@@ -97,7 +95,6 @@ def canonicalize_and_align(landmarks, handedness):
 
 
 def minimal_camera_preprocess(landmarks, handedness):
-    """Keep camera-relative palm orientation; only unify hand, origin, and scale."""
     points = np.asarray(landmarks, dtype=np.float32).reshape(21, 3).copy()
     if str(handedness).lower() == "left":
         points[:, 0] = 1.0 - points[:, 0]
@@ -119,7 +116,6 @@ def model_normalize(points):
 
 
 def generate_blender8_views(skeleton):
-    """Reproduce the paper's Blender8 camera-space skeleton generation in NumPy."""
     world = model_normalize(skeleton)
     world -= world.mean(axis=0, keepdims=True)
     views = []
@@ -130,7 +126,6 @@ def generate_blender8_views(skeleton):
             [CAMERA_RADIUS * np.sin(angle), -CAMERA_RADIUS * np.cos(angle), CAMERA_HEIGHT],
             dtype=np.float32,
         )
-        # Blender camera convention: local -Z looks at the origin and local +Y is up.
         z_axis = camera / (np.linalg.norm(camera) + 1e-8)
         x_axis = np.cross(world_up, z_axis)
         x_axis /= np.linalg.norm(x_axis) + 1e-8
@@ -195,7 +190,6 @@ class GestureRecognizer:
 
 
 class EnsembleGestureRecognizer:
-    """Equal-weight probability ensemble of independently seeded GRU models."""
 
     def __init__(self, checkpoints=None, smoothing_window=7):
         if checkpoints is None:
@@ -303,7 +297,6 @@ def draw_comparison_result(
     baseline_accuracy=76.44,
     proposed_accuracy=84.00,
 ):
-    """Draw the same detected hand with baseline and proposed predictions."""
     output = image_bgr.copy()
     height, width = output.shape[:2]
     if extraction is not None:
@@ -342,7 +335,6 @@ def draw_comparison_result(
 
 
 def draw_multiview_stress_result(image_bgr, extraction, ground_truth, baseline_eval, proposed_eval):
-    """Full-screen defense panel for a captured Blender8 virtual-camera test."""
     output = image_bgr.copy()
     height, width = output.shape[:2]
     shade = output.copy()

@@ -1,4 +1,3 @@
-"""Generate deterministic defense-demo screenshots from real DrOh images."""
 
 from __future__ import annotations
 
